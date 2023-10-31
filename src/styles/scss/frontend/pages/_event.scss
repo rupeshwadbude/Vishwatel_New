@@ -1,0 +1,235 @@
+.eventPage{
+    .container{
+        @media (min-width:1800px){
+            max-width: 1760px;
+        } 
+        @media (max-width: 1799px){
+            max-width: 100%;
+        }
+    }
+    &.boatPage{
+        .bookNowCard_contBox{min-height: 160px;}
+    }
+    .filterSec{
+        left: 0;
+        z-index: 3;        
+        padding: 18px 67px;
+        border-bottom: 1px solid #f0f0f0;
+        .form-control{
+            background-color: rgba($color: color(80), $alpha: 0.50);
+        }
+        .select2{
+            .select2-selection{
+                &--single,&--multiple{
+                    border-color: rgba($color: color(80), $alpha: 0.50);background: rgba($color: color(80), $alpha: 0.50);
+                }
+                &__arrow{
+                    &:after{
+                      color: color(150);
+                    }
+                }
+            }
+        }
+        &_lft{
+            .form-group{     
+                min-width: 117px;         
+                &:not(:last-child){
+                    margin-right: 20px;
+                }
+            }
+            .filterSort{
+                min-width: 155px;
+                &_sort{
+                    @include absolutecenter(y);
+                    color: color(150);
+                    left: 15px;
+                }
+                .select2{
+                    .select2-selection{
+                        &--single,&--multiple{
+                            padding: 15px; padding-left: 68px;padding-right: 30px;
+                        }
+                        &__arrow{right: 10px;}
+                        &__rendered{
+                            padding-right: 0!important;
+                        }
+                    }
+                }
+            }
+        }
+        &_rht{
+            padding-left: 20px;
+            .customcheck{
+                margin: 0px 12px;
+            }
+            &_label{
+                font-size: 18px;
+            }            
+            
+        }
+        @media (min-width:1499px) {
+            &_lft{
+                .form-group{
+                    &:nth-child(1){
+                        width: 300px;
+                    }
+                }
+            }
+        }
+        @media (max-width:1799px) {
+            padding: 15px 0px;
+        }
+        @media (max-width:1399px) {
+            &_rht{
+                &_label{
+                    font-size: 16px;
+                }
+            }
+        }
+        @include media-breakpoint-down(xl){
+            &_lft{
+                .form-group{
+                    &:not(:last-child){margin-right: 15px;}
+                }
+            }
+        }
+        @include media-breakpoint-down(lg){
+            padding: 10px 0;z-index: 1004;
+            &_lft{
+                position: fixed;top: 0;left: -100%;width: 250px;height: 100vh;background-color: color(50);
+                padding: 50px 15px 20px;transition: all (0.4s);z-index: 1005;
+                .form-group{
+                    margin-right: 0 !important;
+                }
+            }
+            .closeBtn{
+                color: color(800);font-size: 12px;position: absolute;
+                top: 15px;right: 15px;@include transition(all 0.4s);
+                &:hover{
+                    color: color(500);
+                }
+            }
+            .filterBtn{
+                color: color(800);margin-right:10px;font-size: 20px;@include transition(all 0.4s);width: 30px;height: 30px;
+                border-radius: 5px;text-align: center;
+                background-color: color(500); 
+            }
+            &_rht{
+                .customcheck{margin: 0 10px;}
+                &_label{
+                    font-size: 14px;
+                }
+            }
+        }
+        @include media-breakpoint-down(md){
+            &_lft{
+                padding: 70px 15px 20px;
+            }
+        }
+        @include media-breakpoint-down(sm){
+            .filterBtn{ font-size: 18px; width: 26px;height: 26px;line-height: 26px;}
+        }
+    }
+    .eventcardSec{
+        padding: 30px 0;
+        $parent:eventcardSec;        
+        &.show{
+            .#{$parent}_grid{
+                .col{
+                    flex: 0 0 33.33%;
+                }
+            }   
+            .#{$parent}_map{
+                right: 0px;       
+            } 
+        }           
+        &_grid{
+            .col{
+                flex: 0 0 20%; 
+            }
+        }   
+        &_map{
+            position: fixed;
+            width: 100%;
+            right: -100%;            
+            max-width: 770px;
+            border-left: 1px solid #E5E5E5;
+            top: 0;
+            #map{
+                height: 100vh;
+            }
+        }
+        @media (max-width:1799px) {
+            padding: 20px 0px;
+            &_map{
+                max-width: 680px;
+            }
+        }
+        @media (max-width:1499px) {
+            &_map{
+                max-width: 580px;
+            }
+        }
+        @media (max-width:1399px) {
+            &_grid{
+                .col{
+                    flex: 0 0 25%; 
+                }
+            } 
+            &.show{
+                .#{$parent}_grid{
+                    .col{
+                        flex: 0 0 50%;
+                    }
+                }        
+            } 
+        }
+        @include media-breakpoint-down(xl){
+            &_map{
+                max-width: 450px;
+            }
+        }
+        @include media-breakpoint-down(lg){
+            &_grid{
+                .col{
+                    flex: 0 0 33.33%; 
+                }
+            }
+            &.show{
+                .#{$parent}_grid{
+                    .col{padding: 0 10px;}
+                }        
+            } 
+            &_map{
+                max-width: 100%;
+            }
+        }
+        @include media-breakpoint-down(md){
+            &_grid{
+                .col{
+                    flex: 0 0 50%; 
+                }
+            } 
+        } 
+        @include media-breakpoint-down(sm){
+            &_grid{
+                .col{
+                    flex: 0 0 100%; 
+                }
+            } 
+
+        }          
+    }
+    @include media-breakpoint-down(xxl){
+        &.boatPage{
+            .bookNowCard_contBox{min-height: 115px;}
+        }
+    }
+    @media(max-width: 1399px){
+        .filterSec{
+            .form-control{
+                padding-left: 30px;
+            }
+        }
+    }
+}

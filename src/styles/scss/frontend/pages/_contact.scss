@@ -1,0 +1,205 @@
+.contactPage{
+    &_inner{padding: 0 100px;}
+    &_title{font-size: 2.375rem;}
+    &_subTitle{
+        font-size: 18px;
+        color: color(150);
+        margin: 12px 0 40px;
+    }
+    .contact{
+        li{
+            &:not(:last-child){margin-bottom: 25px;}
+            em{
+                color: color(500);
+                padding-right: 20px;
+                font-size: 20px;
+                &.splash-email{font-size: 15px;}
+            }
+            a, address{
+                color: color(800);
+                font-size: 1.25rem;
+                font-family: font(md);
+                line-height: 26px;
+            }
+            &.aniPhone{
+                &:hover{
+                    .ring{
+                        -webkit-animation: ring 2s ease infinite;
+                        animation: ring 2s ease infinite;
+                        @-webkit-keyframes ring {
+                            0% {
+                            -webkit-transform: rotate(-15deg);
+                            transform: rotate(-15deg);
+                            }
+                            5% {
+                            -webkit-transform: rotate(-18deg);
+                            transform: rotate(-18deg);
+                            }
+                            6% {
+                            -webkit-transform: rotate(18deg);
+                            transform: rotate(18deg);
+                            }
+                        
+                            8% {
+                            -webkit-transform: rotate(-22deg);
+                            transform: rotate(-22deg);
+                            }
+                        
+                            10% {
+                            -webkit-transform: rotate(22deg);
+                            transform: rotate(22deg);
+                            }
+                        
+                            12% {
+                            -webkit-transform: rotate(-18deg);
+                            transform: rotate(-18deg);
+                            }
+                        
+                            14% {
+                            -webkit-transform: rotate(18deg);
+                            transform: rotate(18deg);
+                            }
+                        
+                            16% {
+                            -webkit-transform: rotate(-12deg);
+                            transform: rotate(-12deg);
+                            }
+                        
+                            18% {
+                            -webkit-transform: rotate(12deg);
+                            transform: rotate(12deg);
+                            }
+                        
+                            20% {
+                            -webkit-transform: rotate(0deg);
+                            transform: rotate(0deg);
+                            }
+                        }
+                    }
+                }
+            }
+            &.aniMail{
+                &:hover{
+                    .horizontal{
+                        -webkit-animation: horizontal 2s ease infinite;
+                        animation: horizontal 2s ease infinite;
+                        @-webkit-keyframes horizontal {
+                            0% {
+                              -webkit-transform: translate(0,0);
+                              transform: translate(0,0);
+                            }
+                          
+                            6% {
+                              -webkit-transform: translate(5px,0);
+                              transform: translate(5px,0);
+                            }
+                          
+                            12% {
+                              -webkit-transform: translate(0,0);
+                              transform: translate(0,0);
+                            }
+                          
+                            18% {
+                              -webkit-transform: translate(5px,0);
+                              transform: translate(5px,0);
+                            }
+                          
+                            24% {
+                              -webkit-transform: translate(0,0);
+                              transform: translate(0,0);
+                            }
+                          
+                            30% {
+                              -webkit-transform: translate(5px,0);
+                              transform: translate(5px,0);
+                            }
+                          
+                            36% {
+                              -webkit-transform: translate(0,0);
+                              transform: translate(0,0);
+                            }
+                        }
+                    }
+                }
+            }
+            &.aniAdd{
+                &:hover{
+                    .vert-move{
+                        -webkit-animation: mover 1s infinite  alternate;
+                        animation: mover 1s infinite  alternate;
+                        @-webkit-keyframes mover {
+                            0% { transform: translateY(0); }
+                            100% { transform: translateY(-5px); }
+                        }
+                        @keyframes mover {
+                            0% { transform: translateY(0); }
+                            50% { transform: translateY(2px); }
+                            100% { transform: translateY(-2px); }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &_form{
+        background-color: color(50);
+        border-radius: 5px;
+        @include box-shadow(0,0px, 20px, rgba($color: color(900), $alpha: 0.05));
+        padding: 40px;
+    }
+    @media (max-width: 1699px) {
+        &_form{padding: 30px;}
+        &_subTitle{margin: 10px 0 30px;}
+        .contact{
+            li{
+                &:not(:last-child){margin-bottom: 20px;}
+                em{padding-right: 15px;}
+                a, address{font-size: 18px;}
+            }
+        }
+        &_inner{padding: 0 80px;}
+    }
+    @include media-breakpoint-down(xxl){
+        &_inner{padding: 0 40px;}
+        &_title{font-size: 35px;}
+        .contact{
+            li{
+                &:not(:last-child){margin-bottom: 15px;}
+                em{font-size: 16px;
+                &.splash-email{font-size: 12px;}
+                }
+            }
+        }
+        &_subTitle{margin: 10px 0 20px;font-size: 16px;}
+        &_form{padding: 20px;}
+    }
+    @include media-breakpoint-down(xl){
+        &_title{font-size: 28px;}
+        &_inner{padding: 0 30px;}
+        .contact{
+            li{
+                &:not(:last-child){margin-bottom: 10px;}
+                em{padding-right: 10px;}
+                a, address{font-size: 16px;}
+            }
+        }
+        &_subTitle{margin: 6px 0 15px;}
+        &_form{padding: 15px;}
+    }
+    @include media-breakpoint-down(lg){
+        &_inner{padding: 0 20px;}
+        &_title{font-size: 22px;}
+        &_form{padding: 10px;}
+        &_subTitle{font-size: 14px;}
+        .contact{
+            li{
+                &:not(:last-child){margin-bottom: 5px;}
+                a, address, em{font-size: 14px;}
+            }
+        }
+    }
+    @include media-breakpoint-down(sm){
+        &_inner{padding: 0;}
+        &_title{font-size: 18px;}
+    }
+}

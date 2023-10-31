@@ -1,0 +1,106 @@
+.accountPage{
+    &_title{
+        border-bottom: 1px solid rgba($color: color(150), $alpha: 0.2);
+        padding-bottom: 20px; margin-bottom: 20px;
+        h4{font-size: 20px;}
+        
+        .btn-warning{font-size: 14px;}
+        .select2.select2-container .select2-selection--single, .select2.select2-container .select2-selection--multiple{
+            height: 40px;padding: 10px;padding-right: 30px;
+        }
+        
+    }
+    
+    .form-group{
+        min-width: 180px;
+    }
+    .tab-pane p{
+        font-size: 16px; color: color(150); padding-bottom: 20px;
+    }
+    .subTab{padding-bottom:30px;}
+    th,td{
+        padding: 15px 15px 15px 10px;
+        white-space: nowrap;
+        vertical-align: middle;
+        .badge{
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 10px; line-height: normal; background-color: #5cb85c;
+        }
+        .transid{
+            color: color(400);
+        }
+        .amount{
+            color: #00ae78;
+        }
+        .select2.select2-container .select2-selection--single, .select2.select2-container .select2-selection--multiple{
+            height: 40px;padding: 10px;padding-right: 30px;
+        }
+    }
+    .payoutstatus{
+        h3{
+            font-size: 18px; margin-bottom: 20px;
+        }
+    }
+    
+    .hidepayment#addpayment{
+        display: none;
+    }
+    .hidepayment#addpayout{
+        display: none;
+    }
+
+    @include media-breakpoint-down(xxl) {
+        th,td{
+            font-size: 15px;
+        }
+        .tab-pane p{
+            font-size: 15px; padding-bottom: 15px;
+        }
+        &_title{
+            padding-bottom: 15px; margin-bottom: 15px;
+            h4{font-size: 18px;}
+        }
+        .payoutstatus{
+            h3{
+                font-size: 16px; margin-bottom: 15px;
+            }
+        } 
+    }
+    @include media-breakpoint-down(lg) {
+        .form-group {
+            min-width: 155px;
+        }
+        .subTab{padding-bottom:20px;}
+        .tab-pane p{
+         padding-bottom: 10px; font-size: 14px;
+        }
+        &_title{
+            padding-bottom: 10px; margin-bottom: 10px;
+            h4{font-size: 16px;}
+        }
+        .payoutstatus{
+            h3{
+                font-size: 15px; margin-bottom: 10px;
+            }
+        } 
+    }
+    @include media-breakpoint-down(md){
+        th, td{font-size: 14px;}
+    }
+    @media (max-width: 380px) {
+        .accountPage_title{
+            flex-wrap: wrap;
+            .form-group {
+                min-width: 100%;
+                width: 100%;
+                &.mb-0.ms-3{
+                    margin-left: 0px!important;
+                }
+                &:not(:last-child){
+                    margin-bottom: 8px!important;
+                }
+            }
+        }
+    }
+}

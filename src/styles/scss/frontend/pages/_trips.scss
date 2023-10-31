@@ -1,0 +1,11 @@
+.tripsPage {
+  .tripsSec {
+    padding-top: 50px;
+    @include media-breakpoint-down(lg){
+      padding-top: 30px;
+    }
+    @include media-breakpoint-down(sm){
+      padding-top: 20px;
+    }
+  }
+}

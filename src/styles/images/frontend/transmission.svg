@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <g id="bolt" transform="translate(-568 -180)">
+    <rect id="Frame" width="36" height="36" transform="translate(568 180)" fill="#25aae1" opacity="0"/>
+    <path id="Path_4722" data-name="Path 4722" d="M592.826,192.889a2.215,2.215,0,0,0-2.079-1.389l-4.285.105,2.573-5.964a2.25,2.25,0,0,0-2.066-3.141H580.25a2.823,2.823,0,0,0-2.708,2.014l-3.925,10.023a2.251,2.251,0,0,0,2.134,2.963l4.236-.1-4.328,12.606a.751.751,0,0,0,1.24.774l15.438-15.44A2.218,2.218,0,0,0,592.826,192.889Z" transform="translate(2.75 1.25)" fill="#25aae1" opacity="0.4"/>
+  </g>
+</svg>

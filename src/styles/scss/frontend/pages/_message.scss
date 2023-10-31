@@ -1,0 +1,161 @@
+.messagePage {
+    // messageSec
+    .messageSec {
+        padding-top: 50px; padding-bottom: 30px;
+    }
+    // Tabs
+    .tab {
+        &-content  {
+            padding: 40px 30px;
+            max-height: 770px; overflow-x: auto;
+            background-color: color(50);
+        }
+    }
+    // msgList
+    .msgList {
+        &_item{
+            color: color(800);
+            &:not(:last-child) {
+                padding-bottom: 30px; margin-bottom: 30px; border-bottom: 1px solid rgba(color(150), $alpha: 0.2);
+            }
+            p{ margin-bottom: 0; color: color(150);line-height: 1.2;}
+        }
+        &_userInfo{
+            width: 280px; flex: 0 0 auto;
+            &-profile{
+                width: 64px; height: 64px; margin-right: 15px; flex: 0 0 auto;
+            }
+            &-content{width: calc(100% - 64px); padding-right: 7px;}
+            img {width: 100%; height: 100%; object-fit: cover;}
+            h3 {font-size: 18px;margin-bottom: 7px;position: relative;}
+            
+        }
+        &_userMsg{
+            padding-right: 10PX;
+            p{font-size: 18px;}
+            .status{
+                font-family: font(md); margin-bottom: 7px;
+                color: rgba(#25314C, 0.7);
+            }
+            .msgText{
+                font-size: 20px; font-family: font(sm);color: color(800);     margin-bottom: 7px; 
+                &.online {
+                    position: relative;
+                    &:before{
+                        position: absolute; width: 8px; height: 8px; background: #00AE78; border-radius: 8px; left: -12px; top: 7px;
+                        content: "";
+                    }
+                }
+            }
+        }
+        &_msgStatus{width: 150px; text-align: right; margin-left: auto;     flex: 1 0 auto}
+    }
+    @include media-breakpoint-down(xxl) {
+        .messageSec{
+            padding-top: 30px;
+        }
+        .tab {
+            &-content{
+                padding:25px;
+                max-height: 700px;
+            }
+        }
+        .msgList {
+            &_item{
+                &:not(:last-child){
+                    padding-bottom: 20px; margin-bottom: 20px;
+                }  
+                p{font-size: 15px;}
+            } 
+            &_userInfo {
+                h3{font-size: 16px;}
+            }
+            &_userMsg {
+                p{font-size: 16px;}
+                .msgText {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(xl){
+        .tab {
+            &-content {
+                padding: 15px;
+                max-height: 500px;
+            } 
+        }
+        // msgList
+        .msgList{
+            &_item {
+                &:not(:last-child){
+                    padding-bottom: 15px;
+                    margin-bottom: 15px;
+                }
+            }
+            &_userInfo {
+                h3{font-size: 15px;}
+                &-profile {
+                    margin-right: 10px;
+                    width: 50px; height: 50px;
+                }
+                &-content{width: calc(100% - 50px);}
+                .online{width: 5px; height: 5px;}
+            }
+            &_userMsg {
+                p{font-size: 15px;}
+                .msgText{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(lg){
+        .msgList{
+            &_userInfo{
+                width: 200px;
+                h3{
+                    margin-bottom: 5px;
+                }
+                p{font-size: 14px;}
+                &-profile{
+                    width: 40px; height: 40px ;
+                }
+                &-content{width: calc(100% - 40px);}
+            }
+            &_msgStatus{
+                width: 120px;
+            }   
+            &_userMsg{
+                .msgText.online{
+                    &::before{width: 6px; height: 6px;left: -10px; top: 6px;}
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(sm){
+        .msgList {
+            &_item{
+                display: block;
+            }
+            &_userInfo{
+                width: 100%; margin-bottom: 10px;
+                h3{font-size: 14px;}
+            }
+            &_userMsg{
+                padding-right: 0; 
+                p{font-size: 14px;}
+                .msgText{
+                    font-size: 14px;
+                    &.online{
+                        &::before{width: 5px; height: 5px;left: -8px; }
+                    }
+                }
+                .status{margin-bottom: 3px;}
+            }
+            &_msgStatus {
+                width:100%; text-align: left; margin-top: 10px;
+            }
+        }
+    }
+}

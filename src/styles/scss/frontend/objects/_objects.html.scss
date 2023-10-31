@@ -1,0 +1,164 @@
+.container {
+  @media (min-width: 1500px) {
+    max-width: 1424px;
+  }
+  @include media-breakpoint-down(xl){max-width: 100%;}
+}
+
+// slider arrow css
+.slick-arrow {
+  @include absolutecenter(y);
+  width: 50px;
+  height: 50px;
+  @include flexcenter(both);
+  border: 1px solid rgba(color(500), 0.3);
+  border-radius: 5px;
+  background-color: color(50);
+  font-size: 16px;
+  padding: 0;
+  z-index: 1;
+  color: color(500);
+  top: calc(50% - 65px);
+  @include transition(0.3s);
+  &:hover {
+    background-color: color(500);
+    color: color(50);
+  }
+  @media (max-width: 1600px) {
+    width: 40px;
+    height: 40px;
+    font-size: 13px;
+    top: calc(50% - 45px);
+  }
+  @include media-breakpoint-down(xl){
+    width: 35px;
+    height: 35px;
+    font-size: 11px;
+    top: auto;
+    bottom: -60px;
+  }
+  @include media-breakpoint-down(md){
+    width: 30px;
+    height: 30px;
+    font-size: 9px;
+    bottom: -50px;
+  }
+}
+
+//slider slide spacing and arrow alignment
+.slick-slider {
+  margin: 0 -15px;
+  .slick-slide {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  .prev-arrow {
+    left: -84px;
+  }
+  .next-arrow {
+    right: -84px;
+  }
+  @media (max-width: 1600px) {
+    margin: 0 -10px;
+    .slick-slide {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+    .prev-arrow {
+      left: -10px;
+    }
+    .next-arrow {
+      right: -10px;
+    }
+  }
+  @include media-breakpoint-down(xl){
+    .prev-arrow {
+      left: calc(50% - 40px);
+    }
+    .next-arrow {
+      right: calc(50% - 40px);
+    }
+  }
+  @include media-breakpoint-down(lg){
+    margin: 0 -6px;
+    .slick-slide {
+      margin-right: 6px;
+      margin-left: 6px;
+    }
+  }
+  @include media-breakpoint-down(md){
+    .prev-arrow {
+      left: calc(50% - 35px);
+    }
+    .next-arrow {
+      right: calc(50% - 35px);
+    }
+  }
+}
+
+
+
+// custom-dropdown
+.custom-dropdown {
+  .dropdown-menu {
+    border: 0;
+    border-radius: 5px 0 5px 5px;
+    padding: 15px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.12);
+    li {
+      &:hover {
+        a{
+          color: color(500);
+        }
+      }
+      a {
+        padding: 0;
+        background-color: transparent;
+        color: color(800);
+        em {
+          margin-right: 12px;
+          font-size: 20px;
+          &.splash-logout {
+            color: #e33535;
+          }
+        }
+        &.active{
+          color:color(500);
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: 7px;
+        a {
+          border-bottom: 1px solid #ebebeb;
+          padding: 0 0 7px 0;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm){
+    .dropdown-menu{
+      padding: 12px;
+      li a {
+        font-size: 14px;
+        em{ margin-right: 8px; font-size: 18px;}
+      }
+    }
+  }
+}
+.sideSticky{
+  position: sticky;
+  top: 90px;
+  @include transition(0.3s);
+}
+
+.backdrop{
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  z-index: 3;
+  top: 0;
+}
+.sidebarOpen{overflow: hidden;}

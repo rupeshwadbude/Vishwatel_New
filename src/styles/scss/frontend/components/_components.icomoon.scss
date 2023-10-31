@@ -1,0 +1,229 @@
+@font-face {
+  font-family: "splash";
+  src: url("#{$fonturl}/splash.eot?5a9ddr");
+  src: url("#{$fonturl}/splash.eot?5a9ddr#iefix") format("embedded-opentype"),
+    url("#{$fonturl}/splash.ttf?5a9ddr") format("truetype"),
+    url("#{$fonturl}/splash.woff?5a9ddr") format("woff"),
+    url("#{$fonturl}/splash.svg?5a9ddr#splash") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="splash-"],
+[class*=" splash-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "splash" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.splash-camera:before {
+  content: "\e93d";
+}
+.splash-filter_list:before {
+  content: "\e938";
+}
+.splash-eye-off:before {
+  content: "\e901";
+}
+.splash-eye:before {
+  content: "\e917";
+}
+.splash-menu:before {
+  content: "\e93b";
+}
+.splash-boat-owner:before {
+  content: "\e939";
+}
+.splash-renter:before {
+  content: "\e93a";
+}
+.splash-dollar:before {
+  content: "\e936";
+}
+.splash-home:before {
+  content: "\e935";
+}
+.splash-minus:before {
+  content: "\e934";
+}
+.splash-location-outline:before {
+  content: "\e908";
+}
+.splash-book:before {
+  content: "\e904";
+}
+.splash-enjoy:before {
+  content: "\e905";
+}
+.splash-facebook:before {
+  content: "\e906";
+}
+.splash-insta:before {
+  content: "\e907";
+}
+.splash-mail-outline:before {
+  content: "\e909";
+}
+.splash-phone-call:before {
+  content: "\e90a";
+}
+.splash-search2:before {
+  content: "\e90b";
+}
+.splash-twitter:before {
+  content: "\e90c";
+}
+.splash-youtube:before {
+  content: "\e90d";
+}
+.splash-calendar-check-alt:before {
+  content: "\e90e";
+}
+.splash-calendar-clock:before {
+  content: "\e90f";
+}
+.splash-send-fill:before {
+  content: "\e910";
+}
+.splash-logout:before {
+  content: "\e911";
+}
+.splash-setting:before {
+  content: "\e912";
+}
+.splash-change-password:before {
+  content: "\e913";
+}
+.splash-account:before {
+  content: "\e914";
+}
+.splash-reservations:before {
+  content: "\e915";
+}
+.splash-your-trip:before {
+  content: "\e916";
+}
+.splash-share:before {
+  content: "\e918";
+}
+.splash-calendar:before {
+  content: "\e919";
+}
+.splash-close:before {
+  content: "\e91a";
+}
+.splash-successful:before {
+  content: "\e91b";
+}
+.splash-password:before {
+  content: "\e91c";
+}
+.splash-user:before {
+  content: "\e91d";
+}
+.splash-envelope:before {
+  content: "\e91f";
+}
+.splash-fill-boat:before {
+  content: "\e920";
+}
+.splash-hand-raise:before {
+  content: "\e921";
+}
+.splash-like:before {
+  content: "\e922";
+}
+.splash-send:before {
+  content: "\e923";
+}
+.splash-boat:before {
+  content: "\e924";
+}
+.splash-location-fill:before {
+  content: "\e925";
+}
+.splash-email:before {
+  content: "\e926";
+}
+.splash-phone:before {
+  content: "\e927";
+}
+.splash-bookmark-check:before {
+  content: "\e928";
+}
+.splash-delete:before {
+  content: "\e929";
+}
+.splash-plus:before {
+  content: "\e92a";
+}
+.splash-three-dot:before {
+  content: "\e92b";
+}
+.splash-bell:before {
+  content: "\e92c";
+}
+.splash-arrow-up-left:before {
+  content: "\e92d";
+}
+.splash-arrow-left:before {
+  content: "\e92e";
+}
+.splash-arrow-right:before {
+  content: "\e92f";
+}
+.splash-fill-heart:before {
+  content: "\e930";
+}
+.splash-outline-heart:before {
+  content: "\e931";
+}
+.splash-search:before {
+  content: "\e932";
+}
+.splash-down-arrow:before {
+  content: "\e900";
+}
+.splash-up-arrow:before {
+  content: "\e933";
+}
+.splash-trip:before {
+  content: "\e902";
+}
+.splash-location-pin:before {
+  content: "\e903";
+}
+.splash-edit-icon:before {
+  content: "\e93c";
+}
+.splash-star:before {
+  content: "\e93f";
+}
+.splash-half-rate:before {
+  content: "\e93e";
+}
+.splash-checkmark:before {
+  content: "\e91e";
+}
+.splash-tick:before {
+  content: "\e91e";
+}
+.splash-approve:before {
+  content: "\e91e";
+}
+.splash-submit:before {
+  content: "\e91e";
+}
+.splash-chat:before {
+  content: "\e937";
+}

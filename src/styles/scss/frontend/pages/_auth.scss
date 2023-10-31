@@ -1,0 +1,111 @@
+.authPage{
+    &_outer{
+        max-width: 400px; padding: 50px 0;
+        .form-group {
+            input{
+                background-color: color(50);border-color:color(120);
+            }
+            .fieldicon-input-right{padding-right: 45px;}
+            .fieldicon-right{
+                color:rgba(#25314C, 0.4);font-size: 22px; top: 12px; right: 15px;
+            }
+            .select2.select2-container .select2-selection--single, .select2.select2-container .select2-selection--multiple,
+            .select2-container--open .select2-dropdown--below, .select2-container--open .select2-dropdown--above, 
+            .select2-container--open .select2-dropdown .select2-search__field{
+                background-color: color(50);
+            }
+            .form-check-input[type="checkbox"] ~ .form-check-label:before{
+                background-color: color(50);width: 24px;height: 24px;
+            }
+            .form-check-input[type="checkbox"] ~ .form-check-label{
+                padding-left: 37px;    padding-top: 3px;
+            }
+            .form-check-input[type="checkbox"]:checked ~ .form-check-label:before {
+                border-color: color(500); border-radius: 3px; background: color(500);
+            }
+            .form-check-input[type="checkbox"]:checked ~ .form-check-label:after {
+                left: 4px;  top: 3px;
+            }
+        }
+        .link{
+            color:color(400);
+            &:hover{color:lighten(color(400), 5%);}
+        }
+        .backLink{
+            color:color(800);
+            em{color:color(500); display: inline-block;transform: rotate(90deg);font-size: 8px; vertical-align: 2px;margin-right: 5px;}
+            &:hover{
+                color:color(500);
+            }
+        }
+        .orLogin{
+            span{
+                position: relative;display: block;z-index: 1;margin-bottom: 20px;
+                &:before{
+                    background-color: #D5D5D5;height: 1px;width: 100%;@include absolutecenter(y);
+                    content: "";z-index: -1;left: 0;
+                }
+                &:after{
+                    background-color: #fafafa;width: 35px;height: 35px;@include absolutecenter(both);content: "";z-index: -1;
+                }
+            }
+            .fbBtn{
+                height: 48px;background-color: #3C5A9A; border-radius: 5px; color:color(50);
+                em{margin-right: 12px;font-size: 20px;}
+                &:hover{background-color: lighten(#3C5A9A, 10%);}
+            }
+            .googleBtn{
+                height: 48px;background-color: color(50); border-radius: 5px; color:color(800);border:1px solid #EEEEEE;
+                margin: 15px 0;
+                img{margin-right: 12px;}
+                &:hover{
+                    background-color: darken(color(50), 5%);
+                }
+            }
+        }
+        @include media-breakpoint-down(xxl){
+            padding: 40px 0;
+            .form-group{
+                .fieldicon-right{
+                    font-size: 18px;top:10px;right: 15px;
+                }
+                .form-check-input[type="checkbox"] ~ .form-check-label{
+                    padding-top: 0px;
+                }
+                .form-check-input[type="checkbox"] ~ .form-check-label:before{
+                    width: 20px;height: 20px;
+                }
+                .form-check-input[type="checkbox"]:checked ~ .form-check-label:after {
+                    left: 3px; top: 1px; font-size: 14px;
+                }
+            }
+            .orLogin{
+                span { margin-bottom: 15px;}
+                .fbBtn, .googleBtn {
+                    height: 40px; font-size: 14px;
+                    em{font-size: 18px;}
+                    img {width: 18px;}
+                }
+            }
+        }
+        @include media-breakpoint-down(lg){
+            padding: 30px 0;
+            max-width: 360px;
+            .form-group{
+                .fieldicon-right{
+                    right: 10px;
+                }
+                .fieldicon-input-right{padding-right: 35px;}
+                .form-check-input[type="checkbox"] ~ .form-check-label{
+                    padding-left: 30px;
+                }
+            }
+        }
+        @include media-breakpoint-down(sm){
+            padding: 20px 15px;
+            .backLink{
+                em{font-size: 6px;}
+            }
+        }
+    }
+}

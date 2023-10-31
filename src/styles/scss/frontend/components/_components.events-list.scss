@@ -1,0 +1,169 @@
+.eventsBox {
+    &_left {
+      flex: 0 0 280px;
+      max-width: 280px;
+    }
+    &_right {
+      flex: 0 0 calc(100% - 280px);
+      max-width: calc(100% - 280px);
+    }
+    &_image {
+      height: 188px;
+      border-radius: 5px;
+      img {
+        object-fit: cover;
+      }
+    }
+    &_top {
+      .date {
+        font-size: 18px;
+        color: rgba(37, 49, 76, 0.7);
+      }
+    }
+    &_middle {
+      margin-top: 10px;
+      margin-bottom: 34px;
+      h6 {
+        font-size: 1.5rem;
+        word-break: break-word;
+      }
+      p {
+        color: rgba($color: color(800), $alpha: 0.7);
+        word-break: break-word;
+      }
+    }
+    &_bottom {
+      .price {
+        font-size: 1.75rem;
+        sup {
+          font-size: 16px;
+          right: -4px;
+          font-family: font(md);
+        }
+        span {
+          font-size: 16px;
+          line-height: 32px;
+          color: color(150);
+          margin-left: 6px;
+        }
+      }
+    }
+    @include media-breakpoint-down(xl){
+        &_left {
+            flex: 0 0 240px;
+            max-width: 240px;
+        }
+        &_right {
+            flex: 0 0 calc(100% - 240px);
+            max-width: calc(100% - 240px);
+        }
+        &_top {
+            .date {
+            font-size: 16px;
+            }
+        }
+        &_middle {
+            margin-bottom: 25px;
+            h6 {
+            font-size: 1.25rem;
+            margin-bottom: 5px;
+            }
+            p {
+            font-size: 14px;
+            }
+        }
+        &_bottom {
+            .price {
+            font-size: 1.25rem;
+            sup {
+                font-size: 15px;
+            }
+            span {
+                font-size: 14px;
+            }
+            }
+        }
+        &_image {
+            height: 170px;
+        }
+       
+    }
+
+    @include media-breakpoint-down(lg){
+        &_left {
+            flex: 0 0 200px;
+            max-width: 200px;
+        }
+        &_right {
+            flex: 0 0 calc(100% - 200px);
+            max-width: calc(100% - 200px);
+        }
+        &_top {
+            .date {
+            font-size: 15px;
+            }
+        }
+        &_middle {
+            margin-bottom: 20px;
+            h6 {
+            font-size: 18px;
+            }
+        }
+        &_bottom {
+            .price {
+            font-size: 18px;
+            sup {
+                right: -2px;
+            }
+            span {
+                font-size: 13px;
+            }
+            }
+        }
+        &_image {
+            height: 140px;
+        }
+        
+    }
+    @include media-breakpoint-down(sm){
+        &_left,
+        &_right {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        &_left {
+            margin-bottom: 10px;
+        }
+        &_top {
+            position: relative;
+            .date {
+            font-size: 14px;
+            }
+        }
+        &_middle {
+            margin-bottom: 15px;
+            h6 {
+            font-size: 16px;
+            }
+        }
+        &_bottom {
+            .price {
+            font-size: 16px;
+            sup {
+                right: -2px;
+            }
+            span {
+                font-size: 13px;
+            }
+            }
+        }
+        &_image {
+            height: 140px;
+            margin: auto;
+        }
+        .action {
+            padding-left: 0 !important;
+          }
+          
+    }
+}

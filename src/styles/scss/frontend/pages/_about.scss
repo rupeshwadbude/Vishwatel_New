@@ -1,0 +1,337 @@
+.aboutPage{
+    &_banner{
+        background-image:url("#{$imageurl}/about-color-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: auto;
+        background-position: center bottom 50px, bottom;
+        .pageTitle{    
+            padding-bottom: 330px;
+            padding-top: 130px;
+            background: none;
+            p{color: color(800);font-size: 1.5rem;}
+        }
+        .imagesWrap{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            max-width: 1620px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 0;
+            &:before{
+                content: '';
+                background-image:url("#{$imageurl}/about-circle.svg");
+                background-repeat: no-repeat;
+                background-size: 100%, auto;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                right: 0;
+            }
+            .animateImg{
+                position: absolute;
+                &-1{
+                    top: 70px;
+                    left: 30px;
+                }
+                &-2{
+                    bottom: 170px;
+                    left: 150px;
+                }
+                &-3{
+                    bottom: 165px;
+                    left: 530px;                
+                }
+                &-4{
+                    bottom: 165px;
+                    right: 530px;
+                }
+                &-5{
+                    bottom: 150px;
+                    right: 150px;
+                }
+                &-6{
+                    top: 70px;
+                    right:30px;
+                }
+            }
+            span{
+                background: color(500);
+                width: 30px;
+                height: 30px;
+                bottom: 170px;
+                left: 0;
+                border-radius: 50%;
+                right: 0;
+                margin: 0 auto;
+                border: 6px solid color(50);
+            }
+        }
+        .rotate { 
+            animation: rotate 5s infinite;
+        }
+        .pulse {
+            animation: pulse-animation 2s infinite;
+          }
+          @keyframes pulse-animation {
+            0% {
+              box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+            }
+            100% {
+              box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+            }
+          }
+          
+        .zoom{ 
+            animation: zoom 3s infinite;}
+            @keyframes zoom {0% { transform: scale(1);}50% { transform: scale(1.2);}100% { transform: scale(1);}}
+        .zoomOut{ 
+            animation: zoomOut 3s infinite;}
+            @keyframes zoomOut {0% { transform: scale(1);}50% { transform: scale(0.9);}100% { transform: scale(1);}}
+        .animatewave{ 
+            animation: animatewave 5s infinite linear;
+        }
+        @keyframes animatewave {
+            0%, 100% { 
+                -webkit-transform: rotate(0);
+                transform: rotate(0);
+            }
+            25%, 75% { 
+                -webkit-transform: rotate(4deg); 
+                transform: rotate(4deg);
+            }
+            50% { 
+                -webkit-transform: rotate(10deg); 
+                transform: rotate(10deg);
+            }
+        }
+    }
+    &_feature{
+        .heading{
+            font-size: 2.8125rem;
+            line-height: 60px;
+            margin-bottom: 30px;
+        }
+        &_inner{
+            padding: 20px 50px;
+            @include transition(0.5s);
+            border-radius: 5px;
+            border: 1px dashed transparent;
+            h3{font-size: 1.5rem;margin: 25px 0 20px;}
+            p{font-size: 18px;color: color(150);}
+            .icon{
+                background-color: color(600);
+                width: 90px;
+                height: 90px;
+                border: 8px solid color(50);
+                border-radius: 50px;
+                color: color(50);
+                @include box-shadow(0,3px, 20px, rgba($color: color(900), $alpha: 0.08));
+                margin: 0 auto;
+                em{font-size: 35px;}
+            }
+            &:hover{
+                transform: translateY(-6px);  
+                @include box-shadow(0,3px, 20px, rgba($color: color(900), $alpha: 0.08));
+                background-color: color(600);
+                h3, p{color: color(50);}
+                .icon{background-color: color(50);color: color(600);}
+            }
+        }
+    }
+    &_detail{
+        .subTitle{color: color(500);font-size: 1.25rem;}
+        .title{font-size: 2.25rem;margin: 20px 0 25px;}
+        p{font-size: 18px;color: color(150);margin-bottom: 25px;}
+        ul{
+            li{font-size: 16px;color: color(150);margin-bottom: 20px;position: relative;padding-left: 32px;line-height: 24px;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    background-color: color(500);
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    left: 0;
+                    top: 6px
+                }
+            }
+        }
+    }
+    @media (max-width: 1699px) {
+        &_detail{
+            .title{margin: 15px 0 20px;font-size: 30px;}
+            p{margin-bottom: 20px;}
+            ul{
+                li{padding-left: 25px;margin-bottom: 15px;}
+            }
+        }
+        &_feature{
+            .heading{line-height: 40px;margin-bottom: 20px;font-size: 40px;}
+            &_inner{
+                padding: 15px 40px;
+                .icon{width: 80px;height: 80px;
+                em{font-size: 30px;}}
+                h3{margin: 20px 0 15px;}
+            }
+        }
+        &_banner{
+            .pageTitle{
+                padding-bottom: 268px;
+            }
+            .imagesWrap {
+                max-width: 1440px;
+                padding: 0 20px;
+                span{bottom: 145px;}
+                .animateImg{
+                    &-3, &-4{bottom: 130px;}
+                    &-2, &-5{
+                     max-width: 250px;
+                    }
+                    &-5{                        
+                        bottom: 170px;
+                        right: 90px;    
+                    }
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(xxl){
+        &_detail{
+            .title{margin: 10px 0 15px;}
+            p{margin-bottom: 15px;font-size: 16px;}
+            .subTitle{font-size: 18px;}
+            ul{
+                li{
+                    padding-left: 20px;margin-bottom: 10px;
+                }
+            }
+        }
+        &_feature{
+            &_inner{
+                padding: 10px 20px;
+                .icon{width: 70px;height: 70px;
+                em{font-size: 25px;}}
+                h3{margin: 15px 0 10px;}
+            }
+        }
+        &_banner{
+            background-image:url("#{$imageurl}/about-page.png"), url("#{$imageurl}/about-color-bg.png");
+            .imagesWrap{display: none;}
+            .pageTitle{    
+                padding-top: 50px;
+                p{font-size: 20px;}
+            }
+        }
+    }
+    @media (max-width: 1499px){
+        &_banner{
+            .imagesWrap {
+                span{bottom: 170px;}
+                .animateImg{
+                    &-3, &-4{bottom: 165px;}
+                }
+            }
+        }
+    }
+    @media (max-width: 1399px){
+        &_banner{
+            background-image:url("#{$imageurl}/about-page.png"), url("#{$imageurl}/about-color-bg.png");
+            .pageTitle{    
+                padding-bottom: 200px;
+                padding-top: 100px;
+                p{font-size: 18px;}
+            }
+            .imagesWrap{display: none;}
+        }
+    }
+    @include media-breakpoint-down(xl){
+        &_feature{
+            .heading{font-size: 35px;line-height: normal;}
+            &_inner{
+                padding: 0;     pointer-events: none;
+                h3{font-size: 20px;margin: 10px 0 5px;}
+                p{font-size: 16px;}
+                .icon{border-width: 4px; width: 60px;height: 60px; em{font-size: 20px;}}
+            }
+        }
+        &_detail{
+            .title{font-size: 25px;
+                margin: 5px 0 10px;
+            }
+            .subTitle{font-size: 16px;}
+            p{font-size: 14px;margin-bottom: 10px;}
+            ul{
+                li{font-size: 14px;padding-left: 15px;
+                    &:before{width: 6px;height: 6px;top: 8px;}}
+            }
+        }
+        &_banner{
+            .pageTitle{    
+                padding-bottom: 180px;
+                padding-top: 70px;
+            }
+        }
+    }
+    @include media-breakpoint-down(lg){
+        &_banner{
+            .pageTitle{  
+                padding: 30px 20px 160px; 
+                p{font-size: 16px;}
+            }
+        }
+        &_feature{
+            .heading{font-size: 30px;}
+            &_inner{
+                .icon{width: 60px;height: 60px;border-width: 4px;
+                em{font-size: 20px;}}
+            }
+        }
+        &_detail{
+            .title{font-size: 20px;}
+            .subTitle{font-size: 14px;}
+        }
+    }
+    @include media-breakpoint-down(md){
+        &_banner{
+            background-image:url("#{$imageurl}/about-color-bg.png");
+            .pageTitle{  
+                padding: 30px 20px 120px; margin-bottom: -30px;
+            }
+        }
+        &_feature{
+            .heading{font-size: 25px;}
+        }
+        &_detail{
+            img{max-width: 50%;}
+            .title{font-size: 18px;}
+        }
+    }
+    @include media-breakpoint-down(sm){
+        &_banner{
+            .pageTitle{    
+                padding: 20px 15px 100px; 
+                p{font-size: 14px;}
+            }
+        }
+        &_feature{
+            .heading{font-size: 20px;margin-bottom: 5px;}
+            &_inner{
+                margin-top: 10px;
+                h3{font-size: 18px;}
+                p{font-size: 14px;}
+                .icon{width: 50px;height: 50px;
+                em{font-size: 18px;}}
+            }
+        }
+        &_detail{
+            img{max-width: 100%;}
+            .title{font-size: 16px;}
+            p{margin-bottom: 5px;}
+        }
+    }
+}

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20.898" height="21.384" viewBox="0 0 20.898 21.384">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_183756" data-name="Path 183756" d="M-348.145,294.048h-9.963v4.131h5.735c-.535,2.624-2.77,4.131-5.735,4.131a6.305,6.305,0,0,1-6.318-6.318,6.305,6.305,0,0,1,6.318-6.318,6.181,6.181,0,0,1,3.937,1.409l3.11-3.11a10.643,10.643,0,0,0-7.047-2.673A10.661,10.661,0,0,0-368.8,295.992a10.661,10.661,0,0,0,10.692,10.692c5.346,0,10.206-3.888,10.206-10.692A8.871,8.871,0,0,0-348.145,294.048Z" transform="translate(368.8 -285.3)"/>
+    </clipPath>
+  </defs>
+  <g id="google-g-2015" transform="translate(374.66 -279.852)">
+    <g id="Group_191658" data-name="Group 191658" transform="translate(-374.66 279.852)">
+      <g id="Group_191652" data-name="Group 191652" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <path id="Path_183755" data-name="Path 183755" d="M-370.8,306.936V294.3l8.262,6.318Z" transform="translate(369.828 -289.926)" fill="#fbbc05"/>
+      </g>
+      <g id="Group_191653" data-name="Group 191653" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <path id="Path_183757" data-name="Path 183757" d="M-370.8,288.646l8.262,6.318,3.4-2.965,11.664-1.9v-6.8H-370.8Z" transform="translate(369.828 -284.272)" fill="#ea4335"/>
+      </g>
+      <g id="Group_191655" data-name="Group 191655" transform="translate(0 0)">
+        <g id="Group_191654" data-name="Group 191654" clip-path="url(#clip-path)">
+          <path id="Path_183759" data-name="Path 183759" d="M-370.8,301.282l14.58-11.178,3.839.486,4.909-7.29v23.328H-370.8Z" transform="translate(369.828 -284.272)" fill="#34a853"/>
+        </g>
+      </g>
+      <g id="Group_191657" data-name="Group 191657" transform="translate(0 0)">
+        <g id="Group_191656" data-name="Group 191656" clip-path="url(#clip-path)">
+          <path id="Path_183761" data-name="Path 183761" d="M-340.79,312.282l-15.066-11.664-1.944-1.458,17.01-4.86Z" transform="translate(363.146 -289.926)" fill="#4285f4"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

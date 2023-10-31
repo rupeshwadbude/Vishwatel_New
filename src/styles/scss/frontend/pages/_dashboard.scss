@@ -1,0 +1,678 @@
+.dashboardPage {
+  margin-top: 30px;
+  &_title {
+    margin-bottom: 30px;
+    h1 {
+      font-size: 1.875rem;
+      color: color(150);
+      flex: 1;
+    }
+    span {
+      color: color(900);
+    }
+    .btn {
+      width: 35px;
+      height: 35px;
+      font-size: 13px;
+    }
+  }
+  .customColumn {
+    .column-1 {
+      flex: 0 0 351px;
+      max-width: 351px;
+    }
+    .column-2 {
+      flex: 0 0 calc(100% - 351px);
+      max-width: calc(100% - 351px);
+    }
+  }
+
+  .ProfileBox {
+    &_cnt {
+      margin-left: 45px;
+      h2 {
+        font-size: 16px;
+        color: color(400);
+      }
+      span {
+        font-size: 1.5rem;
+        color: color(900);
+        margin-bottom: 5px;
+      }
+      p {
+        color: #818181;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .boxTitle {
+    margin-bottom: 15px;
+    h4 {
+      font-size: 1.5rem;
+      span {
+        color: color(150);
+      }
+    }
+    a {
+      color: color(500);
+      &:hover {
+        color: darken(color(500), 15%);
+      }
+    }
+  }
+
+  .messageBox {
+    &_list {
+      &:not(:last-child) {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid rgba($color: color(150), $alpha: 0.2);
+      }
+    }
+    &_detail {
+      max-width: 70%;
+      flex: 0 0 70%;
+      .leftSide {
+        span {
+          font-size: 18px;
+        }
+        p {
+          font-size: 18px;
+          color: color(150);
+        }
+      }
+    }
+    &_user {
+      max-width: 30%;
+      flex: 0 0 30%;
+      .image {
+        height: 64px;
+        width: 64px;
+        margin-right: 15px;
+        flex: 0 0 64px;
+        img {
+          object-fit: cover;
+        }
+      }
+    }
+    .info {
+      &_name {
+        font-size: 18px;
+        white-space: nowrap;
+        max-width: 175px;
+      }
+      span {
+        color: color(150);
+      }
+    }
+    .leftSide {
+      width: 422px;
+    }
+  }
+  // progess bar
+  .progress {
+    width: 160px;
+    height: 160px !important;
+    line-height: 160px;
+    background: none;
+    margin: 0;
+    box-shadow: none;
+    position: relative;
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 15px solid rgba(37, 170, 225, 0.1);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    > span {
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+    }
+    &-left {
+      left: 0;
+    }
+    &-right {
+      right: 0;
+    }
+    .progress-bar {
+      width: 100%;
+      height: 100%;
+      background: none;
+      border-width: 15px;
+      border-style: solid;
+      position: absolute;
+      top: 0;
+    }
+    .progress-left {
+      .progress-bar {
+        left: 100%;
+        border-top-right-radius: 80px;
+        border-bottom-right-radius: 80px;
+        border-left: 0;
+        @include transform-origin(center left);
+      }
+    }
+    .progress-right {
+      .progress-bar {
+        left: -100%;
+        border-top-left-radius: 80px;
+        border-bottom-left-radius: 80px;
+        border-right: 0;
+        @include transform-origin(center right);
+        @include animation(loading-1 1.8s linear forwards);
+      }
+    }
+    .progress-value {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: color(50);
+      font-size: 39px;
+      color: color(900);
+      line-height: 135px;
+      text-align: center;
+      position: absolute;
+      top: 8%;
+      left: 5%;
+    }
+    &.blue {
+      .progress-bar {
+        border-color: color(400);
+      }
+      .progress-left {
+        .progress-bar {
+          @include animation(loading-2 1.5s linear forwards 1.8s);
+        }
+      }
+    }
+    &.yellow {
+      .progress-right {
+        .progress-bar {
+          @include animation(loading-3 1.8s linear forwards);
+        }
+      }
+      .progress-left {
+        .progress-bar {
+          animation: none;
+        }
+      }
+    }
+  }
+
+  @keyframes loading-1 {
+    0% {
+      @include transform(rotate(0deg));
+    }
+    100% {
+      @include transform(rotate(180deg));
+    }
+  }
+  @keyframes loading-2 {
+    0% {
+      @include transform(rotate(0deg));
+    }
+    100% {
+      @include transform(rotate(144deg));
+    }
+  }
+  @keyframes loading-3 {
+    0% {
+      @include transform(rotate(0deg));
+    }
+    100% {
+      @include transform(rotate(135deg));
+    }
+  }
+
+  //
+  .detailView {
+    &_image {
+      height: 450px;
+      margin-bottom: 20px;
+      img {
+        object-fit: cover;
+      }
+    }
+    &_body {
+      &_top {
+        h2 {
+          font-size: 1.5rem;
+          margin-bottom: 5px;
+        }
+        .code {
+          margin-top: 15px;
+          p {
+            font-size: 14px;
+          }
+          a {
+            color: color(500);
+            &:hover {
+              color: darken(color(500), 15%);
+            }
+          }
+        }
+      }
+      &_bottom {
+        margin-top: 20px;
+        .profileImage {
+          width: 80px;
+          height: 80px;
+          img {
+            object-fit: cover;
+          }
+        }
+        .onwerInfo {
+          margin-bottom: 20px;
+          &_right {
+            flex: 1;
+            .badge {
+              font-size: 13px;
+              padding: 5px 12px;
+            }
+            a {
+              color: color(500);
+              &:hover {
+                color: darken(color(500), 15%);
+              }
+            }
+          }
+        }
+      }
+    }
+    .ratingStar {
+      em {
+        font-size: 13px;
+        color: rgba(93, 93, 93, 0.5);
+        &:not(:last-child) {
+          margin-right: 3px;
+        }
+        &.active {
+          color: color(500);
+        }
+      }
+    }
+
+    &_review {
+      .value {
+        font-size: 14px;
+        color: color(800);
+      }
+    }
+    .infoBox {
+      &_row {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+          border-bottom: 1px solid color(130);
+          padding-bottom: 20px;
+        }
+        label {
+          font-size: 18px;
+          font-family: font(sm);
+        }
+      }
+      &_name {
+        p {
+          font-size: 16px;
+        }
+        a {
+          color: color(500);
+          &:hover {
+            color: darken(color(500), 15%);
+          }
+        }
+      }
+    }
+
+    .experienceForm {
+      h3 {
+        font-size: 1.25rem;
+      }
+      label {
+        font-size: 18px;
+        color: color(150);
+      }
+    }
+    .ratingStatus {
+      @include media-breakpoint-up(md) {
+        .ratingStar {
+          em {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  // media query
+  @include media-breakpoint-down(xxl) {
+    margin-top: 15px;
+    .customColumn {
+      .column-1 {
+        flex: 0 0 280px;
+        max-width: 280px;
+      }
+      .column-2 {
+        flex: 0 0 calc(100% - 280px);
+        max-width: calc(100% - 280px);
+      }
+    }
+    &_title {
+      margin-bottom: 15px;
+      h1 {
+        font-size: 1.25rem;
+      }
+    }
+
+    .ProfileBox {
+      &_cnt {
+        margin-left: 20px;
+        h2 {
+          margin-bottom: 5px;
+        }
+        span {
+          font-size: 1.25rem;
+        }
+        p {
+          font-size: 15px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+    .boxTitle {
+      margin-bottom: 10px;
+      h4 {
+        font-size: 18px;
+      }
+      a {
+        font-size: 15px;
+      }
+    }
+
+    .messageBox {
+      &_user {
+        .image {
+          height: 55px;
+          width: 55px;
+          flex: 0 0 55px;
+          margin-right: 12px;
+        }
+      }
+      .info {
+        &_name {
+          font-size: 16px;
+        }
+        span {
+          font-size: 15px;
+        }
+      }
+      &_detail {
+        .leftSide {
+          width: 360px;
+          p {
+            font-size: 16px;
+          }
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+      &_list {
+        &:not(:last-child) {
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .progress {
+      width: 140px;
+      height: 140px !important;
+      line-height: 140px;
+      .progress {
+        &-value {
+          font-size: 30px;
+          top: 2px;
+        }
+      }
+    }
+    .detailView {
+      &_image {
+        height: 380px;
+        margin-bottom: 15px;
+      }
+      &_body {
+        &_top {
+          h2 {
+            font-size: 1.25rem;
+          }
+        }
+        &_bottom {
+          margin-top: 15px;
+          .profileImage {
+            width: 60px;
+            height: 60px;
+          }
+          .onwerInfo {
+            margin-bottom: 15px;
+          }
+        }
+      }
+      .experienceForm {
+        h3 {
+          font-size: 18px;
+        }
+        label {
+          font-size: 16px;
+        }
+      }
+      .infoBox {
+        &_row {
+          label {
+            font-size: 16px;
+          }
+          &:not(:last-child) {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+          }
+        }
+        &_name {
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &_title {
+      h1 {
+        font-size: 18px;
+      }
+    }
+    .ProfileBox {
+      &_cnt {
+        h2 {
+          font-size: 15px;
+        }
+        span {
+          font-size: 18px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+    .boxTitle {
+      h4 {
+        font-size: 16px;
+      }
+      a {
+        font-size: 14px;
+      }
+    }
+    .customColumn {
+      .column-1 {
+        flex: 0;
+        max-width: 0;
+      }
+      .column-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+    .overlay {
+      background-color: rgba($color: color(900), $alpha: 0.6);
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1001;
+      cursor: pointer;
+    }
+    .detailView {
+      &_image {
+        height: 340px;
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &_title {
+      .btn {
+        height: 34px;
+        font-size: 12px;
+        padding: 5px 8px;
+      }
+    }
+    .progress {
+      width: 120px;
+      height: 120px !important;
+      line-height: 120px;
+      margin: auto;
+      &:after {
+        border-width: 12px;
+      }
+      .progress {
+        &-value {
+          font-size: 24px;
+          top: -8px;
+          left: 3px;
+        }
+        &-bar {
+          border-width: 12px;
+        }
+      }
+    }
+    .messageBox {
+      .leftSide {
+        width: 100%;
+      }
+      &_list {
+        &:not(:last-child) {
+          padding-bottom: 15px;
+          margin-bottom: 15px;
+        }
+      }
+      &_user {
+        margin-bottom: 10px;
+        .image {
+          height: 45px;
+          width: 45px;
+          flex: 0 0 45px;
+        }
+      }
+      &_user,
+      &_detail {
+        max-width: 100%;
+        flex: 0 0 100%;
+      }
+    }
+    .detailView {
+      &_image {
+        height: 280px;
+      }
+      .experienceForm {
+        h3 {
+          font-size: 16px;
+        }
+        label {
+          font-size: 14px;
+        }
+      }
+      &_body {
+        &_top {
+          h2 {
+            font-size: 18px;
+          }
+          .code {
+            margin-top: 10px;
+            p {
+              margin-bottom: 10px;
+            }
+          }
+        }
+        &_bottom {
+          .onwerInfo {
+            &_right {
+              .badge {
+                font-size: 11px;
+                padding: 4px 10px;
+              }
+            }
+          }
+        }
+      }
+      &_image {
+        margin-bottom: 10px;
+      }
+      .infoBox {
+        &_row {
+          &:not(:last-child) {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+          }
+          label {
+            font-size: 15px;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .ProfileBox {
+      &_cnt {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+    .messageBox {
+      .leftSide {
+        margin-bottom: 10px;
+      }
+    }
+    .upcoming {
+      .action {
+        padding-left: 60px;
+      }
+    }
+    .detailView {
+      &_image {
+        height: 140px;
+      }
+    }
+  }
+}

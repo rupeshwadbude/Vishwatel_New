@@ -1,0 +1,70 @@
+$bg-unchecked: color(150);
+$bg-checked: color(50);
+$bg-checked-witch: color(400);
+.customcheck{
+    &_switch{
+        position: relative;
+        display: inline-block;
+        width: 45px;
+        height: 30px;
+        input{
+            opacity: 0;
+            width: 0;
+            height: 0;
+            &:checked{
+                +.customcheck_switch_slider{
+                    background-color: $bg-checked-witch;
+                    border: 2px solid $bg-checked-witch;
+                    &:before {
+                        background-color: $bg-checked;
+                    }
+                }
+            }
+            &:checked{
+                +.customcheck_switch_slider{
+                    &:before{
+                        @include transform(translateX(13px));
+                    }
+                }
+            }
+        }
+        &_slider{
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $bg-unchecked;
+            border: 2px solid $bg-unchecked;
+            transition: .4s;
+            &:before{
+                position: absolute;
+                content: "";
+                height: 20px;
+                width: 20px;
+                left: 5px;
+                bottom: 3px;
+                background-color: $bg-checked;
+                transition: .4s;
+                @include transition(.4s);
+            }
+            &.round{
+                border-radius: 20px;
+                &:before{
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(lg){
+        &_switch{
+            height: 26px;width: 40px;
+            &_slider{
+                &::before{
+                    height: 18px;width: 18px;bottom: 2px;left: 3px;
+                }
+            }
+        }
+    }
+}

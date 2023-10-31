@@ -1,0 +1,266 @@
+.manageBoatSec {
+  &_box {
+    &_image {
+      flex: 0 0 250px;
+      max-width: 250px;
+      height: 188px;
+      img {
+        object-fit: cover;
+      }
+    }
+    &_info {
+      flex: 0 0 calc(100% - 250px);
+      max-width: calc(100% - 250px);
+    }
+    &_cnt {
+      flex:1;
+      h6 {
+        font-size: 1.5rem;
+      }
+      p {
+        color: rgba($color: color(800), $alpha: 0.7);
+        font-size: 14px;
+      }
+      .progress {
+        --bs-progress-bar-bg: #25aae1;
+        --bs-progress-height: 8px;
+        --bs-progress-border-radius: 10px;
+        --bs-progress-bg: rgba(37, 170, 225, 0.1);
+        &-low {
+          --bs-progress-bar-bg: #e33535;
+          --bs-progress-bg: rgba(227, 53, 53, 0.1);
+        }
+        width: 413px;
+        margin-bottom: 5px;
+        &-bar {
+          border-radius: 10px;
+        }
+      }
+    }
+    &_top {
+      min-height: 140px;
+      .actionBtn{
+         li{
+            line-height: 20px;
+            &:not(:last-child){margin-right: 5px;}
+            a{
+               font-size: 20px;height: 26px; color:color(500);
+               &:hover{color:darken(color(500), 10%);}
+            }
+         }
+      }
+    }
+    &_bottom {
+      .btnRow {
+        .btn {
+          margin-right: 20px;
+        }
+      }
+    }
+    .select2.select2-container .select2-selection--single,
+    .select2.select2-container .select2-selection--multiple {
+      background: transparent;
+      border-color: color(500);
+    }
+
+    .select2.select2-container .select2-selection__rendered {
+      color: color(500);
+      font-family: font(md);
+      text-transform: uppercase;
+      padding-right: 20px !important;
+    }
+  }
+  .date {
+    font-size: 18px;
+    color: color(150);
+    margin-bottom: 10px;
+  }
+  .dropdown {
+    &-toggle {
+      width: 38px;
+      height: 38px;
+      background-color: color(80);
+      border-color: color(80);
+      color: #25314c;
+      padding: 0;
+      &::after {
+        display: none;
+      }
+      &:hover {
+        background-color: color(500);
+        color: color(50);
+      }
+    }
+    &-menu {
+      min-width: 120px;
+    }
+  }
+  .price {
+    font-size: 1.75rem;
+    sup {
+      font-size: 16px;
+      right: 0;
+      font-family: font(md);
+    }
+    span {
+      font-size: 16px;
+      line-height: 32px;
+      color: color(150);
+      margin-left: 6px;
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    .date {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    .price {
+      font-size: 1.5rem;
+      span {
+        font-size: 15px;
+        line-height: 26px;
+      }
+      sup {
+        font-size: 15px;
+      }
+    }
+    &_box {
+      &_image {
+        flex: 0 0 220px;
+        max-width: 220px;
+        height: 170px;
+        img {
+          object-fit: cover;
+        }
+      }
+      &_info {
+        flex: 0 0 calc(100% - 220px);
+        max-width: calc(100% - 220px);
+      }
+      &_top {
+        min-height: 130px;
+      }
+      &_cnt {
+        h6 {
+          font-size: 1.25rem;
+        }
+        .progress {
+          width: 380px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    &_box {
+      &_bottom {
+        .btnRow {
+          .btn {
+            margin-right: 10px;
+          }
+        }
+      }
+      &_cnt {
+        h6 {
+          font-size: 18px;
+        }
+        .progress{width:265px;}
+      }
+      &_image {
+        flex: 0 0 180px;
+        max-width: 180px;
+        height: 140px;
+      }
+      &_top {
+        min-height: auto;
+        margin-bottom: 10px;
+        .deleteBtn{font-size: 18px;}
+      }
+      &_info {
+        flex: 0 0 calc(100% - 180px);
+        max-width: calc(100% - 180px);
+      }
+    }
+    .dropdown {
+      &-toggle {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+      }
+    }
+
+    .price {
+      font-size: 18px;
+      span {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    .select2.select2-container .select2-selection--single,
+    .select2.select2-container .select2-selection--multiple {
+      height: 40px;
+    }
+    &_box {
+      &_top{
+         .actionBtn{
+            li{
+               &:not(:last-child){margin-right: 2px;}
+               a{font-size: 18px;}
+            }
+         }
+      }
+   }
+  }
+  @include media-breakpoint-down(sm) {
+    &_box {
+      &_bottom {
+         .btnRow {
+           .btn {
+             margin-right: 5px;
+           }
+         }
+       }
+      &_info{
+        position: relative;
+      }
+      &_item {
+        .col {
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
+      }
+      &_cnt {
+        margin-top: 10px;
+        .progress {
+          width: 100%;
+        }
+        h6 {
+          font-size: 16px;
+        }
+        p {
+          font-size: 13px;
+        }
+      }
+      &_top {
+        .actionBtn {
+          position: absolute;
+          bottom: 8px;
+          right: 0;
+          li{
+            &:not(:last-child){margin-right: 0;}
+          }
+        }
+      }
+    }
+    .date {
+      font-size: 14px;
+    }
+    .price {
+      font-size: 16px;margin-bottom: 8px;
+      span {
+        font-size: 13px;
+      }
+    }
+  }
+}

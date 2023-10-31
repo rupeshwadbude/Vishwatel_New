@@ -1,0 +1,56 @@
+// color variables
+$colors: (
+  50: #ffffff,
+  80: #ececec,
+  90: #e6e6e6,
+  100: #f5f5f5,
+  120: #eeeeee,
+  130: #ebebeb,
+  150: #5d5d5d,
+  200: #575757,
+  400: #25aae1,
+  500: #fcb040,
+  600: #2e3192,
+  800: #101010,
+  900: #000000,
+);
+
+@function color($color) {
+  @if map-has-key($colors, $color) {
+    @return map-get($colors, $color);
+  }
+  @error "Unknown `#{$color}` in $colors.";
+  @return null;
+}
+
+//fonts
+$fonts: (
+  rg: "SF-Pro-Display-Regular",
+  lt: "SFProDisplay-Light",
+  md: "SF-Pro-Display-Medium",
+  sm: "SF-Pro-Display-Semibold",
+  bd: "SF-Pro-Display-Bold",
+  mm: "MackayMedium",
+);
+
+@function font($font) {
+  @if map-has-key($fonts, $font) {
+    @return map-get($fonts, $font);
+  }
+  @error "Unknown `#{$font}` in $fonts.";
+  @return null;
+}
+
+$imageurl: "../../../images/frontend";
+$fonturl: "../../../fonts/frontend/";
+
+// fields height variable
+$field-height: 48px; // field height
+$field-height-xl: 40px; // field height responsive xl
+$field-height-lg: 38px; // field height responsive lg
+$field-height-md: 30px; // field height responsive md
+
+// fields padding variable
+$field-padding: 10px 20px; //field padding
+$field-padding-xl: 10px; //field height responsive xl
+$field-padding-lg: 6px 10px; //field height responsive lg

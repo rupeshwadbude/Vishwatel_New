@@ -1,0 +1,9 @@
+//  Poppins fonts
+@include font-face(font(rg), "#{$fonturl}/SFProDisplay-Regular", "normal", "normal");
+@include font-face(font(lt), "#{$fonturl}/SFUIDisplay-Light", "normal", "normal");
+@include font-face(font(md), "#{$fonturl}/SFProDisplay-Medium", "normal", "normal");
+@include font-face(font(sm), "#{$fonturl}/SFUIDisplay-Semibold", "normal", "normal");
+@include font-face(font(bd), "#{$fonturl}/SFProDisplay-Bold", "normal", "normal");
+@include font-face(font(mm), "#{$fonturl}/MackayMedium", "normal", "normal");
+
+

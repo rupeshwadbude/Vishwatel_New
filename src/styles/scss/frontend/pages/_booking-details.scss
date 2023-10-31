@@ -1,0 +1,390 @@
+.bookingDetails {
+  &.cancelReservation {
+    .required {
+      &:after {
+        content: " *";
+        color: #ff0000;
+      }
+    }
+    .bookingDetails {
+      &_head {
+        h3 {
+          font-size: 1.25rem;
+        }
+      }
+    }
+    .ridingInfo {
+      margin-top: 20px;
+      &_item {
+        p {
+          color: color(800);
+        }
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+    .cencelForm {
+      label {
+        font-size: 18px;
+        color: color(150);
+      }
+    }
+    .paymentCard1 {
+      &_owner {
+        p {
+          font-size: 14px;
+        }
+        .price {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .earningsDetail {
+      &_cnt {
+        a {
+          color: color(800);
+          span {
+            color: color(500);
+            font-family: font(bd);
+          }
+        }
+      }
+      &_info {
+        margin-bottom: 10px;
+        &_left {
+          h6 {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  .custom-row {
+    margin: 0 -5px;
+    > * {
+      padding: 0 5px;
+    }
+  }
+  &_box {
+    padding: 40px;
+    background-color: color(50);
+    margin-bottom: 30px;
+    border-radius: 5px;
+    &:first-child {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &:nth-child(2) {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+    textarea.form-control {
+      min-height: 150px;
+    }
+    .payNowBtn {
+      margin-top: 32px;
+    }
+  }
+  &_head {
+    margin-bottom: 20px;
+    h2 {
+      font-size: 1.5rem;
+      font-family: font(bd);
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      color: rgba(color(800), 0.7);
+      // font-family: font(rg);
+    }
+  }
+  @media (max-width: 1399px) {
+    &.cancelReservation {
+      .bookingDetails {
+        &_head {
+          h3 {
+            font-size: 18px;
+          }
+        }
+      }
+      .earningsDetail {
+        &_info {
+          &_left {
+            h6 {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      .paymentCard1 {
+        &_owner {
+          .price {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    &_box {
+      padding: 20px;margin-bottom: 20px;
+    }
+    &_head {
+      margin-bottom: 20px;
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    &.cancelReservation {
+      .bookingDetails {
+        &_head {
+          h3 {
+            font-size: 16px;
+          }
+        }
+      }
+      .ridingInfo {
+        margin-top: 15px;
+      }
+      .cencelForm {
+        label {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &_head {
+      margin-bottom: 12px;
+      h2 {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &.cancelReservation {
+      .earningsDetail {
+        &_info {
+          &_left {
+            h6 {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .paymentCard1 {
+        &_owner {
+          .price {
+            font-size: 14px;
+          }
+        }
+      }
+      .ridingInfo {
+        margin-top: 10px;
+      }
+      .cencelForm {
+        label {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &_box {
+      padding: 15px;
+      margin-bottom: 16px;
+    }
+    .payNowBtn {
+      margin-top: 25px;
+      max-width: 400px;
+    }
+  }
+
+  .paymentCard1 {
+    background-color: color(50);
+    padding: 20px;
+    border-radius: 5px;
+    @include box-shadow(0, 5px, 30px, rgba($color: color(900), $alpha: 0.05));
+    &_img {
+      border-radius: 5px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .profileImg {
+      width: 75px;
+      height: 75px;
+      position: absolute;
+      border-radius: 50px;
+      border: 3px solid color(50);
+      overflow: hidden;
+      bottom: -20px;
+      right: 20px;
+      object-fit: cover;
+    }
+    ul {
+      li {
+        padding: 15px 0;
+        p {
+          color: color(150);
+        }
+      }
+    }
+    .btmBorder {
+      border-bottom: 1px solid color(130);
+    }
+    &_owner {
+      h2 {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+      h3 {
+        font-size: 1.375rem;
+      }
+      .textGray {
+        font-size: 16px;
+        color: color(200);
+        margin-bottom: 10px;
+      }
+      .detail {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      &.paymentCard1_owner-slot {
+        padding: 30px 0;
+      }
+      &-slot {
+        span {
+          &.textGray {
+            color: color(800);
+          }
+        }
+        .tab {
+          min-width: 200px;
+        }
+        .payment {
+          color: color(150);
+        }
+      }
+      // &-fee{
+      //     ul{
+      //         li{
+      //             padding: 15px 0;
+      //         }
+      //     }
+      // }
+    }
+    .cancelPolicy {
+      padding-top: 30px;
+      p {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      span {
+        margin-bottom: 20px;
+        color: color(150);
+      }
+      a {
+        color: color(500);
+        &:hover {
+          color: darken(color(500), 15%);
+        }
+      }
+    }
+    @include media-breakpoint-down(xxl) {
+      padding: 15px;
+      ul {
+        li {
+          padding: 15px 0;
+        }
+      }
+      &_owner {
+        .detail {
+          font-size: 18px;
+        }
+        .textGray {
+          margin-bottom: 6px;
+          font-size: 14px;
+        }
+      }
+    }
+    @media (max-width: 1399px) {
+      &_owner {
+        h3 {
+          font-size: 18px;
+        }
+        &.paymentCard1_owner-slot {
+          padding: 15px 0;
+        }
+      }
+      .cancelPolicy {
+        padding-top: 20px;
+        p,
+        span {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    @include media-breakpoint-down(xl) {
+      &_owner {
+        .detail,
+        h2 {
+          font-size: 16px;
+        }
+      }
+      ul {
+        li {
+          padding: 10px 0;
+        }
+      }
+      &_img {
+        margin-bottom: 5px;
+      }
+      .detail {
+        margin-bottom: 5px;
+      }
+      .profileImg {
+        height: 60px;
+        width: 60px;
+      }
+      .textGray {
+        margin-bottom: 4px;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      &_owner {
+        .detail,
+        h2 {
+          font-size: 15px;
+        }
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      &_owner {
+        h3 {
+          font-size: 16px;
+        }
+      }
+      .cancelPolicy {
+        padding-top: 15px;
+        p,
+        span {
+          font-size: 14px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+  @media (max-width: 1399px) {
+    .cencelForm {
+      .btn {
+        &:not(last-child) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

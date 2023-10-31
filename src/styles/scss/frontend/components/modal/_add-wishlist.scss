@@ -1,0 +1,200 @@
+.addwishlist{
+    .modal-dialog{max-width: 685px;}
+    .modal-body{padding:30px;}
+    .input-group{margin-top: 20px;}
+    h2{font-size: 1.5rem;padding-bottom: 20px;}
+    // p{font-size: 18px; color:#5D5D5D;}
+    .divider{
+        border-bottom: 1px solid rgba(color(150), 0.20);
+    }
+    form{
+        &.py-30{
+            padding: 30px 0;
+        }
+    }
+    .input-group{
+        &-text{
+            @include absolutecenter(y);
+            border: 0;
+            z-index: 9;
+            display: block;
+            width: auto;
+            left: 23px;
+            padding: 0;
+            background-color: transparent;
+            em{
+                font-size: 18px;
+                color: rgba(#25314C, 0.40);
+            }
+        }
+        .form-control{
+            font-size: 16px;
+            padding: 10px 15px 10px 56px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+    }
+    &_list{
+        &-pd{padding-top: 30px;}
+        ul{
+            li:not(:last-child){
+                margin-bottom: 10px;
+            }
+        }
+        input[type="radio"]{
+            display: none;
+            &:checked{
+                + label{
+                    border-color: rgba(#1186B7, 0.20);
+                    background-color: rgba(color(400), 0.20);
+                    &::after{
+                        display: block;
+                    }
+                }
+            }
+        }
+        &_label{
+            border: 1px solid rgba(color(150), 0.20);
+            border-radius: 5px;
+            padding: 15px;
+            cursor: pointer;
+            .tripinfo{
+                margin-left: 15px;
+                h3{
+                    font-size: 1.25rem;
+                    font-family: font(bd);
+                    margin-bottom: 6px;
+                }
+                p{color: rgba(color(800), 0.70);}
+            }
+            img{
+                width: 102px;
+                max-height: 60px;
+                object-fit: cover;
+                border: 1px solid color(120);
+            }
+            &::after{
+                @include absolutecenter(y);
+                content: "\e928";
+                font-family: "splash" !important;
+                font-size: 12px;
+                padding: 7px;
+                border-radius: 50%;
+                right: 15px;
+                width: 30px;
+                height: 30px;
+                display: none;
+                background-color: color(400);
+                color: color(50);
+            }
+        }
+    }
+    .createList{
+        margin-top: 40px;
+        &_add{
+            color: color(800);
+            font-size: 16px;
+            font-family: font(md);
+            em{
+                color: color(50);
+                background-color: color(500);
+                border-radius: 50%;
+                padding: 4px;
+                font-size: 10px;
+                margin-right: 6px;
+            }
+            &:hover{color:color(500);}
+        }
+    }
+    .btn{width: 98px;padding: 8px 15px;}
+    @include media-breakpoint-down(xl){
+        .modal-dialog{max-width: 580px;}
+        .modal-body{padding:20px;}
+        h2{font-size: 20px;padding-bottom: 15px;}
+        .input-group{
+            margin-top: 15px;
+            &-text{
+                left: 12px;
+            }
+            .form-control{
+                padding-left: 40px;
+            }
+        }
+        form{
+            &.py-30{
+                padding: 20px 0;
+            }
+        }
+        &_list{
+            &-pd{padding-top: 20px;}
+            ul{
+                li:not(:last-child){
+                    margin-bottom: 10px;
+                }
+            }
+            &_label{
+                padding: 10px;
+                .tripinfo{
+                    margin-left: 15px;
+                    h3{
+                        font-size: 16px;
+                        margin-bottom: 0;
+                    }
+                }
+                img{
+                    width: 100px;
+                    max-height: 60px;
+                    object-fit: cover;
+                    border: 1px solid color(120);
+                }
+            }
+        }
+        .createList{
+            margin-top: 25px;
+            &_add{
+                font-size: 14px;
+            }
+        }
+    }
+    @include media-breakpoint-down(md){
+        .modal-dialog{max-width: 480px;}
+
+        h2{font-size: 18px;}
+        &_list{
+            &-pd{padding-top: 15px;}
+            &_label{
+                &::after{
+                    font-size: 8px;
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(sm){
+        .modal-body{padding:15px;}
+        .btn{width: 80px;}
+        &_list{
+            &-pd{padding-top: 15px;}
+            &_label{
+                img{
+                    width: 80px;
+                }
+                .tripinfo {
+                    margin-left: 10px;
+                    h3{
+                        font-size: 14px;
+                    }
+                }
+                &::after{
+                    font-size: 8px;
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+        .createList{
+            margin-top: 15px;
+        }
+    }
+}
