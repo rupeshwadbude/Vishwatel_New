@@ -1,0 +1,25 @@
+// components
+@import "components.button";
+@import "components.alert";
+@import "components.form";
+@import "components.date-picker";
+@import "components.icomoon";
+@import "components.booknowcard";
+@import "components.citiescard";
+@import "components.chatsidebar";
+@import "components.commonhead";
+@import "components.select";
+@import "components.page-title";
+@import "components.switch";
+@import "components.common-tabs";
+@import "components.upcoming";
+@import "components.pagination";
+@import "components.events-list";
+
+// modal
+@import "./modal/modal-main";
+
+// layout
+@import "layout/layout.header";
+@import "layout/layout.footer";
+@import "layout/layout.sidebar";

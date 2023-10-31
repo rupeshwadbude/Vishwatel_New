@@ -1,0 +1,111 @@
+.favoriteList {
+  &_item {
+    ul {
+      margin: 0 -2px;
+      li {
+        margin: 3px 2px 0px 2px;
+        background-color: color(80);
+        .moreImg {
+          position: relative;
+          &_overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(color(900), 0.6);
+            p {
+              font-size: 28px;
+              font-family: font(bd);
+              color: color(50);
+              @include transition(all 0.3s);
+            }
+            &:hover {
+              p {
+                color: lighten(color(500), 10%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &_box {
+    &_cont {
+      top: 0;
+      left: 0;
+      padding: 30px;
+      z-index: 1;
+      h4 {
+        margin-bottom: 6px;
+        font-size: 1.375rem;
+        line-height: 30px;
+        color: color(50);
+        font-family: font(md);
+      }
+      p {
+        font-size: 16px;
+        color: rgba(color(50), 0.85);
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: calc(100% + 100px);
+        background: linear-gradient(
+          to top,
+          rgba(color(900), 0) 45%,
+          rgba(color(900), 0.67) 100%
+        );
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    &_box {
+      &_cont {
+        padding: 20px;
+        h4 {
+          line-height: 20px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    &_item{
+      ul li .moreImg_overlay p{font-size: 24px;}
+    }
+    &_box {
+      &_cont {
+        h4 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &_box {
+      &_cont {
+        h4 {
+          font-size: 18px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &_item{
+      ul li .moreImg_overlay p{font-size: 20px;}
+    }
+    &_box {
+      &_cont {
+        h4 {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

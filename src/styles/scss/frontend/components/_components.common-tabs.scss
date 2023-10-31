@@ -1,0 +1,67 @@
+.commonTab {
+  .nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: color(50);
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid color(130);
+    // margin-bottom: 20px;
+    &-item {
+      white-space: nowrap;
+      padding-bottom: 0;
+      position: relative;
+    }
+    &-link {
+      color: #818181;
+      font-size: 18px;
+      padding:15px 20px;
+      border: none;
+      &.active {
+        color: color(500);
+        background: transparent;
+        border-bottom:4px solid color(500);
+      }
+      &.focus {
+        border-color: transparent;
+      }
+    }
+    @include media-breakpoint-down(xxl){
+      // margin-bottom: 15px;
+      &-link {
+        font-size: 16px; padding: 15px;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      &-link {
+        padding: 10px 8px;border-color: transparent;
+        &.active{
+          border-color: transparent;
+        }
+      }
+    }
+  }
+  &.subTab{
+    .nav{
+      border-bottom: 0;
+      &-link{
+        font-size: 17px; border-bottom: 0;padding:0;
+        
+        &.active{color:#00ae78;}
+      }
+      &-item{
+        &:not(:last-child){
+          .nav-link{margin-right: 15px;}
+        }
+      }
+    }
+    @include media-breakpoint-down(xxl){
+      .nav{
+        &-link{font-size: 15px;}
+      }
+    }
+    @include media-breakpoint-down(sm){
+      .nav{padding-bottom: 6px;}
+    }
+  }
+}

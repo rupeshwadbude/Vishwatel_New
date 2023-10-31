@@ -1,0 +1,522 @@
+// variables
+$chkrdo-bg-color: color(500);
+$chkrdo-border-color: color(80);
+$chkrdo-text-color: color(800);
+$label-color: color(800);
+$input-label-color: color(800);
+$input-bg-color: color(80);
+$input-border-color: color(80);
+$input-focus-border: color(500);
+$placholder-color: rgba(color(800), 0.6);
+$icon-color: rgba(37, 49, 76, 0.4);
+
+.form-group,
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+  &.selectCountry {
+    .select2 {
+      width: 100px !important;
+      margin-right: 15px;
+    }
+  }
+  label {
+    margin-bottom: 8px;
+    color: $label-color;
+    span {
+      font-size: 12px;
+      color: color(150);
+    }
+  }
+  .form-control,
+  .input-group-text {
+    border-color: transparent;
+    color: $input-label-color;
+    background-color: rgba($color: $input-bg-color, $alpha: 0.5);
+    border-radius: 5px;
+    background-clip: initial;
+    padding: $field-padding;
+    height: $field-height;
+    font-size: 16px;
+    &:focus {
+      outline: none;
+      -webkit-box-shadow: none;
+      box-shadow: none !important;
+      border-color: $input-focus-border;
+    }
+    &:valid,
+    &:invalid {
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+    &:disabled,
+    &[readonly] {
+      background-color: #e9eef1;
+      color: color(900);
+    }
+  }
+  @include placeholder {
+    color: $placholder-color;
+  }
+  .fieldicon {
+    &-input {
+      &-right {
+        padding-inline-end: 35px;
+      }
+      &-left {
+        padding-inline-start: 35px;
+      }
+    }
+    &-right {
+      position: absolute;
+      top: 15px;
+      right: 10px;
+      color: $icon-color;
+      text-decoration: none;
+      z-index: 1;
+      cursor: text;
+    }
+    &-left {
+      position: absolute;
+      top: 15px;
+      left: 10px;
+      color: $icon-color;
+      text-decoration: none;
+      z-index: 1;
+      cursor: text;
+    }
+    .toggle-password {
+      cursor: pointer;
+      @include media-breakpoint-up(xxl) {
+        font-size: 20px;
+      }
+    }
+  }
+}
+textarea {
+  resize: none;
+}
+// checkbox and radio
+.form-check {
+  line-height: normal;
+  min-height: auto;
+  position: relative;
+  padding-left: 0px;
+  &.custom-control-inline {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  // checkbox
+  &-input[type="checkbox"] {
+    z-index: 1;
+    cursor: pointer;
+    position: absolute;
+    left: 25px;
+    z-index: -1;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    &:focus {
+      ~ .form-check-label {
+        &:before {
+          -webkit-box-shadow: none;
+          box-shadow: none;
+        }
+      }
+    }
+    &:not(:disabled):active ~ .form-check-label::before {
+      background-color: color(50);
+      border-color: $chkrdo-border-color;
+    }
+
+    ~ .form-check-label {
+      width: 100%;
+      cursor: pointer;
+      position: static;
+      color: $chkrdo-text-color;
+      font-family: font(rg);
+      margin-bottom: 0;
+      padding-left: 43px;
+      padding-top: 5px;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        display: block;
+        width: 28px;
+        height: 28px;
+        border-radius: 3px;
+        background: color(80);
+        top: 0;
+        border: 1.5px solid $chkrdo-border-color;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 10px;
+        top: 12px;
+        transition: all 0.3s;
+        cursor: pointer;
+        color: color(50);
+        line-height: 17px;
+      }
+    }
+  }
+  &-input[type="checkbox"]:checked ~ &-label {
+    &:before {
+      border-color: $chkrdo-bg-color;
+      border-radius: 3px;
+      background: $chkrdo-bg-color;
+    }
+    &:after {
+      left: 6px;
+      top: 6px;
+      content: "\e91e";
+      font-family: "splash";
+      color: color(50);
+      text-align: center;
+    }
+  }
+  &-input[type="checkbox"]:checked:disabled ~ &-label {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.7;
+  }
+  // radio
+  &-input[type="radio"]:checked ~ &-label {
+    &:before {
+      border-color: $chkrdo-bg-color;
+    }
+    &:after {
+      width: 10px;
+      height: 10px;
+      left: 4px;
+      top: 7px;
+      content: "";
+      text-align: center;
+      border-color: $chkrdo-bg-color;
+      border-radius: 50%;
+      background-color: $chkrdo-bg-color;
+    }
+  }
+  &-input[type="radio"] {
+    z-index: 1;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    &:focus {
+      ~ .form-check-label {
+        &:before {
+          -webkit-box-shadow: none;
+          box-shadow: none;
+        }
+      }
+    }
+    &:not(:disabled):active ~ .form-check-label::before {
+      background-color: color(50);
+      border-color: $chkrdo-border-color;
+    }
+    &:focus:not(:checked) ~ .form-check-label::before {
+      border-color: $chkrdo-bg-color;
+    }
+    ~ .form-check-label {
+      width: 100%;
+      cursor: pointer;
+      position: static;
+      color: $chkrdo-text-color;
+      font-family: font(rg);
+      margin-bottom: 0;
+      padding-left: 25px;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        display: block;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: color(50);
+        top: 3px;
+        border: 1.5px solid $chkrdo-border-color;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 4px;
+        top: 7px;
+        transition: all 0.3s;
+        cursor: pointer;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+// Media query
+@include media-breakpoint-down(xxl) {
+  .form-group,
+  .input-group {
+    label {
+      span {
+        font-size: 10px;
+      }
+    }
+    .form-control,
+    .input-group-text {
+      height: $field-height-xl;
+      padding: $field-padding-xl;
+      font-size: 14px;
+    }
+
+    .dateIcon,
+    .timeIcon,
+    .searchIcon {
+      &:after {
+        top: 10px;
+      }
+    }
+    .fieldicon {
+      &-input {
+        &-right {
+          padding-inline-end: 30px;
+        }
+        &-left {
+          padding-inline-start: 30px;
+        }
+      }
+      &-right,
+      &-left {
+        font-size: 14px;
+        top: 12px;
+      }
+    }
+  }
+  .form-check {
+    // checkbox
+    &-input[type="checkbox"] {
+      ~ .form-check-label {
+        padding-left: 35px;
+        padding-top: 3px;
+        font-size: 15px;
+        &:before {
+          width: 24px;
+          height: 24px;
+        }
+        &:after {
+          left: 5px;
+          top: 3px;
+          font-size: 14px;
+        }
+      }
+    }
+    &-input[type="checkbox"]:checked {
+      ~ .form-check-label {
+        &:after {
+          left: 5px;
+          top: 3px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xl) {
+  .form-check {
+    &-input[type="checkbox"] {
+      ~ .form-check-label {
+        padding-left: 30px;
+        padding-top: 0;
+        &::before {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    &-input[type="checkbox"]:checked {
+      ~ .form-check-label {
+        &:after {
+          left: 3px;
+          top: 2px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .form-group,
+  .input-group {
+    margin-bottom: 15px;
+    .form-control,
+    .input-group-text {
+      // height:$field-height-lg;
+      padding: $field-padding-lg;
+    }
+    label {
+      font-size: 14px;
+    }
+    .dateIcon,
+    .timeIcon {
+      &:after {
+        font-size: 15px;
+        line-height: 15px;
+      }
+    }
+    .fieldicon {
+      &-input {
+        &-right {
+          padding-inline-end: 28px;
+        }
+        &-left {
+          padding-inline-start: 28px;
+        }
+      }
+      &-right,
+      &-left {
+        top: 11px;
+      }
+    }
+  }
+  .form-check {
+    &-input[type="checkbox"] {
+      ~ .form-check-label {
+        padding-left: 30px;
+        padding-top: 2px;
+        font-size: 14px;
+        // &:before{
+        //   width:21px; height:21px;
+        // }
+      }
+    }
+    &-input[type="checkbox"]:checked ~ &-label {
+      &:after {
+        left: 4px;
+        top: 2px;
+      }
+    }
+    &-input[type="radio"]:checked ~ &-label {
+      &:after {
+        width: 6px;
+        height: 6px;
+      }
+    }
+    &-input[type="radio"] {
+      ~ .form-check-label {
+        padding-left: 20px;
+        &:before {
+          width: 14px;
+          height: 14px;
+        }
+        &:after {
+          width: 6px;
+          height: px;
+        }
+      }
+    }
+    .custom-control-label {
+      &::before {
+        width: 14px;
+        height: 14px;
+      }
+      &:after {
+        width: 8px;
+        height: 8px;
+        left: 3px;
+        top: 4px;
+      }
+    }
+  }
+}
+
+.select2 {
+  &-selection {
+    &__rendered {
+      &::-webkit-scrollbar {
+        height: 5px;
+      }
+      &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: rgb(169, 169, 169);
+        border-radius: 50px;
+      }
+    }
+  }
+}
+input:-internal-autofill-selected {
+  -webkit-appearance: menulist-button;
+  background-color: rgb(247, 248, 249) !important;
+  background-image: none !important;
+  color: -internal-light-dark-color(color(900), color(50)) !important;
+  font: 18px font(rg) !important;
+}
+.form-control.is-valid,
+.form-control.is-invalid {
+  background-image: none;
+  padding-right: inherit;
+}
+
+//
+.userProfile {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 1px solid color(500);
+  img {
+    overflow: hidden;
+    object-fit: cover;
+  }
+  label {
+    cursor: pointer;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    line-height: 32px;
+    text-align: center;
+    right: 2px;
+    bottom: 0;
+    color: color(50);
+    border-radius: 50%;
+    margin-bottom: 0px;
+    background-color: color(500);
+    input {
+      display: none;
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    label {
+      width: 24px;
+      height: 24px;
+      line-height: 25px;
+      font-size: 14px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    width: 80px;
+    height: 80px;
+    label {
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      font-size: 12px;
+    }
+  }
+}

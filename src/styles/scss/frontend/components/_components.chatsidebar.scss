@@ -1,0 +1,97 @@
+.paymentCard{
+    background-color: color(50);
+    padding: 20px;
+    border-radius: 5px;
+    @include box-shadow(0,5px, 30px, rgba($color: color(900), $alpha: 0.05));
+    &_img{
+        border-radius: 5px;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+    .profileImg{
+        width: 75px;
+        height: 75px;
+        position: absolute;
+        border-radius: 50px;
+        border: 3px solid color(50);
+        overflow: hidden;
+        bottom: -20px;
+        right: 20px;
+        object-fit: cover;
+    }
+    ul{
+        li{
+            padding: 20px 0;
+            &:last-child{padding-bottom: 0;}
+        }
+    }
+    .btmBorder{border-bottom: 1px solid color(130);}
+    &_owner{
+        h2{font-size: 18px;margin-bottom: 5px; }
+        h3{font-size: 1.375rem;}
+        .textGray{
+            font-size: 16px;
+            color: color(200);
+            margin-bottom: 10px;
+        }
+        .detail{font-size: 20px;margin-bottom: 10px;}
+        &-slot{
+            span{
+                &.textGray{color: color(800);}
+            }
+            .tab{min-width: 200px;}
+            .payment{color: color(150);}
+        }
+        &-fee{
+            ul{
+                li{
+                    padding: 15px 0;
+                }
+            }
+        }
+    }
+    .cancelPolicy{
+        padding-top: 30px;
+        p{
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        span{
+            margin-bottom: 20px;
+            color: color(150);
+        }
+        a{
+            color: color(500);
+            &:hover{
+                color: lighten(color(500), 15%);
+            }
+        }
+    }
+    @include media-breakpoint-down(xxl){
+        padding: 15px;
+        ul{
+            li{padding: 15px 0;}
+        }
+        &_owner{
+            .detail{font-size: 18px;}
+            .textGray{margin-bottom: 6px;font-size: 14px;}
+        }
+    }
+    @include media-breakpoint-down(xl){
+        &_owner{
+            .detail, h2{font-size: 16px;}
+        }
+        ul{
+            li{padding: 10px 0;}
+        }
+        &_img{margin-bottom: 5px;}
+        .detail{margin-bottom: 5px;}
+        .profileImg{height: 60px;width: 60px;}
+        .textGray{margin-bottom: 4px;}
+    }
+    @include media-breakpoint-down(md){
+        &_owner{
+            .detail, h2{font-size: 15px;}
+        }
+    }
+}

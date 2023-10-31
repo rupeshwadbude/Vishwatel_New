@@ -1,0 +1,15 @@
+.calendarModal{
+    .nav{
+        border: 1px solid color(80);
+        &-pills {border-radius: 0;}
+        &-item{
+            border-radius: 0;
+        }
+        &-link{
+            font-size: 16px;color: color(150);border-radius: 0;font-family: font(sm);
+            &.active{
+                background-color: color(500);color: color(50);
+            }
+        }
+    }
+}

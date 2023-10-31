@@ -1,0 +1,234 @@
+.sideBar {
+  &_body {
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  &_header {
+    padding: 30px 15px 15px;
+    .userTitle {
+      font-size: 18px;
+      font-family: font(sm);
+      line-height: 30px;
+      color: #090600;
+    }
+  }
+
+  &_user {
+    border: 2px solid #25aae1;
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+
+  &_user {
+    img {
+      object-fit: cover;
+    }
+  }
+  &_content {
+    padding-bottom: 15px;
+    ul {
+      li {
+        &:not(:last-child) {
+          a {
+            &:after {
+              height: 1px;
+              width: calc(100% - 38px);
+              bottom: 0;
+              background-color: color(130);
+              content: "";
+              right: auto;
+              text-align: center;
+              @include absolutecenter(x);
+            }
+          }
+        }
+        a {
+          padding: 17px 20px 14px 20px;
+          color: color(150);
+          font-family: font(rg);
+          font-size: 16px;
+          position: relative;
+
+          &.active,
+          &:hover {
+            background-color: color(500);
+            color: color(800);
+            font-family: font(sm);
+          }
+          em {
+            font-size: 22px;
+            margin-right: 12px;
+          }
+        }
+      }
+    }
+  }
+  &_infoBox {
+    padding: 30px 20px;
+    border-radius: 5px;
+    h3 {
+      font-size: 18px;
+      color: color(800);
+      margin-bottom: 20px;
+    }
+    .info-items {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+      .title {
+        color: color(150);
+      }
+      span {
+        height: 24px;
+        width: 24px;
+        background-color: rgba($color: color(150), $alpha: 0.5);
+        border-radius: 50%;
+        color: color(50);
+        font-size: 12px;
+      }
+      &.active {
+        span {
+          background-color: #00ae78;
+        }
+      }
+    }
+  }
+  .addmore {
+    color: color(500);
+    margin-top: 30px;
+    &:hover {
+      color: darken(color(500), 15%);
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    &_body {
+      margin-bottom: 15px;
+    }
+    &_header {
+      padding: 20px 15px 15px;
+      .userTitle {
+        font-size: 16px;
+      }
+    }
+    &_user {
+      width: 80px;
+      height: 80px;
+      padding: 4px;
+    }
+    &_content {
+      ul {
+        li {
+          a {
+            padding: 12px 15px;
+            em {
+              font-size: 19px;
+            }
+          }
+        }
+      }
+    }
+    &_infoBox {
+      padding: 20px 15px;
+      h3 {
+        margin-bottom: 15px;
+      }
+      .info-items {
+        span {
+          height: 20px;
+          width: 20px;
+          font-size: 10px;
+        }
+      }
+    }
+    .addmore {
+      margin-top: 20px;
+      font-size: 15px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    left: -100%;
+    width: 250px;
+    top: 0;
+    position: fixed;
+    right: auto;
+    height: 100%;
+    overflow: auto;
+    @include transition(0.3s);
+    background-color: color(50);
+    z-index: 1002;
+    &_header {
+      padding: 15px;
+    }
+    &_body {
+      border-radius: 0;
+      margin-bottom: 0;
+    }
+    &_infoBox {
+      border-radius: 0;
+      border-top: 1px solid #ccc;
+      &.commonShadow {
+        box-shadow: none;
+      }
+    }
+    .closeMenu {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      color: color(900);
+    }
+  }
+  @include media-breakpoint-down(md) {
+    width: 220px;
+    .addmore {
+      font-size: 14px;
+    }
+    &_header {
+      padding: 25px 15px 5px;
+    }
+    &_body {
+      border-radius: 0;
+      margin-bottom: 0;
+    }
+    &_infoBox {
+      padding: 15px;
+      h3 {
+        font-size: 16px;
+      }
+      .info-items {
+        margin-bottom: 12px;
+      }
+    }
+    .closeMenu {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      color: color(900);
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &_content {
+      padding-bottom: 10px;
+      ul {
+        li {
+          a {
+            padding: 10px 15px;
+            font-size: 14px;
+            em {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body.menuOpen {
+  overflow: hidden;
+  .sideBar {
+    left: 0;
+  }
+}

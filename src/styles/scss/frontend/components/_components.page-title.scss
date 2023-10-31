@@ -1,0 +1,92 @@
+.pageTitle {
+  padding: 50px 0 80px;
+  text-align: center;
+  position: relative;
+  background: color(50) url("#{$imageurl}/curve-gray.svg") no-repeat;
+  background-position: left bottom;
+  background-size: 100%;
+  .h1 {
+    font-size: 2.875rem;
+    font-family: font(mm);
+    margin-bottom: 0;
+    line-height: 54px;
+  }
+  p {
+    font-size: 18px;
+    color: #5d5d5d;
+    margin-top: 12px;
+    margin-bottom: 0;
+    a {
+      color: color(800);
+      font-size: 16px;
+      font-family: font(md);
+      em {
+        color: color(50);
+        background-color: color(500);
+        border-radius: 50%;
+        padding: 5px;
+        font-size: 10px;
+        margin-right: 6px;
+      }
+      &:hover {
+        color: lighten(color(500), 10%);
+      }
+    }
+  }
+  .curvedShape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    svg {
+      width: 100%;
+    }
+  }
+  @media (max-width: 1699px) {
+    padding: 40px 0 60px;
+    .h1 {
+      font-size: 40px;
+      line-height: 48px;
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    padding: 30px 0 50px;
+    .h1 {
+      font-size: 34px;
+      line-height: 40px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  @include media-breakpoint-down(xl) {
+    padding: 30px 0 40px;
+    .h1 {
+      font-size: 28px;
+      line-height: 34px;
+    }
+  }
+  @include media-breakpoint-down(lg) {
+    padding: 20px 15px 25px;
+    .h1 {
+      font-size: 24px;
+      line-height: normal;
+    }
+    p {
+      font-size: 14px;
+      margin-top: 10px;
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 15px 15px 20px;
+    .h1 {
+      font-size: 22px;
+    }
+    p {
+      margin-top: 5px;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.contactBoatOwner{
+    h3{font-size: 24px;padding-bottom: 20px; padding-left: 20px;}
+    .ownerInfo{
+        padding:15px; background-color: #FAFAFA;
+        &_img{
+            width: 90px;height: 90px;border:3px solid color(500);
+            img{width: 100%;height: 100%;object-fit: cover;}
+        }
+        h5{font-size: 18px; margin-top: 10px;}
+        &_content{
+            padding-top:15px;margin-top: 20px;
+        }
+    }
+    .ownerFields{
+        .alert{
+            background-color: rgba(color(400), 0.3);color:color(800);border-radius: 0;
+            padding:15px 20px; border:0;
+        }
+        form{padding:0 20px 20px;}
+        // plus minus input 
+        .number {
+            .addon {
+                background-color: rgba(color(80), 0.77);
+                border-radius: 5px;
+                text-align: center; color: color(150);
+                cursor: pointer; font-size: 12px;
+                padding: 15px 19px;
+                &.minus{margin-right: 8px;}
+                &.plus{margin-left: 8px;}
+            }
+            @include media-breakpoint-down(xxl){
+            .addon{
+                font-size: 12px;padding: 11px 14px;
+                &.minus{margin-right: 5px;}
+                &.plus{margin-left: 5px;}
+            }  
+            }
+            @include media-breakpoint-down(lg){
+                .addon{font-size: 10px;}
+            }
+        }
+        .formLabs{
+            &_items{
+                input[type="radio"],input[type="checkbox"]{
+                    &:checked{
+                        + label{
+                            color: color(800);
+                            border-color: color(400);
+                        }
+                    }
+                    &:disabled {
+                        + label{
+                            color: rgba(color(800), 0.5);
+                            p {color: rgba(color(800), 0.5);}
+                        }
+                    }
+                }
+                label{
+                    cursor: pointer;     
+                    border: 2px solid color(80);
+                    background-color: color(80);
+                    border-radius: 5px;
+                    padding: 5px 10px;
+                    font-family: font(md);
+                    @include flexcenter();
+                    height: 48px;
+                    margin-bottom: 0;
+                }    
+            }  
+            @include media-breakpoint-down(xxl){
+                &_items {
+                    label{
+                        font-size: 14px; height: 40px; padding: 5px;
+                        p{font-size: 10px;}
+                    }
+                } 
+            }          
+        }
+    }
+
+
+    @include media-breakpoint-down(lg){
+        h3{font-size: 20px;padding-left: 15px;}
+        .ownerInfo{
+            &_img{width: 75px;height: 75px;}
+            ul{margin-bottom: 0; padding-left: 22px;}
+        }
+        .ownerFields{
+            .alert{padding:10px;}
+            form{padding: 0 15px 15px;}
+        }
+    }
+    @include media-breakpoint-down(sm){
+        h3{font-size: 18px;}
+    }
+}

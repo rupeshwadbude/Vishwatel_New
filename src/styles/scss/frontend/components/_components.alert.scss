@@ -1,0 +1,37 @@
+$alert-success: #04AAB0;
+$alert-danger: #f36673;
+$alert-warning: color(500);
+
+$alert-textColor: #3c3c3c; 
+
+
+$alertColors: (
+  success: (
+    clr: $alert-success
+  ),
+  danger: (
+    clr: $alert-danger
+  ),
+  warning: (
+    clr: $alert-warning
+  ),
+
+);
+
+.alert {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid transparent; 
+    border-left-width: 5px;
+    font-size: 14px;
+    background-color: color(50);
+    font-family: font(sm);
+    @each $key, $clrValue in $alertColors {
+        &-#{$key} {
+            border-color: map-get($clrValue, clr);
+            background-color: rgba($color: map-get($clrValue, clr), $alpha: 0.10);
+            border-left-color: map-get($clrValue, clr);
+            color:map-get($clrValue, clr);
+        }
+    }
+}

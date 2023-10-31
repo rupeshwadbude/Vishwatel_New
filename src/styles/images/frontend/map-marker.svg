@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="36" viewBox="0 0 34 36">
+  <g id="Group_191638" data-name="Group 191638" transform="translate(-1389 -521)">
+    <ellipse id="Ellipse_9821" data-name="Ellipse 9821" cx="5" cy="2" rx="5" ry="2" transform="translate(1401 550)" fill="#2e3192" opacity="0.63"/>
+    <g id="location-pin" transform="translate(1268.706 -2003.294)">
+      <rect id="Frame" width="34" height="34" transform="translate(120.294 2524.294)" fill="#2e3192" opacity="0"/>
+      <path id="Subtraction_3" data-name="Subtraction 3" d="M12.605,28.1a1.113,1.113,0,0,1-.6-.178l-.766-.51-.016-.01C6.756,24.449,0,19.982,0,12.612a12.609,12.609,0,1,1,25.219,0c0,7.374-6.766,11.841-11.242,14.8l-.01.005-.762.51A1.12,1.12,0,0,1,12.605,28.1ZM12.244,7.57a4.323,4.323,0,1,0,4.328,4.321A4.326,4.326,0,0,0,12.244,7.57Z" transform="translate(124.326 2527.241)" fill="#2e3192" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

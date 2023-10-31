@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <g id="ic_boat_length" transform="translate(-342 -1078)">
+    <g id="calendar" transform="translate(-2830 -1014)">
+      <rect id="Frame" width="36" height="36" transform="translate(3172 2092)" fill="#25aae1" opacity="0"/>
+      <g id="Group_191569" data-name="Group 191569" transform="translate(3172.245 2089.581)">
+        <path id="Path_183749" data-name="Path 183749" d="M34.4,29.442a.674.674,0,0,0-.931-.2L30.3,31.3H27.457l-1.544-2.324c3.711-.961,5.034-2.841,5.034-2.841-1.8-3.116-8.309-7.467-8.309-7.467l-.016,0L19.5,14.551a.674.674,0,1,0-1.073.815L21.2,19.022l-5.72,5.284c-8.342-1.242-5.411-.781-13.7-2.161-.859.48-.889.852-.66,1.116a12.409,12.409,0,0,1,2.051,2.966l.686,1.532c15.613,1.735,16.343,1.94,19.265,1.68L24.707,31.3H21.543a.674.674,0,1,0,0,1.347H30.5a.676.676,0,0,0,.366-.108L34.2,30.373a.674.674,0,0,0,.2-.931Z" transform="translate(0 -1.469)" fill="#25aae1"/>
+        <path id="Path_183750" data-name="Path 183750" d="M4.659,29.78c-2.078,2.386.954,3.79.954,3.79l12.042-.056a2.133,2.133,0,0,0,1.657-2.078Z" transform="translate(-0.885 -2.423)" fill="#25aae1"/>
+        <path id="Path_183751" data-name="Path 183751" d="M14.1,24.242l1.143-2.717c1.871,1.442,1.572,1.35,2.711,1.35l2.918-2.695H17.91a26.191,26.191,0,0,0-3.517-2.553,2.308,2.308,0,0,0-3.018,1.233L9.407,23.541c.426.073,4.262.637,4.7.7Z" transform="translate(-0.885 -2.423)" fill="#25aae1" opacity="0.4"/>
+        <circle id="Ellipse_9818" data-name="Ellipse 9818" cx="2.513" cy="2.513" r="2.513" transform="translate(12.307 9.419)" fill="#25aae1" opacity="0.4"/>
+      </g>
+    </g>
+    <g id="Group_191849" data-name="Group 191849">
+      <path id="Path_183784" data-name="Path 183784" d="M6,0A6,6,0,1,1,0,6,6,6,0,0,1,6,0Z" transform="translate(365 1101)" fill="#a7ddf3"/>
+      <g id="Group_191848" data-name="Group 191848" transform="translate(0.317 -0.025)">
+        <path id="Icon_feather-chevron-down" data-name="Icon feather-chevron-down" d="M11.339,15.839a.515.515,0,0,1-.336-.12L8.364,13.443l.672-.579,2.3,1.986,2.3-1.986.672.579-2.639,2.276A.515.515,0,0,1,11.339,15.839Z" transform="translate(359.82 1118.338) rotate(-90)" fill="#25aae1"/>
+        <path id="Icon_feather-chevron-down-2" data-name="Icon feather-chevron-down" d="M2.975,0a.515.515,0,0,0-.336.12L0,2.4l.672.579L2.975.989l2.3,1.986L5.95,2.4,3.311.12A.515.515,0,0,0,2.975,0Z" transform="translate(366.683 1109.975) rotate(-90)" fill="#25aae1"/>
+        <path id="Path_183785" data-name="Path 183785" d="M-3317.868-3237.5h-7.746v-1h7.746Z" transform="translate(3693 4345)" fill="#25aae1"/>
+      </g>
+    </g>
+  </g>
+</svg>

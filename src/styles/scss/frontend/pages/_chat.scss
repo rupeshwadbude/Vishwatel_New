@@ -1,0 +1,314 @@
+.chatPage{
+    .chatOpen{
+        margin-bottom: 10px;
+        background-color: color(500);
+        padding: 10px;
+        border-radius: 10%;
+        width: 40px;
+        height: 40px;
+        em{
+            font-size: 16px;
+            color: color(50);
+        }
+    }
+    .chatClose{
+        padding: 10px;
+        em{
+            font-size: 18px;
+            color: color(500);
+        }
+    }
+    &_panel{
+        .notification{
+            background-color: color(50);
+            padding: 30px;
+            @include box-shadow(0,5px, 30px, rgba($color: color(900), $alpha: 0.05));
+            border-radius: 5px;
+            margin-bottom: 30px;
+            &_head{font-size: 1.5rem;margin-bottom: 10px;}
+            p{font-size: 16px;color: #818181;margin-bottom: 30px;}
+        }
+        .detailInfoBox{        
+            position: relative;
+            background-color: color(50);
+            @include box-shadow(0,5px, 30px, rgba($color: color(900), $alpha: 0.05));
+            border-radius: 5px;
+            overflow: hidden;
+            &_txt{
+                background-color: color(80);
+                padding: 20px 30px;
+                img{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50px;
+                    border: 3px solid color(50);
+                    overflow: hidden;
+                    object-fit: cover;  
+                }
+                .profileName{
+                    margin-left: 12px;
+                    h4{font-size: 18px;margin-bottom: 3px;}
+                    p{color: color(150);}
+                }
+            }
+            &_chat{
+                .media{
+                    margin-bottom: 24px;
+                    &-body{
+                        .msgtxt{   
+                            margin-bottom: 8px;                   
+                            span{
+                                padding:13px;
+                                display: inline-block;
+                                max-width: 50%;
+                                text-align: start;
+                            }
+                            img{
+                                width: 100%;
+                            }
+                            video{
+                                width: 100%;
+                            }
+                        }
+                        .timeTxt{
+                            display: block;
+                            color: color(150);
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .receiveChat{
+                    .media{
+                        &-body{
+                            text-align: left;
+                            .msgtxt{
+                                span{
+                                    background-color: rgba($color: color(80), $alpha: 0.50);
+                                    border-radius: 0px 5px 5px 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .sendChat{
+                    .media{
+                        &-body{
+                            text-align: right;
+                            .msgtxt{
+                                span{
+                                    background-color:#9CD9F1;
+                                    border-radius: 5px 0px 5px 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .badge{
+                    padding: 15px 30px;
+                    margin-bottom: 30px;
+                    white-space: normal;
+                    img{padding-right: 15px;}
+                    &-outline-yellow{
+                        color: color(500);
+                        background-color: rgba($color: color(500), $alpha: 0.10);
+                    }
+                    &-outline-green{
+                        color: #00AE78;
+                        background-color: rgba($color: #00AE78, $alpha: 0.10);
+                    }
+                }
+                &_list{
+                    height: 600px;
+                    overflow-x: auto;
+                    padding: 30px;
+                }
+                &_inputBox{
+                    position: relative;
+                    overflow: hidden;
+                    border-top: 1px solid color(80);
+                    .msgType{
+                        padding: 5px 100px 5px 32px;
+                        height: 70px;
+                        border: none;
+                        width: 100%;
+                        line-height: 20px;
+                        caret-color: color(500);
+                    }
+                    .sendBtn{
+                        position: absolute;
+                        right: 0;
+                        height: 100%;
+                        width: 70px;
+                        border-radius: 0;
+                        @include transition(0.5s);
+                        &:hover{
+                            em{transform: rotate(45deg);}
+                        }
+                        em{
+                            font-size: 26px;@include transition(0.5s);
+                        }
+                    }
+                }
+            }
+        } 
+        @include media-breakpoint-down(xxl){
+            .notification{
+                padding: 20px;
+                margin-bottom: 20px;
+                &_head{margin-bottom: 6px;font-size: 20px;}
+                p{margin-bottom: 20px;font-size: 14px;}
+            }
+            .detailInfoBox{
+                &_txt{
+                    padding: 15px;
+                    .profileName{
+                        h4{font-size: 16px;}
+                        p{font-size: 14px;}
+                    }
+                }
+                &_chat{
+                    &_list{padding: 20px;height: 500px;}
+                    .badge{
+                        padding: 10px 20px;
+                        font-size: 14px;
+                        margin-bottom: 20px;
+                        img{padding-right: 10px;}
+                    }
+                    .media{
+                        margin-bottom: 15px;
+                        &-body{
+                            .msgtxt{
+                                span{padding: 10px;font-size: 14px;}
+                            }
+                        }
+                    }
+                    &_inputBox{
+                        .msgType{height: 60px;}
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-down(xl){
+            .detailInfoBox{
+                &_chat{
+                    &_list{
+                        padding: 15px;
+                        height: 420px;
+                    }
+                    .badge{
+                        padding: 6px 10px;
+                        margin-bottom: 15px;
+                        font-size: 12px;
+                        img{
+                            width: 18px;
+                            padding-right: 6px;
+                        }
+                    }
+                    &_inputBox{
+                        .msgType{
+                            height: 45px;
+                            padding: 5px 80px 5px 20px;
+                        }
+                        .sendBtn{
+                            width: 60px;
+                            em{font-size: 20px;}
+                        }
+                    }
+                    .media{
+                        margin-bottom: 10px;
+                        &-body{
+                            .msgtxt{
+                                span{padding: 8px;font-size: 14px;}
+                            }
+                            .timeTxt{font-size: 12px;}
+                        }
+                    }
+                }
+                &_txt{
+                    padding: 10px;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                    }
+                    .profileName{
+                        margin-left: 8px;
+                        p{font-size: 13px;line-height: normal;}
+                        h4{font-size: 15px;}
+                    }
+                }
+            }
+            .notification{
+                padding: 15px;
+                margin-bottom: 15px;
+                p{margin-bottom: 10px;}
+                &_head{font-size: 18px;}
+            }
+        }
+        @include media-breakpoint-down(md){
+            .detailInfoBox{
+                width: 100%;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100%;
+                z-index: 1030;
+                margin: 0;
+                padding: 0;
+                border-radius: 0;
+                @include transition(0.6s);
+                &_open{right: 0; @include transition(0.6s);}
+                .card{height: 100%; border-radius: 0;}
+                &_chat{
+                    height: calc(100% - 60px);
+                    &_list{height: calc(100% - 45px)}
+                }
+            }
+            .notification{
+                &_head{font-size: 16px;}
+            }
+        }
+        @include media-breakpoint-down(sm){
+            .detailInfoBox{
+                &_txt{
+                    .profileName{
+                        h4{font-size: 14px;}
+                    }
+                    img{ width: 35px;
+                        height: 35px;}
+                }
+                &_chat{
+                    height: calc(100% - 55px);
+                    .badge{font-size: 10px;margin-bottom: 10px;padding: 5px 8px;
+                        img{width: 15px;padding-right: 5px;}
+                    }
+                    .media{
+                        &-body{
+                            .msgtxt{
+                                margin-bottom: 5px;
+                                span{padding: 8px;font-size: 13px;line-height: normal;max-width: 80%;}
+                            }
+                            .timeTxt{font-size: 10px;}
+                        }
+                    }
+                    &_inputBox{
+                        .msgType{height: 40px;padding: 5px 60px 5px 10px;}
+                        .sendBtn{width: 45px;
+                            em{font-size: 16px;}
+                        }
+                    }
+                    &_list{height: calc(100% - 40px);}
+                }
+            }
+        }
+    }
+    @include media-breakpoint-down(sm){
+        .chatOpen{
+            width: 34px;
+            height: 34px;
+            em{font-size: 14px;}
+        }
+        .chatClose{
+            em{font-size: 15px;}
+        }
+    }
+}
