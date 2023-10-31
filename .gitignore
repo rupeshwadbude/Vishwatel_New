@@ -14,8 +14,7 @@
 # misc
 .DS_Store
 .env
-.env.dev
-.env.qa
+
 
 
 npm-debug.log*
@@ -23,10 +22,3 @@ yarn-debug.log*
 yarn-error.log*
 /package-lock.json
 
-
-#DOCKER
-.env.docker.*
-
-# Ignore Exceptions
-!.env.docker.example
-!.env.example
