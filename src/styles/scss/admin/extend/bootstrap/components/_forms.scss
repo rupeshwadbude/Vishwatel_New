@@ -199,9 +199,9 @@
     &-group{
         position: relative;
         margin-bottom: 1.25rem;
-        &:last-child{
-            margin-bottom: 0;
-        }
+        // &:last-child{
+        //     margin-bottom: 0;
+        // }
     }
     
     &-focus{

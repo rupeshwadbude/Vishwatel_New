@@ -1,0 +1,51 @@
+.authPage{
+    .card{
+        border-radius: 15px;
+        &-header{
+            background: none;
+            border-bottom: 1px solid #ddd;
+        }
+        &-inner{
+            padding: 40px 70px;
+        }
+        .nk-block-title{
+            color: #28326D;
+        }
+    }
+    &_radio{
+        label{
+            font-size: 18px;
+            color: #28326D;
+            font-weight: 500;
+        }
+    }
+    &_btn {
+        .btn{
+            min-width: 150px;
+        }
+    }
+    form{
+        .btn{
+            border-radius: 0;
+        }
+        .formBtm_radio{
+            padding: 15px;
+            background-color: rgba(#28326F, 0.05);
+            .form-group{
+                margin-bottom: 0;
+            }
+            .form-check{
+                &-label{
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #28326D;
+                }
+                &-input{
+                    &:checked{
+                        background-color: #28326F;
+                    }
+                }
+            }
+        }
+    }
+}

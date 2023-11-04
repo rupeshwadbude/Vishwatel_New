@@ -4,6 +4,9 @@ const accessRoute = {
   LOGIN: {
     path: `${baseRoutes.adminBaseRoutes}`,
   },
+  CHANNELSIGNUP: {
+    path: `${baseRoutes.adminBaseRoutes}/channel-signup`,
+  },
   FORGOT_PASSWORD: {
     path: `${baseRoutes.adminBaseRoutes}forgot-password`,
   },

@@ -1,5 +1,5 @@
 import { DesktopOutlined } from "@ant-design/icons";
-import { AdminLogin } from "../../pages";
+import { AdminLogin, ChannelSignup } from "../../pages";
 import adminRouteMap from "../../routeControl/adminRouteMap";
 
 export default function route() {
@@ -12,6 +12,15 @@ export default function route() {
       belongsToSidebar: false,
       icon: <DesktopOutlined />,
       element: <AdminLogin />,
+    },
+    {
+      path: adminRouteMap.CHANNELSIGNUP.path,
+      name: "Channel Signup",
+      key: adminRouteMap.CHANNELSIGNUP.path,
+      private: false,
+      belongsToSidebar: false,
+      icon: <DesktopOutlined />,
+      element: <ChannelSignup />,
     },
   ];
 }

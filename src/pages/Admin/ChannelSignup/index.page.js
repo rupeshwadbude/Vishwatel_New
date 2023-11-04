@@ -40,11 +40,11 @@ function Login() {
           <div className="card-inner card-inner-lg">
             <div className="nk-block-head">
               <div className="nk-block-head-content">
-                <h4 className="nk-block-title text-center">Customer Sign Up Process</h4>
+                <h4 className="nk-block-title text-center">Channel Partner SignUp Page</h4>
               </div>
             </div>
             <form>
-              <div className="authPage_radio d-flex ailgn-items-center justify-content-center mb-4">
+            <div className="authPage_radio d-flex ailgn-items-center justify-content-start mb-4">
                 <div className="form-check me-4">
                   <input className="form-check-input" type="radio" name="customer" id="individual" />
                   <label className="form-check-label" htmlFor="individual">
@@ -53,16 +53,9 @@ function Login() {
                 </div>
 
                 <div className="form-check me-4">
-                  <input className="form-check-input" type="radio" name="customer" id="business" />
-                  <label className="form-check-label" htmlFor="business">
-                    Business
-                  </label>
-                </div>
-
-                <div className="form-check">
-                  <input className="form-check-input" type="radio" name="customer" id="non-profit" />
-                  <label className="form-check-label" htmlFor="non-profit">
-                    Non-profit Organization
+                  <input className="form-check-input" type="radio" name="customer" id="organization" />
+                  <label className="form-check-label" htmlFor="organization">
+                    Organization
                   </label>
                 </div>
               </div>
@@ -279,39 +272,6 @@ function Login() {
                     </div>
                   </div>
                 </Col>
-
-                <Col>
-                    <div className="formBtm_radio">
-                      <div className="form-group mb-0">
-                        <label className="form-label">
-                          Billing Name<span>*</span>
-                        </label>
-
-                        <div className="d-flex ailgn-items-center justify-content-start">
-                          <div className="form-check me-4">
-                            <input className="form-check-input" type="radio" name="form-btm" id="name" />
-                            <label className="form-check-label" htmlFor="name">
-                              Name
-                            </label>
-                          </div>
-
-                          <div className="form-check me-4">
-                            <input className="form-check-input" type="radio" name="form-btm" id="company" />
-                            <label className="form-check-label" htmlFor="company">
-                              Company
-                            </label>
-                          </div>
-
-                          <div className="form-check">
-                            <input className="form-check-input" type="radio" name="form-btm" id="both" />
-                            <label className="form-check-label" htmlFor="both">
-                              Both (Name and Company)
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                </Col>
               </Row>
               {/* <div className="form-group">
                             <div className="d-flex justify-content-between">
@@ -335,7 +295,7 @@ function Login() {
                             </Link>
                             </div>
                         </div> */}
-              <div className="authPage_btn form-group mt-5 d-flex align-items-center justify-content-center mb-0">
+              <div className="authPage_btn form-group mt-3 d-flex align-items-center justify-content-center mb-0">
                 <CommonButton
                   extraClassName="btn-lg btn-inline justify-content-center me-3"
                   variant="primary"
