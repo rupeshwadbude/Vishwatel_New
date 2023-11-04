@@ -1,4 +1,7 @@
 .authPage{
+    &.wide-xxl{
+        max-width: 1240px;
+    }
     .card{
         border-radius: 15px;
         &-header{
@@ -46,6 +49,43 @@
                     }
                 }
             }
+        }
+    }
+    @include media-breakpoint-down(xxl){
+        .logo-img-lg{
+            max-height: 50px;
+        }
+        &.wide-xxl{
+            max-width: 992px;
+        }
+        .card{
+            &-inner{
+                padding: 40px;
+            }
+        }
+        form{
+            .formBtm_radio{
+                .form-check{
+                    &-label{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        &_radio{
+            label{
+                font-size: 16px;
+            }
+        }
+    }
+    @include media-breakpoint-down(xl){
+        .card{
+            &-inner{
+                padding: 30px;
+            }
+        }
+        &.wide-xxl{
+            max-width: 768px;
         }
     }
 }

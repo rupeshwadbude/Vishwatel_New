@@ -1,3 +1,40 @@
+.btn{
+    border-radius: 0;
+    &-secondary{
+        background-color: #28326F;
+    }
+}
+.modal-content{
+    border-radius: 15px;
+}
+.signupModal{
+    h3{
+        position: relative;
+        padding-bottom: 10px;
+        font-size: 28px;
+        margin-bottom: 20px;
+        &::after{
+            position: absolute;
+            content: '';
+            width: 200px;
+            height: 3px;
+            background-color: #FF9934;
+            bottom: 0;
+            left: 50%;
+            border-radius: 30px;
+            transform: translateX(-50%);
+        }
+    }
+    p{
+        font-size: 18px;
+        color: #28326D;
+        margin-bottom: 30px;
+        line-height: 1.3;
+    }
+    .btn{
+        min-width: 130px;
+    }
+}
 //Upload Photos
 .uploadPhoto {
     width: 110px;
@@ -141,6 +178,9 @@
                 border: 0;
                 box-shadow: none;
             }
+            &:focus{
+                box-shadow: none;
+            }
         }
     }
     &-control{
@@ -149,9 +189,35 @@
             box-shadow: none;
             border: 1px solid #8C9FA6;
         }
+        &::placeholder{
+            color: #bdbdbd;
+            font-weight: 500;
+        }
+        .ant-picker-input{
+            >input{
+                font-size: 15px!important;
+                &::placeholder{
+                    color: #bdbdbd!important;
+                    font-weight: 500;
+                }
+            }
+        }
     }
 }
-
+@include media-breakpoint-down(xxl){
+    .form{
+        &-group{
+            margin-bottom: 20px;
+        }
+       
+        &-check{
+            &-input{
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+}
 @include media-breakpoint-up(xl){
     .is-compact{
         &:not(:hover){

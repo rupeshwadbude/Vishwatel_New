@@ -1,37 +1,47 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Row, Col } from 'react-bootstrap';
 import { DatePicker } from 'antd';
 import {
   AuthLogo,
   CommonButton,
+  ImageElement,
+  ModalComponent,
   Input as TextInput,
   Password as TextPassword,
 } from "../../../components";
-import { modalNotification } from "../../../utils";
+// import { modalNotification } from "../../../utils";
 // import { Input as TextInput, Password as TextPassword} from "../../../index";
-import adminRouteMap from "../../../routeControl/adminRouteMap";
+// import adminRouteMap from "../../../routeControl/adminRouteMap";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [repeatPassword, setRepeatPassword] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
+  const [signupModal, setSignupModal] = useState(false);  
+  const [signinModal, setSigninModal] = useState(false);
+
   const loginSuccessfully = () => {
-    modalNotification({
-      type: "success",
-      message: "Signin Successfully",
-    });
-    setTimeout(() => {
-      navigate(adminRouteMap.DASHBOARD.path);
-    }, 2000);
+    // modalNotification({
+    //   type: "success",
+    //   message: "Signin Successfully",
+    // });
+    // setTimeout(() => {
+    //   navigate(adminRouteMap.DASHBOARD.path);
+    // }, 2000);
+    setSignupModal(true);
   };
 
   const onChange = (date, dateString) => {
     console.log(date, dateString);
   };
+
+  const handleCloseModal = () => {
+    setSignupModal(false);
+  }
   return (
     <>
-      <div className="authPage nk-block nk-block-middle nk-auth-body  wide-xl">
+      <div className="authPage nk-block nk-block-middle nk-auth-body wide-xxl">
         
         <div className="card">
           <div className="card-header">
@@ -119,17 +129,6 @@ function Login() {
                       </label>
                     </div>
                     <div className="form-control-wrap">
-                      {/* <TextInput
-                        id="firstname"
-                        className="form-control form-control-lg"
-                        name="firstname"
-                        disabled={false}
-                        variant="standard"
-                        type="text"
-                        placeholder="Select your DOB"
-                        setFieldValue=""
-                        icon={<em className="splash-calendar fieldicon-right"/>}
-                      /> */}
                       <DatePicker
                         className="form-control form-control-lg"
                         onChange={onChange}
@@ -361,6 +360,75 @@ function Login() {
           </div>
         </div>
       </div>
+
+      <ModalComponent
+        backdrop
+        show={signupModal}
+        extraTitleClassName='d-none'
+        modalExtraClass='signupModal'
+      >
+        <div className="text-center">
+          <div className=""> 
+              <ImageElement previewSource='/assets/images/admin/signup-success.png' className='img-fluid' />
+          </div>
+          <h3 className="mt-3">Sign Up Successfully</h3>
+          <p>You have successfully sign Up, <br />
+            You can close this window and continue using <br />
+            the Vishwatel service.
+          </p>
+          <div className="d-flex align-items-center justify-content-center">
+                <CommonButton
+                  extraClassName="btn-lg btn-inline justify-content-center me-3"
+                  variant="primary"
+                  onClick={() => {setSigninModal(true);setSignupModal(false)}}
+                >
+                  Sign In
+                </CommonButton>
+
+                <CommonButton
+                  extraClassName="btn-lg btn-inline justify-content-center"
+                  variant="secondary"
+                  onClick={handleCloseModal}
+                  // loading={loading}
+                  // htmlType="button"
+                  // type="submit"
+                >
+                  Close
+                </CommonButton>
+              </div>
+          </div>
+
+      </ModalComponent>
+
+      <ModalComponent
+        backdrop
+        show={signinModal}
+        extraTitleClassName='d-none'
+        modalExtraClass='signupModal'
+      >
+        <div className="text-center">
+          <div className=""> 
+              <ImageElement previewSource='/assets/images/admin/signup-success.png' className='img-fluid' />
+          </div>
+          <h3 className="mt-3">Sign In Successfully</h3>
+          <p>You have successfully signed into your account. <br />
+            You can close this window and continue using the <br />
+            Vishwatel service.
+          </p>
+
+          <CommonButton
+            extraClassName="btn-lg btn-inline justify-content-center"
+            variant="secondary"
+            onClick={() => setSigninModal(false)}
+            // loading={loading}
+            // htmlType="button"
+            // type="submit"
+          >
+            Close
+          </CommonButton>
+        </div>
+
+      </ModalComponent>
     </>
   );
 }
