@@ -8,7 +8,7 @@ export default function route() {
       name: "User Management",
       key: customerRouteMap.USER_MANAGEMENT.path,
       private: true,
-      belongsToSidebar: true,
+      belongsToSidebar: false,
       icon: customerRouteMap.USER_MANAGEMENT.icon,
       element: <UserManagement />
     },
