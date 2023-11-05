@@ -54,7 +54,7 @@ function Login() {
               </div>
             </div>
             <form>
-              <div className="authPage_radio d-flex ailgn-items-center justify-content-center mb-4">
+              <div className="authPage_radio d-md-flex ailgn-items-center justify-content-center mb-2 mb-lg-4">
                 <div className="form-check me-4">
                   <input className="form-check-input" type="radio" name="customer" id="individual" />
                   <label className="form-check-label" htmlFor="individual">
@@ -77,7 +77,7 @@ function Login() {
                 </div>
               </div>
               <Row>
-                <Col md={6}>
+                <Col sm={6}>
                   <div className="form-group">
                     <div className="form-label-group">
                       <label className="form-label" htmlFor="email">
@@ -99,7 +99,7 @@ function Login() {
                     </div>
                   </div>
                 </Col>
-                <Col md={6}>
+                <Col sm={6}>
                   <div className="form-group">
                     <div className="form-label-group">
                       <label className="form-label" htmlFor="email">
@@ -121,7 +121,7 @@ function Login() {
                     </div>
                   </div>
                 </Col>
-                <Col md={6}>
+                <Col sm={6}>
                   <div className="form-group">
                     <div className="form-label-group">
                       <label className="form-label" htmlFor="email">
@@ -136,7 +136,7 @@ function Login() {
                     </div>
                   </div>
                 </Col>
-                <Col md={6}>
+                <Col sm={6}>
                   <div className="form-group">
                     <div className="form-label-group">
                       <label className="form-label" htmlFor="email">
@@ -159,7 +159,7 @@ function Login() {
                   </div>
                 </Col>
 
-                <Col md={6}>
+                <Col sm={6}>
                   <div className="form-group">
                     <div className="form-label-group">
                       <label className="form-label" htmlFor="email">
@@ -182,7 +182,7 @@ function Login() {
                   </div>
                 </Col>
 
-                <Col md={6}>
+                <Col sm={6}>
                   <div className="form-group">
                     <div className="form-label-group">
                       <label className="form-label" htmlFor="email">
@@ -205,7 +205,7 @@ function Login() {
                   </div>
                 </Col>
 
-                <Col md={6}>
+                <Col sm={6}>
                   <div className="form-group">
                     <div className="form-label-group">
                       <label className="form-label" htmlFor="password">
@@ -242,7 +242,7 @@ function Login() {
                   </div>
                 </Col>
 
-                <Col md={6}>
+                <Col sm={6}>
                   <div className="form-group">
                     <div className="form-label-group">
                       <label className="form-label" htmlFor="password">
@@ -280,13 +280,13 @@ function Login() {
                 </Col>
 
                 <Col>
-                    <div className="formBtm_radio">
+                    <div className="authPage_radio  authPage_radio-formBtm">
                       <div className="form-group mb-0">
                         <label className="form-label">
                           Billing Name<span>*</span>
                         </label>
 
-                        <div className="d-flex ailgn-items-center justify-content-start">
+                        <div className="d-md-flex ailgn-items-center justify-content-start">
                           <div className="form-check me-4">
                             <input className="form-check-input" type="radio" name="form-btm" id="name" />
                             <label className="form-check-label" htmlFor="name">
@@ -312,36 +312,11 @@ function Login() {
                     </div>
                 </Col>
               </Row>
-              {/* <div className="form-group">
-                            <div className="d-flex justify-content-between">
-                            <div className="custom-control custom-control-sm custom-checkbox">
-                                <CustomCheckbox
-                                className="custom-control-input"
-                                id="checkbox"
-                                name="rememberMe"
-                                // checked={props.values?.rememberMe}
-                                >
-                                <label className="custom-control-label" htmlFor="checkbox">
-                                    {t("text.adminLogin.rememberMe")}
-                                </label>
-                                </CustomCheckbox>
-                            </div>
-                            <Link
-                                className="link link-primary link-sm"
-                                to={moduleRoutesMap[user].FORGOT_PASSWORD.path}
-                            >
-                                {t("text.adminLogin.forgotPasswordLink")}
-                            </Link>
-                            </div>
-                        </div> */}
-              <div className="authPage_btn form-group mt-5 d-flex align-items-center justify-content-center mb-0">
+              <div className="authPage_btn form-group mt-lg-5 mt-3 d-flex align-items-center justify-content-center mb-0">
                 <CommonButton
                   extraClassName="btn-lg btn-inline justify-content-center me-3"
                   variant="primary"
-                  // loading={loading}
                   onClick={() => loginSuccessfully()}
-                  // htmlType="button"
-                  // type="submit"
                 >
                   Submit
                 </CommonButton>
@@ -349,9 +324,6 @@ function Login() {
                 <CommonButton
                   extraClassName="btn-lg btn-inline justify-content-center"
                   variant="secondary"
-                  // loading={loading}
-                  // htmlType="button"
-                  // type="submit"
                 >
                   Reset
                 </CommonButton>
@@ -389,9 +361,6 @@ function Login() {
                   extraClassName="btn-lg btn-inline justify-content-center"
                   variant="secondary"
                   onClick={handleCloseModal}
-                  // loading={loading}
-                  // htmlType="button"
-                  // type="submit"
                 >
                   Close
                 </CommonButton>
@@ -420,9 +389,6 @@ function Login() {
             extraClassName="btn-lg btn-inline justify-content-center"
             variant="secondary"
             onClick={() => setSigninModal(false)}
-            // loading={loading}
-            // htmlType="button"
-            // type="submit"
           >
             Close
           </CommonButton>

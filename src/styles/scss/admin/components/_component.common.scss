@@ -34,6 +34,36 @@
     .btn{
         min-width: 130px;
     }
+    @include media-breakpoint-down(xl){
+        h3{
+            font-size: 24px;
+            &::after{
+                width: 150px;
+            }
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+    @include media-breakpoint-down(lg){
+        h3{
+            font-size: 20px;
+            &::after{
+                width: 110px;
+            }
+        }
+        p{
+            margin-bottom: 20px;
+        }
+    }
+    @include media-breakpoint-down(sm){
+        h3{
+            font-size: 18px;
+            &::after{
+                width: 100px;
+            }
+        }
+    }
 }
 //Upload Photos
 .uploadPhoto {
@@ -252,6 +282,18 @@
 @include media-breakpoint-up(lg){
     .min-vh-auto{
         min-height: auto !important;
+    }
+    .form{
+        &-group{
+            margin-bottom: 15px;
+        }
+    }
+}
+@include media-breakpoint-down(md){
+    .form{
+        &-group{
+            margin-bottom: 10px;
+        }
     }
 }
 .selection-cell,  .selection-cell-header{
