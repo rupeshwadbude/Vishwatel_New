@@ -41,7 +41,7 @@ function FileUploader({ uploadFileName, formData }) {
       <div className="fileUpload">
         <label htmlFor={uploadFileName}>
           <InboxOutlined />
-          <h2>{t("text.common.clickHere")}</h2>
+          <h2>Click Here</h2>
         </label>
         <input
           type="file"

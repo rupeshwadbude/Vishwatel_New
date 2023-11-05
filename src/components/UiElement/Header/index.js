@@ -95,10 +95,10 @@ function Header() {
             </Navbar.Collapse>
             <div className="d-flex actionBtn align-items-center hideLogin">
               <Link className="btn me-1 signUp" to="#">
-                {t("text.userAuth.signUp")}
+                SignUp
               </Link>
               <Link to="#" className="btn btn-warning btn-sm" id="loginHeader">
-                {t("text.userAuth.login")}
+                Login
               </Link>
             </div>
             <Navbar.Toggle

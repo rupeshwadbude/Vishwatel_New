@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import {
-  actionFormatter,
+  // actionFormatter,
   Breadcrumb,
-  DataTable,
+  // DataTable,
   ListingHeader,
   PageHeader,
-  SweetAlert,
-  switchFormatter
+  SweetAlert
+  // switchFormatter
 } from "../../../../components";
-import customerRouteMap from "../../../../routeControl/customerRouteMap";
+// import customerRouteMap from "../../../../routeControl/customerRouteMap";
 import { modalNotification } from "../../../../utils";
 
 function UserManagement() {
@@ -20,27 +20,27 @@ function UserManagement() {
     });
     setIsAlertVisibleDelete(false);
   };
-  const options = () => {
-    const optionsArr = [
-      {
-        name: "View",
-        icon: "icon ni ni-eye",
-        action: "redirect",
-        path: `${customerRouteMap.USER_DETAILS.path}`
-        // onClickHandle: () => {showViewDiscountModal(); setViewData(row); setViewDataModal('pending'); document.body.click()}
-      },
-      {
-        name: "Delete",
-        icon: "icon ni ni-trash",
-        action: "confirm",
-        onClickHandle: () => {
-          setIsAlertVisibleDelete(true);
-          document.body.click();
-        }
-      }
-    ];
-    return optionsArr;
-  };
+  // const options = () => {
+  //   const optionsArr = [
+  //     {
+  //       name: "View",
+  //       icon: "icon ni ni-eye",
+  //       action: "redirect",
+  //       path: `${customerRouteMap.USER_DETAILS.path}`
+  //       // onClickHandle: () => {showViewDiscountModal(); setViewData(row); setViewDataModal('pending'); document.body.click()}
+  //     },
+  //     {
+  //       name: "Delete",
+  //       icon: "icon ni ni-trash",
+  //       action: "confirm",
+  //       onClickHandle: () => {
+  //         setIsAlertVisibleDelete(true);
+  //         document.body.click();
+  //       }
+  //     }
+  //   ];
+  //   return optionsArr;
+  // };
 
   const breadcrumb = [
     {
@@ -52,51 +52,51 @@ function UserManagement() {
       name: "USER MANAGEMENT"
     }
   ];
-  const customerData = [
-    {
-      id: 1,
-      name: "Ashley Lawson",
-      email: "ashley@test.com",
-      phone: "9580095000",
-      price: "$0",
-      status: "active"
-    }
-  ];
+  // const customerData = [
+  //   {
+  //     id: 1,
+  //     name: "Ashley Lawson",
+  //     email: "ashley@test.com",
+  //     phone: "9580095000",
+  //     price: "$0",
+  //     status: "active"
+  //   }
+  // ];
 
-  const columns = [
-    {
-      dataField: "id",
-      text: "S.No.",
-      headerClasses: "w_70"
-    },
-    {
-      dataField: "name",
-      text: "User Name",
-      headerClasses: "sorting"
-    },
-    {
-      dataField: "email",
-      text: "Email ID",
-      headerClasses: "sorting"
-    },
-    {
-      dataField: "phone",
-      text: "Phone Number",
-      headerClasses: "sorting"
-    },
-    {
-      dataField: "status",
-      text: "Status",
-      headerClasses: "sorting",
-      formatter: () => switchFormatter(false)
-    },
-    {
-      dataField: "action",
-      text: "Action",
-      headerClasses: "nk-tb-col-tools text-end",
-      formatter: (cell, row) => actionFormatter(options(row))
-    }
-  ];
+  // const columns = [
+  //   {
+  //     dataField: "id",
+  //     text: "S.No.",
+  //     headerClasses: "w_70"
+  //   },
+  //   {
+  //     dataField: "name",
+  //     text: "User Name",
+  //     headerClasses: "sorting"
+  //   },
+  //   {
+  //     dataField: "email",
+  //     text: "Email ID",
+  //     headerClasses: "sorting"
+  //   },
+  //   {
+  //     dataField: "phone",
+  //     text: "Phone Number",
+  //     headerClasses: "sorting"
+  //   },
+  //   {
+  //     dataField: "status",
+  //     text: "Status",
+  //     headerClasses: "sorting",
+  //     formatter: () => switchFormatter(false)
+  //   },
+  //   {
+  //     dataField: "action",
+  //     text: "Action",
+  //     headerClasses: "nk-tb-col-tools text-end",
+  //     formatter: (cell, row) => actionFormatter(options(row))
+  //   }
+  // ];
   return (
     <>
       <div className="nk-block-head nk-block-head-sm">
@@ -107,7 +107,7 @@ function UserManagement() {
           <ListingHeader btnArray={["csvExport"]} />
         </div>
       </div>
-      <DataTable
+      {/* <DataTable
         hasLimit
         noOfPage="1"
         sizePerPage="10"
@@ -122,7 +122,7 @@ function UserManagement() {
         // tableReset={tableReset}
         // getSearchValue={getSearchValue}
         // searchPlaceholder={t("text.search.ManageSubscription")}
-      />
+      /> */}
       <SweetAlert
         title="Are you sure"
         text="you want to delete this user?"
