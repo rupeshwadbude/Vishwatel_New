@@ -10,7 +10,7 @@ export const GlobalLoader = loadable(() => import("./GlobalLoader/index"));
 export const FileUploader = loadable(() => import("./FileUploader/index"));
 
 export const ModalComponent = loadable(() => import("./Modal/Index"));
-export const DataTable = loadable(() => import("./DataTable/index"));
+// export const DataTable = loadable(() => import("./DataTable/index"));
 export const Pagination = loadable(() => import("./Pagination/index"));
 export const ActionDropdown = loadable(() => import("./ActionDropdown/index"));
 export const ProgressBarComponent = loadable(() =>
