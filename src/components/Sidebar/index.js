@@ -71,14 +71,14 @@ function Sidebar({ routes, sidebarOpen, menuToggle }) {
           >
             <img
               className="logo-img"
-              src="/assets/images/admin/logo-light.svg"
-              srcSet="../assets/images/admin/logo-light.svg"
+              src="/assets/images/admin/logo.png"
+              srcSet="../assets/images/admin/logo.png"
               alt="logo"
             />
             <img
               className="logo-small logo-img logo-img-small"
-              src="/assets/images/admin/logo-small-light.svg"
-              srcSet="/assets/images/admin/logo-small-light.svg"
+              src="/assets/images/admin/logo-small.png"
+              srcSet="/assets/images/admin/logo-small.png"
               alt="logo"
             />
           </Link>
