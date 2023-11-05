@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ImageElement } from "..";
-import { getFooterLink } from "../../../utils";
 
-function UserFooter({ routes }) {
-  const footerData = getFooterLink(routes);
+function UserFooter() {
+  let footerData = [];
   return (
     <>
       <footer className="footer position-relative">

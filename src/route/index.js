@@ -1,16 +1,14 @@
-import { useTranslation } from "react-i18next";
-import { AdminLayout } from "../layouts";
+import { CustomerLayout } from "../layouts";
 // import { userRoutes } from "./User";
 // import { NotFound } from "../pages";
-import { adminRoutes } from "./Admin";
+import { customerRoutes } from "./Customer";
 
 export const routes = () => {
-  const { t } = useTranslation();
   return [
     {
-      element: <AdminLayout />,
-      children: [...adminRoutes(t)],
-    },
+      element: <CustomerLayout />,
+      children: [...customerRoutes()]
+    }
     // {
     //   element: <MainLayout />,
     //   children: [...userRoutes(t)],
@@ -23,21 +21,19 @@ export const routes = () => {
 };
 
 export const routesList = () => {
-  const { t } = useTranslation();
   let routeArr = [
     // ...userRoutes(t)[0].children,
     // ...userRoutes(t)[1].children,
-    ...adminRoutes(t)[0].children,
-    ...adminRoutes(t)[1].children,
+    ...customerRoutes()[0].children,
+    ...customerRoutes()[1].children
   ];
   return [...routeArr];
 };
 
 export const moduleRoutesList = () => {
-  // const { t } = useTranslation();
   let routeArr = {
     // user: [...userRoutes(t)[0].children, ...userRoutes(t)[1].children],
-    admin: [...adminRoutes()[0].children, ...adminRoutes()[1].children],
+    admin: [...customerRoutes()[0].children, ...customerRoutes()[1].children]
   };
   return routeArr;
 };

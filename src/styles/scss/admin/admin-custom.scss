@@ -1,0 +1,116 @@
+.authPage{
+    &.wide-xxl{
+        max-width: 1240px;
+    }
+    .card{
+        border-radius: 15px;
+        &-header{
+            background: none;
+            border-bottom: 1px solid #ddd;
+        }
+        &-inner{
+            padding: 40px 70px;
+        }
+        .nk-block-title{
+            color: #28326D;
+        }
+    }
+    &_radio{
+        label{
+            font-size: 18px;
+            color: #28326D;
+            font-weight: 500;
+        }
+        &-formBtm{
+            padding: 15px;
+            background-color: rgba(#28326F, 0.05);
+            .form-group{
+                margin-bottom: 0;
+            }
+            .form-check{
+                &-input{
+                    &:checked{
+                        background-color: #28326F;
+                    }
+                }
+            }
+        }
+    }
+    &_btn {
+        .btn{
+            min-width: 150px;
+        }
+    }
+    form{
+        .btn{
+            border-radius: 0;
+        }
+    }
+    @include media-breakpoint-down(xxl){
+        .logo-img-lg{
+            max-height: 50px;
+        }
+        &.wide-xxl{
+            max-width: 992px;
+        }
+        .card{
+            &-inner{
+                padding: 40px;
+            }
+        }
+        form{
+            .formBtm_radio{
+                .form-check{
+                    &-label{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        &_radio{
+            label{
+                font-size: 16px;
+            }
+        }
+    }
+    @include media-breakpoint-down(xl){
+        .card{
+            &-inner{
+                padding: 30px;
+            }
+        }
+        &.wide-xxl{
+            max-width: 768px;
+        }
+    }
+    @include media-breakpoint-down(lg){
+        .logo-img-lg {
+            max-height: 35px;
+        }
+        .card{
+            &-inner{
+                padding: 20px;
+            }
+        }
+    }
+    @include media-breakpoint-down(md){
+        .card{
+            &-inner{
+                padding: 15px;
+            }
+        }
+        &.wide-xxl{
+            max-width: 100%;
+        }
+        &_radio{
+            label{
+                font-size: 14px;
+            }
+        }
+        &_btn {
+            .btn{
+                min-width: 100px;
+            }
+        }
+    }
+}

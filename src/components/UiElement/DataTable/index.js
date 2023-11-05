@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 import BootstrapTable from "react-bootstrap-table-next";
-import { useLocation, useNavigate } from "react-router-dom";
-import { t } from "i18next";
 import { Col, Row } from "react-bootstrap";
 import Pagination from "../Pagination";
-import { navigateWithParam } from "../../../utils";
 import { GlobalLoader } from "..";
 import { AntTooltip } from "../..";
 
@@ -32,9 +29,7 @@ function DataTable(props) {
     isCard = true,
     selectRow = false
   } = props;
-  const location = useLocation();
-  const navigate = useNavigate();
-  const { pathname } = location;
+
   const [search, setSearch] = useState("");
   const [firstTimeFetch, setFirstTimeFetch] = useState(false);
 
@@ -51,7 +46,7 @@ function DataTable(props) {
     if (pageNo) {
       newParams.page = pageNo;
     }
-    navigateWithParam(newParams, navigate, pathname);
+    // navigateWithParam(newParams, navigate, pathname);
     tableReset();
   };
 
@@ -85,30 +80,30 @@ function DataTable(props) {
 
   const options = {
     page,
-    sizePerPage,
+    sizePerPage
   };
 
   const indicationLoading = () => <GlobalLoader />;
 
   const indicationNoRecords = () => {
-    return <div className="text-center">{t("text.common.noRecordFound")}</div>;
+    return <div className="text-center">No Record Found</div>;
   };
 
   const rowSelection = {
-    mode: 'checkbox',
-    clickToSelect: true,
+    mode: "checkbox",
+    clickToSelect: true
   };
 
   return (
     <div className="nk-block">
-      <div className={`${isCard ? 'card' : ''} position-static`}>
+      <div className={`${isCard ? "card" : ""} position-static`}>
         <div className="card-inner">
           <div className="common-table">
             <div className="dataTables_wrapper dt-bootstrap4 no-footer">
               {header && (
                 <Row className="justify-between g-2">
                   <Col xs="8" md="6" className="text-start">
-                  <div
+                    <div
                       id="DataTables_Table_0_filter"
                       className="dataTables_filter"
                     >
@@ -145,7 +140,7 @@ function DataTable(props) {
                     </div>
                   </Col>
                   <Col xs="4" md="6" className="text-end">
-                  <div className="datatable-filter">
+                    <div className="datatable-filter">
                       <div
                         className="dataTables_length"
                         id="DataTables_Table_0_length"
@@ -172,35 +167,38 @@ function DataTable(props) {
                   </Col>
                 </Row>
               )}
-             {selectRow ? 
-              <BootstrapTable
-                classes="table dataTable tableTooltip"
-                keyField="id"
-                data={tableData}
-                options={options}
-                columns={tableColumns}
-                defaultSorted={param?.sortType ? defaultSort : []}
-                bordered={bordered}
-                selectRow={rowSelection}
-                wrapperClasses="datatable-wrap my-3"
-                loading={tableLoader}
-                noDataIndication={
-                  tableLoader ? indicationLoading : indicationNoRecords()
-                }
-              /> : <BootstrapTable
-                classes="table dataTable tableTooltip"
-                keyField="id"
-                data={tableData}
-                options={options}
-                columns={tableColumns}
-                defaultSorted={param?.sortType ? defaultSort : []}
-                bordered={bordered}
-                wrapperClasses="datatable-wrap my-3"
-                loading={tableLoader}
-                noDataIndication={
-                  tableLoader ? indicationLoading : indicationNoRecords()
-                }
-              />}
+              {selectRow ? (
+                <BootstrapTable
+                  classes="table dataTable tableTooltip"
+                  keyField="id"
+                  data={tableData}
+                  options={options}
+                  columns={tableColumns}
+                  defaultSorted={param?.sortType ? defaultSort : []}
+                  bordered={bordered}
+                  selectRow={rowSelection}
+                  wrapperClasses="datatable-wrap my-3"
+                  loading={tableLoader}
+                  noDataIndication={
+                    tableLoader ? indicationLoading : indicationNoRecords()
+                  }
+                />
+              ) : (
+                <BootstrapTable
+                  classes="table dataTable tableTooltip"
+                  keyField="id"
+                  data={tableData}
+                  options={options}
+                  columns={tableColumns}
+                  defaultSorted={param?.sortType ? defaultSort : []}
+                  bordered={bordered}
+                  wrapperClasses="datatable-wrap my-3"
+                  loading={tableLoader}
+                  noDataIndication={
+                    tableLoader ? indicationLoading : indicationNoRecords()
+                  }
+                />
+              )}
               {pagination && (
                 <Pagination
                   count={count}

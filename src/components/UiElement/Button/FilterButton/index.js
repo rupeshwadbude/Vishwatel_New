@@ -8,7 +8,7 @@ export default function FilterButton({ popover }) {
   const cancelButton = () => {
     setVisible(false);
   };
-  document.addEventListener("click", function (e) {
+  document?.addEventListener("click", (e) => {
     let filterCheck;
     filterCheck =
       e.target.closest(".ant-picker-header") ||

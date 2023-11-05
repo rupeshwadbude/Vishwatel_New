@@ -2,11 +2,11 @@
  * ****user and route for which it will**************
  * ****return true and false************************** */
 
-import { getLocalStorageToken } from "./common.util";
+import {} from "./common.util";
 
 function authDriver(route, userData, pathname) {
   try {
-    let checkData = getLocalStorageToken();
+    let checkData = "";
     let user = "";
     if (pathname.search("admin") >= 0) {
       user = "admin";

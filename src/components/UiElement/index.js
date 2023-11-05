@@ -8,7 +8,7 @@ export const MenuComponent = loadable(() => import("./Menu/index.menu"));
 export const TabComponent = loadable(() => import("./Tabs/index"));
 export const GlobalLoader = loadable(() => import("./GlobalLoader/index"));
 export const FileUploader = loadable(() => import("./FileUploader/index"));
-export const Charts = loadable(() => import("./Chart/index"));
+
 export const ModalComponent = loadable(() => import("./Modal/Index"));
 export const DataTable = loadable(() => import("./DataTable/index"));
 export const Pagination = loadable(() => import("./Pagination/index"));
@@ -18,7 +18,6 @@ export const ProgressBarComponent = loadable(() =>
 );
 export const CustomSwitch = loadable(() => import("./Switch/index"));
 export const SweetAlert = loadable(() => import("./SweetAlert/index"));
-export const TextEditor = loadable(() => import("./TextEditor/index"));
 export const AcountSidebar = loadable(() => import("./AcountSidebar/index"));
 
 export const UserHeader = loadable(() => import("./Header/index"));
@@ -28,6 +27,5 @@ export const SectionComponent = loadable(() =>
   import("./SectionComponent/index")
 );
 export const CustomCheck = loadable(() => import("./CustomCheck/index"));
-export const SlickSlider = loadable(() => import("./SlickSlider/index"));
 export const BookNowCard = loadable(() => import("./BookNowCard/index"));
 export const AboutComponent = loadable(() => import("./AboutComponent/index"));

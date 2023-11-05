@@ -26,12 +26,7 @@ function AboutComponent({ t }) {
               <span className="commonHead_tag d-inline-block position-relative text-uppercase">
                 {t("text.userHome.aboutUs")}
               </span>
-              <h2
-                className="commonHead_title"
-                dangerouslySetInnerHTML={{
-                  __html: t("text.userHome.makeYour"),
-                }}
-              />
+              <h2 className="commonHead_title">Title</h2>
               <p className="mb-0">
                 If you rent a boat for a day, many people make a mistake to plan
                 too many stopovers and programs into one day. One of the biggest

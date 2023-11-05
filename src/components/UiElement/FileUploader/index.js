@@ -1,45 +1,13 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useState } from "react";
 import { InboxOutlined } from "@ant-design/icons";
 
-import { useTranslation } from "react-i18next";
-import {
-  commasFormatter,
-  ImageElement,
-  logger,
-  modalNotification,
-  textFormatter,
-} from "../../../utils";
+import { ImageElement, logger, modalNotification } from "../../../utils";
 
-function FileUploader({ validExt = [], uploadFileName, formData }) {
-  const { t } = useTranslation();
+function FileUploader({ uploadFileName, formData }) {
   const [val, setVal] = useState(formData?.values);
-  useEffect(() => {
-    // if (formData?.values?.[uploadFileName]?.type) {
-    setVal({ ...formData?.values });
-    // }
-  }, [formData]);
-  const validFile = useMemo(() => {
-    return [...validExt?.name];
-  }, [validExt]);
-  let validFileName = useMemo(() => {
-    if (validFile?.length > 0) {
-      return commasFormatter(validFile?.map((item) => textFormatter(item)));
-    }
-  }, [validFile]);
-
-  let fileIcon = useMemo(() => {
-    return {
-      pdf: "pdf-file.svg",
-      txt: "txt-file.svg",
-      doc: "doc-file.svg",
-      docx: "doc-file.svg",
-      pptx: "ppt-file.svg",
-      ppt: "ppt-file.svg",
-      mp4: "mp4-file.svg",
-      mp3: "mp3-file.svg",
-    };
-  }, []);
-
+  let validFile = [];
+  let validFileName = "";
+  let fileIcon = "";
   function validateFileType(id) {
     try {
       let fileName = document.getElementById(id)?.value;
@@ -48,7 +16,7 @@ function FileUploader({ validExt = [], uploadFileName, formData }) {
       if (fileName && !validFile?.includes(extFile)) {
         modalNotification({
           type: "error",
-          message: `${`Please Upload ${validFileName}`}`,
+          message: `${`Please Upload ${validFileName}`}`
         });
         document.getElementById(id).value = "";
       } else {
@@ -59,7 +27,7 @@ function FileUploader({ validExt = [], uploadFileName, formData }) {
           type: extFile,
           name: fileDetail?.files?.item(0)?.name,
           size: fileMb.toFixed(1),
-          file: fileDetail?.files?.item(0),
+          file: fileDetail?.files?.item(0)
         };
         formData?.setFieldValue(uploadFileName, docDetails);
       }

@@ -1,6 +1,6 @@
-import adminRoutes from "./Admin";
+import customerRoutes from "./Customer";
 
 const moduleRoutesMap = {
-  admin: { ...adminRoutes },
+  ...customerRoutes
 };
 export default moduleRoutesMap;

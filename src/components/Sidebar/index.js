@@ -7,10 +7,10 @@ import SimpleBar from "simplebar-react";
 // import routesMap from "../../routeControl/adminRoutes";
 import {
   getSidebarKey,
-  updateSidebarKey,
+  updateSidebarKey
 } from "../../redux/AuthSlice/index.slice";
 import { getSideBarData } from "../../utils";
-import adminRouteMap from "../../routeControl/adminRouteMap";
+import customerRouteMap from "../../routeControl/customerRouteMap";
 // import { Sider, Header } from "..";
 
 function Sidebar({ routes, sidebarOpen, menuToggle }) {
@@ -21,7 +21,7 @@ function Sidebar({ routes, sidebarOpen, menuToggle }) {
   const [state, setState] = useState({
     collapsed: false,
     menu: [],
-    current: location.pathname,
+    current: location.pathname
   });
   const [currentActive, setCurrentActive] = useState(location.pathname);
   useEffect(() => {
@@ -66,19 +66,19 @@ function Sidebar({ routes, sidebarOpen, menuToggle }) {
       <div className="nk-sidebar-element nk-sidebar-head">
         <div className="nk-sidebar-brand">
           <Link
-            to={adminRouteMap.DASHBOARD.path}
+            to={customerRouteMap.DASHBOARD.path}
             className="logo-link nk-sidebar-logo"
           >
             <img
               className="logo-img"
-              src="/assets/images/admin/logo-light.svg"
-              srcSet="../assets/images/admin/logo-light.svg"
+              src="/assets/images/admin/logo.png"
+              srcSet="../assets/images/admin/logo.png"
               alt="logo"
             />
             <img
               className="logo-small logo-img logo-img-small"
-              src="/assets/images/admin/logo-small-light.svg"
-              srcSet="/assets/images/admin/logo-small-light.svg"
+              src="/assets/images/admin/logo-small.png"
+              srcSet="/assets/images/admin/logo-small.png"
               alt="logo"
             />
           </Link>

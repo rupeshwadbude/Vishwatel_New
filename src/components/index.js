@@ -1,8 +1,8 @@
 export * from "./Antd";
 // export * from "./Button";
 export { default as Sidebar } from "./Sidebar/index";
-export { default as AdminHeader } from "./AdminHeader/index";
-export { default as AdminFooter } from "./AdminFooter/index";
+export { default as CustomerHeader } from "./CustomerHeader/index";
+export { default as CustomerFooter } from "./CustomerFooter/index";
 export * from "./UiElement";
 export * from "./Form";
 export * from "./MetaTags";

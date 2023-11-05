@@ -2,13 +2,12 @@ import { useSelector } from "react-redux";
 import { useLocation, generatePath, useParams } from "react-router-dom";
 import React, { useEffect } from "react";
 import { AuthDriver as authDriver, modalNotification } from "../../utils";
-import { selectUserData } from "../../redux/AuthSlice/index.slice";
 import { getCompletePathList } from "../../route";
 
 function AppLayout({ setRedirectPath, children }) {
   const location = useLocation();
   const params = useParams();
-  const userData = useSelector(selectUserData);
+  const userData = useSelector({});
 
   function getGeneratedPath(data) {
     try {
@@ -55,7 +54,7 @@ function AppLayout({ setRedirectPath, children }) {
          * ********* so redirect it to public route******** */
         modalNotification({
           type: "warning",
-          message: "Your Session is expired. Please login again.",
+          message: "Your Session is expired. Please login again."
         });
         setRedirectPath(publicPath);
         // return false;
