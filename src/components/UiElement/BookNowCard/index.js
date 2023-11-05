@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ImageElement, checkValidData, checkValidPrice } from "../../../utils";
+import { ImageElement } from "../../../utils";
 
 function BookNowCard({ item, onHandleClick, onNavigate, buttonTitle }) {
   return (
@@ -40,14 +40,14 @@ function BookNowCard({ item, onHandleClick, onNavigate, buttonTitle }) {
               className=""
               tabIndex="0"
             >
-              {checkValidData(item?.description)}
+              {item?.description}
             </Link>
           </h3>
         </div>
         <div className="bookNowCard_contBox_price d-flex justify-content-between align-items-center flex-wrap">
           <h4 className="mb-0">
-            {checkValidPrice(item?.price)}
-            <span>/ {checkValidData(item?.duration)}</span>
+            {item?.price}
+            <span>/ {item?.duration}</span>
           </h4>
           <Link
             to="#"

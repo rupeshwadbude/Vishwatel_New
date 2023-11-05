@@ -1,12 +1,10 @@
 import React from "react";
 import { InboxOutlined } from "@ant-design/icons";
 import { Form } from "antd";
-import { useTranslation } from "react-i18next";
 import { useField } from "formik";
 import Dragger from "antd/es/upload/Dragger";
 import {
-  // getLocalStorageToken,
-  modalNotification,
+  modalNotification
   // removeSessionStorageToken,
 } from "../../../utils";
 
@@ -25,11 +23,8 @@ function DocumentUploader({
   setUploadLoading,
   ...rest
 }) {
-  const { t } = useTranslation();
-
   const [field, meta, helpers] = useField(name);
   const configs = { ...field, ...rest };
-  // const apiToken = getLocalStorageToken();
   if (meta && meta.touched && meta.error) {
     configs.error = true;
     configs.helperText = meta.error;
@@ -49,9 +44,9 @@ function DocumentUploader({
         type: "error",
         message: `${
           applyImageCropper
-            ? t("text.common.imageOnlyMessgae")
+            ? "text.common.imageOnlyMessgae"
             : "Please Upload Either Pdf , Docx or Doc"
-        }`,
+        }`
       });
     }
 
@@ -62,8 +57,8 @@ function DocumentUploader({
         modalNotification({
           type: "error",
           message: `${
-            applyImageCropper && t("text.common.imageSizeExceedingMessage")
-          }`,
+            applyImageCropper && "text.common.imageSizeExceedingMessage"
+          }`
         });
       }
     }
@@ -87,23 +82,23 @@ function DocumentUploader({
         if (applyImageCropper) {
           modalNotification({
             type: "success",
-            message: "Image uploaded successfully",
+            message: "Image uploaded successfully"
           });
           helpers.setValue(response.data.image);
         } else {
           modalNotification({
             type: "success",
-            message: `${info.file.name} uploaded successfully`,
+            message: `${info.file.name} uploaded successfully`
           });
           helpers.setValue({
             url: response.data.url,
             name: info.file.name,
-            path: response.data.image,
+            path: response.data.image
           });
           mediaUrl({
             url: response.data.url,
             name: info.file.name,
-            path: response.data.image,
+            path: response.data.image
           });
         }
       } else if (status === "error") {
@@ -112,7 +107,7 @@ function DocumentUploader({
           message:
             info?.file?.response?.message ||
             info?.file?.response?.error?.message,
-          description: `${info.file.name} file upload failed. ${info.file.response.detail}`,
+          description: `${info.file.name} file upload failed. ${info.file.response.detail}`
         });
         // if (response.detail.search("authenticated") !== -1) {
         //   removeSessionStorageToken();

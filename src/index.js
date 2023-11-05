@@ -4,7 +4,6 @@ import "./index.css";
 import $ from "jquery";
 // import "antd/dist/antd.css";
 import "antd/dist/reset.css";
-import "./utils/i18n";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";

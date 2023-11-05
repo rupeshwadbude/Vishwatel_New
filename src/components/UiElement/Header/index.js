@@ -2,19 +2,16 @@
 import React, { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import { getHeaderData } from "../../../utils";
 import ImageElement from "../ImageElement";
 // import HeaderDropdownMenu from "../HeaderDropdown";
 // import moduleRoutesMap from "../../../routeControl";
 
-function Header({ routes }) {
-  const { t } = useTranslation();
+function Header() {
   const location = useLocation();
   const { pathname } = location;
-  const headerData = getHeaderData(routes);
   const [show, setShow] = useState(false);
   const [expanded, setExpanded] = useState("");
+  let headerData = [];
   //   const userToken = false;
   useEffect(() => {
     setExpanded("");
@@ -75,7 +72,7 @@ function Header({ routes }) {
               id="navbarSupportedContent"
             >
               <Nav as="ul" className="mx-auto  beforeLogin">
-                {headerData.map((item, key) => {
+                {headerData?.map((item, key) => {
                   return (
                     <li
                       className={`nav-item ${

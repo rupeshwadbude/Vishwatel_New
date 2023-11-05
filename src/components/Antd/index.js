@@ -29,7 +29,6 @@ export const AntTooltip = loadable(() => import("./Tooltip/index.ant"));
 export const Description = loadable(() => import("./Description/index.ant"));
 export const Upload = loadable(() => import("./Upload/index.ant"));
 export const Select = loadable(() => import("./Select/index.ant"));
-export const MultiUpload = loadable(() => import("./MultiUpload/index.ant"));
 export const CheckboxGroup = loadable(() =>
   import("./CheckboxGroup/index.ant")
 );
