@@ -18,6 +18,7 @@ export const UserDetails = React.lazy(() =>
 );
 export const Profile = React.lazy(() => import("./Account/Profile/index.page"));
 export const EkycPage = React.lazy(() => import("./Ekyc/index.page"));
+export const ProfileUpdate = React.lazy(() => import("./ProfileUpdate/index.page"));
 export const ChangePassword = React.lazy(() =>
   import("./Account/ChangePassword/index.page")
 );

@@ -2,6 +2,7 @@ import DashboardRoutes from "./Dashboard/index.route";
 import UserManagementRoutes from "./UserManagement/index.route";
 import customerAccountRoutes from "./CustomerAccount/index.route";
 import ekyc from "./Ekyc/index.route";
+import profileUpdate from "./ProfileUpdate/index.route";
 
 export default function route() {
   return [
@@ -9,5 +10,6 @@ export default function route() {
     ...UserManagementRoutes(),
     ...customerAccountRoutes(),
     ...ekyc(),
+    ...profileUpdate(),
   ];
 }

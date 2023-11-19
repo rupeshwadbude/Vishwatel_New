@@ -175,7 +175,7 @@
         &:hover:not([readonly]){
             div{ 
                 &::before{
-                    $size: math.div(-$tagMargin,2);
+                    $size: calc(-$tagMargin,2);
                     $size: 0;
                     top:$size; 
                     right:$size; 
@@ -263,8 +263,8 @@
 
         width          : $size;
         height         : $size;
-        margin-right   : math.div($size,3);
-        margin-left    : math.div(-$size,3);
+        margin-right   : calc($size,3);
+        margin-left    : calc(-$size,3);
 
         transition     : .2s ease-out;
 
@@ -406,8 +406,8 @@
             right: 0;
             bottom: 0;
             font: $size monospace;
-            line-height: math.div($size,2);
-            height: math.div($size,2);
+            line-height: calc($size,2);
+            height: calc($size,2);
             pointer-events: none;
             transform: translate(-150%, -50%) scaleX(1.2) rotate(90deg);
             transition: .2s ease-in-out;

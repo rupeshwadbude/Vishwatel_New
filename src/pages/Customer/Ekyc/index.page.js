@@ -2,23 +2,9 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import {  PageHeader} from "../../../components";
 
+
 function Ekyc() {
   
-//   const breadcrumb = [
-//     {
-//       path: "/siteadmin/dashboard",
-//       name: "DASHBOARD",
-//     },
-//     {
-//       path: "/siteadmin/user-management",
-//       name: "USER MANAGEMENT",
-//     },
-//     {
-//       path: "#",
-//       name: "iUSER Detals",
-//     },
-//   ];
-
   return (
     <>
       <div className="nk-block-head nk-block-head-sm">
@@ -26,15 +12,22 @@ function Ekyc() {
           <PageHeader heading="Home | E-KYC" />
         </div>
       </div>    
-        <Card className="h-100">
-            <Card.Body>
-                <div className="d-flex align-items-center">
-                    <div className="">
-    dsd
-                    </div>
-                </div>
-            </Card.Body>
-        </Card>  
+      <Card className="ekycPage h-100">
+          <Card.Body className="d-flex align-items-center justify-content-center">
+              <div className="">
+                <label>
+                  <input 
+                    name="upload"
+                    type="file"
+                  />
+                  <span>
+                    Upload Picture <span className="splash-upload"/>
+                  </span>
+                  <span className="splash-camera"/>
+                </label>
+              </div>
+          </Card.Body>
+      </Card>  
     </>
   );
 }

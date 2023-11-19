@@ -1,7 +1,7 @@
 /*eslint-disable*/
 
 import React, {
-  // useEffect,
+  useEffect,
   useState
 } from "react";
 // import { useSelector } from "react-redux";
@@ -37,7 +37,15 @@ function AdminPrivateLayout() {
       list?.classList.toggle("nav-shown");
     }
   };
-
+  useEffect(() => {
+    setTimeout(() => {
+      let navbar = document.querySelector(".nk-header").clientHeight;
+      let footer = document.querySelector(".nk-footer").clientHeight;
+      let inner = document.querySelector(".nk-block-head").clientHeight;
+      document.querySelector(".nk-content-inner .ekycPage .card-body").style.minHeight = `${window.innerHeight - (footer + inner + navbar + 70)}px`;
+      document.querySelector(".nk-content").style.paddingTop = `${navbar + 35}px`;
+    }, 300);
+  }, []);
   return (
     // <AppLayout setRedirectPath={setRedirectPath}>
     <div className="nk-body bg-lighter npc-general has-sidebar">
