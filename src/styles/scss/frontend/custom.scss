@@ -20,8 +20,12 @@
 @import "utilities/utilities.main";
 
 
+.cardHeight{
+    min-height: calc(100vh - 250px);
+}
 
 .ekycPage{
+    
     input{
         display: none;
     }

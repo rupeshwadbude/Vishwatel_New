@@ -4,6 +4,7 @@ import dashboard from "./Dashboard";
 import customerProfile from "./Account/index";
 import ekyc from "./Ekyc";
 import profileUpdate from "./ProfileUpdate";
+import conversation from "./Conversation";
 
 const AccessControl = {
   ...auth,
@@ -12,6 +13,7 @@ const AccessControl = {
   ...customerProfile,
   ...ekyc,
   ...profileUpdate,
+  ...conversation,
 };
 
 export default AccessControl;

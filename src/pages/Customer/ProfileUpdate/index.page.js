@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, Card } from "react-bootstrap";
 import { Formik } from "formik";
-import { Input as TextInput,PageHeader,  UploadInput} from "../../../components";
+import { Input as TextInput,PageHeader} from "../../../components";
 
 function ProfileUpdate() {
   return (
@@ -17,27 +17,16 @@ function ProfileUpdate() {
                 <Col md={5}>
                     <Formik>
                     <form>
-                        <div className="userProfile">
-                        <UploadInput
-                            // apiEndPoints={Common.media("user", "image")}
-                            className="border-0 bg-transparent"
-                            name="file"
-                            type="file"
-                            // defaultImageUrl={
-                            //     userData?.profileImageUrl ||
-                            //     `${config.IMAGE_URL}/userImage.png`
-                            // }
-                            validateFileType={[
-                                "image/jpeg",
-                                "image/png",
-                                "image/jpg",
-                            ]}
-                            // setFieldValue={props.handleChange}
-                            >
-                            <label htmlFor="upload-img1">
-                                <em className="splash-camera" />
-                            </label>
-                        </UploadInput>
+                        <div className="userProfile text-center">
+                            <div className="userProfile_img">
+                                <label>
+                                    <img src='/assets/images/admin/profile.jpg' className="img-fluid profile" alt="profile"/>
+                                    <input type="file"/>
+                                    <em className="icon ni ni-camera-fill" />
+                                </label>
+                            </div>
+                            <h2>Company Profile</h2>
+                            <p>Manage your company name and logo</p>
                         </div>
                         
                         <div className="form-group">
