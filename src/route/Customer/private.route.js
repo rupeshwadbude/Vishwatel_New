@@ -4,12 +4,14 @@ import customerAccountRoutes from "./CustomerAccount/index.route";
 import ekyc from "./Ekyc/index.route";
 import profileUpdate from "./ProfileUpdate/index.route";
 import conversation from "./Conversation/index.route";
+import telephony from "./Telephony/index.route";
 
 export default function route() {
   return [
     ...DashboardRoutes(),
     ...UserManagementRoutes(),
     ...customerAccountRoutes(),
+    ...telephony(),
     ...ekyc(),
     ...profileUpdate(),
     ...conversation(),

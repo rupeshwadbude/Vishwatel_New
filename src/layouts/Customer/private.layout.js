@@ -39,11 +39,20 @@ function AdminPrivateLayout() {
   };
   useEffect(() => {
     setTimeout(() => {
-      let navbar = document.querySelector(".nk-header").clientHeight;
-      let footer = document.querySelector(".nk-footer").clientHeight;
-      let inner = document.querySelector(".nk-block-head").clientHeight;
-      document.querySelector(".nk-content-inner .ekycPage .card-body").style.minHeight = `${window.innerHeight - (footer + inner + navbar + 70)}px`;
-      document.querySelector(".nk-content").style.paddingTop = `${navbar + 35}px`;
+      let navbar = document.querySelector(".nk-header");
+      let footer = document.querySelector(".nk-footer");
+      let inner = document.querySelector(".nk-block-head");
+      let contentInner = document.querySelector(".nk-content-inner .ekycPage .card-body");
+      let content = document.querySelector(".nk-content");
+  
+      if (navbar && footer && inner && contentInner && content) {
+        let navbarHeight = navbar.clientHeight;
+        let footerHeight = footer.clientHeight;
+        let innerHeight = inner.clientHeight;
+  
+        contentInner.style.minHeight = `${window.innerHeight - (footerHeight + innerHeight + navbarHeight + 70)}px`;
+        content.style.paddingTop = `${navbarHeight + 35}px`;
+      }
     }, 300);
   }, []);
   return (

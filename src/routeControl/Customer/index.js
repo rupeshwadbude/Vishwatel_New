@@ -5,6 +5,7 @@ import customerProfile from "./Account/index";
 import ekyc from "./Ekyc";
 import profileUpdate from "./ProfileUpdate";
 import conversation from "./Conversation";
+import telephony from "./Telephony";
 
 const AccessControl = {
   ...auth,
@@ -14,6 +15,7 @@ const AccessControl = {
   ...ekyc,
   ...profileUpdate,
   ...conversation,
+  ...telephony,
 };
 
 export default AccessControl;
