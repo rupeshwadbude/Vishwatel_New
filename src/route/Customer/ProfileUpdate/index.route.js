@@ -5,7 +5,7 @@ export default function route() {
   return [
     {
       path: customerRouteMap.PROFILEUPDATE.path,
-      name: "Profile Update",
+      name: "General Settings",
       key: customerRouteMap.PROFILEUPDATE.path,
       private: true,
       belongsToSidebar: true,
