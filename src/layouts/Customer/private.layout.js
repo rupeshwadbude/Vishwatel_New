@@ -1,9 +1,6 @@
 /*eslint-disable*/
 
-import React, {
-  useEffect,
-  useState
-} from "react";
+import React, { useEffect, useState } from "react";
 // import { useSelector } from "react-redux";
 import {
   Outlet
@@ -42,15 +39,16 @@ function AdminPrivateLayout() {
       let navbar = document.querySelector(".nk-header");
       let footer = document.querySelector(".nk-footer");
       let inner = document.querySelector(".nk-block-head");
-      let contentInner = document.querySelector(".nk-content-inner .ekycPage .card-body");
+      let contentInner = document.querySelector(".nk-content-inner");
       let content = document.querySelector(".nk-content");
-  
       if (navbar && footer && inner && contentInner && content) {
         let navbarHeight = navbar.clientHeight;
         let footerHeight = footer.clientHeight;
         let innerHeight = inner.clientHeight;
-  
-        contentInner.style.minHeight = `${window.innerHeight - (footerHeight + innerHeight + navbarHeight + 70)}px`;
+
+        contentInner.style.minHeight = `${
+          window.innerHeight - (footerHeight + innerHeight + navbarHeight + 70)
+        }px`;
         content.style.paddingTop = `${navbarHeight + 35}px`;
       }
     }, 300);

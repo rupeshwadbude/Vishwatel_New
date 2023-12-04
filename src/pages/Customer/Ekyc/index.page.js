@@ -1,17 +1,27 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import { PageHeader} from "../../../components";
-
+import { PageHeader } from "../../../components";
 
 function Ekyc() {
-  
+  // const breadcrumb = [
+  //   {
+  //     path: "#",
+  //     name: "Home"
+  //   },
+  //   {
+  //     path: "#",
+  //     name: "E-KYC"
+  //   }
+  // ];
   return (
     <>
       <div className="nk-block-head nk-block-head-sm">
         <div className="nk-block-between">
-          <PageHeader heading="Home | E-KYC" />
+          <PageHeader heading="Home | E-KYC">
+            {/* <Breadcrumb breadcrumb={breadcrumb} /> */}
+          </PageHeader>
         </div>
-      </div>    
+      </div>
       <Card className="ekycPage cardHeight h-100">
           <Card.Body className="d-flex align-items-center justify-content-center">
               <div className="conversation_upload">

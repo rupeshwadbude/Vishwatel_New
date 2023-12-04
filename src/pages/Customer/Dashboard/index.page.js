@@ -89,71 +89,166 @@ function Dashboard() {
           enabled: false
       },
 }
-const barChartOptions1 = {
-    chart: {
-      type: 'column'
-    },
-    title: {
-        text: ''
-    },
-    colors: [ '#'],
-    xAxis: {
-      labels: {
-          style: {
-              color: '#B5B5C3'
-          }
-      },
-      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-      lineColor: '#e6e6e6',
-      tickColor:'#e6e6e6'
-    },
-    yAxis: {
-      title: {
-          text: ''
-      },
-      labels: {
-        style: {
-            color: '#B5B5C3'
-        }
-      },
-      minorGridLineWidth: 1,
-      gridLineWidth: 1,
-      gridLineDashStyle: 'longdash',
-      alternateGridColor: null,
-    },
-    credits: {
-        enabled: false
-    },
-    tooltip: {
-        useHTML: true,
-        backgroundColor: 'transparent',
-        borderColor: 'transparent',
-        shadow: false,
-        padding: 0,
-        headerFormat: '<div class="chartTooltip"><div class="chartTooltip-header"><h5>{point.key}</h5></div>',
-        pointFormat: '<div class="chartTooltip-data"><p style="color: {series.color}">{series.name} : <b>{point.y}</b></p></div>',
-        footerFormat: '</div>',
-        valueDecimals: 2
-    },
-    plotOptions: {
-        series: {
-            pointWidth: 12
-        },
-        column: {
-            borderRadius: '100%'
-        },
-    },
-    series: [
-        {
-            data: [100, 70, 60, 80, 50, 68, 78, 30, 52, 85, 30, 45]
-        },
-    ]
-  }
+// const barChartOptions1 = {
+//     chart: {
+//       type: 'column'
+//     },
+//     title: {
+//       text: ""
+//     },
+//     colors: [ '#'],
+//     xAxis: {
+//       type: "datetime",
+//       labels: {
+//         overflow: "justify",
+//         style: {
+//           color: "#B5B5C3"
+//         }
+//       },
+//       lineColor: "#e6e6e6",
+//       tickColor: "#e6e6e6"
+//     },
+//     yAxis: {
+//       title: {
+//         text: ""
+//       },
+//       labels: {
+//         style: {
+//           color: "#B5B5C3"
+//         }
+//       },
+//       minorGridLineWidth: 1,
+//       gridLineWidth: 1,
+//       gridLineDashStyle: "longdash",
+//       alternateGridColor: null
+//     },
+//     tooltip: {
+//       valueSuffix: " m/s",
+//       // shared: true,
+//       useHTML: true,
+//       backgroundColor: "transparent",
+//       borderColor: "transparent",
+//       padding: 0,
+//       headerFormat:
+//         '<div class="chartTooltip"><div class="chartTooltip-header"><h5>{point.key}</h5></div>',
+//       pointFormat:
+//         '<div class="chartTooltip-data"><p style="color: {series.color}">{series.name} : <b>{point.y}</b></p></div>',
+//       footerFormat: "</div>",
+//       valueDecimals: 2
+//     },
+//     plotOptions: {
+//       spline: {
+//         lineWidth: 4,
+//         states: {
+//           hover: {
+//             lineWidth: 5
+//           }
+//         },
+//         marker: {
+//           enabled: false
+//         },
+//         pointInterval: 3600000, // one hour
+//         pointStart: Date.UTC(2020, 3, 15, 0, 0, 0)
+//       }
+//     },
+//     colors: ["orange", "black"],
+//     style: {
+//       textOutline: false
+//     },
+//     series: [
+//         {
+//             data: [100, 70, 60, 80, 50, 68, 78, 30, 52, 85, 30, 45]
+//         },
+//     ]
+//   }
 // const filterOptions = [
 //     {id: 1, name: "Weekly"},
 //     {id: 2, name: "Monthly"},
 //     {id: 3, name: "Yearly"}
 // ]
+
+  //   credits: {
+  //     enabled: false
+  //   }
+  // };
+  const barChartOptions1 = {
+    chart: {
+      type: "column"
+    },
+    title: {
+      text: ""
+    },
+    colors: ["#134d9f", "#4986dd"],
+    xAxis: {
+      labels: {
+        style: {
+          color: "#B5B5C3"
+        }
+      },
+      categories: [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ],
+      lineColor: "#e6e6e6",
+      tickColor: "#e6e6e6"
+    },
+    yAxis: {
+      title: {
+        text: ""
+      },
+      labels: {
+        style: {
+          color: "#B5B5C3"
+        }
+      },
+      minorGridLineWidth: 1,
+      gridLineWidth: 1,
+      gridLineDashStyle: "longdash",
+      alternateGridColor: null
+    },
+    credits: {
+      enabled: false
+    },
+    tooltip: {
+      useHTML: true,
+      backgroundColor: "transparent",
+      borderColor: "transparent",
+      shadow: false,
+      padding: 0,
+      headerFormat:
+        '<div class="chartTooltip"><div class="chartTooltip-header"><h5>{point.key}</h5></div>',
+      pointFormat:
+        '<div class="chartTooltip-data"><p style="color: {series.color}">{series.name} : <b>{point.y}</b></p></div>',
+      footerFormat: "</div>",
+      valueDecimals: 2
+    },
+    plotOptions: {
+      series: {
+        pointWidth: 12
+      },
+      column: {
+        borderRadius: "100%"
+      }
+    },
+    series: [
+      {
+        data: [100, 70, 60, 80, 50, 68, 78, 30, 52, 85, 30, 45]
+      },
+      {
+        data: [56, 54, 45, 100, 54, 87, 78, 44, 75, 10, 56, 47]
+      }
+    ]
+  };
 
 
   // Data for the donut chart
