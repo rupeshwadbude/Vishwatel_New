@@ -26,7 +26,7 @@ function PublicLayout() {
       disable() {
         let maxWidth = 1199;
         return window.innerWidth < maxWidth;
-      },
+      }
     });
     // setTimeout(() => {
     //   let navbar = document.querySelector(".navbar").clientHeight;
@@ -45,7 +45,7 @@ function PublicLayout() {
 
   const pageClass = {
     home: "homePage",
-    login: "authPage",
+    login: "authPage"
   };
 
   return (

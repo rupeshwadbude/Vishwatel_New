@@ -8,13 +8,17 @@ function authDriver(route, userData, pathname) {
   try {
     let checkData = "";
     let user = "";
-    if (pathname.search("admin") >= 0) {
-      user = "admin";
+    if (pathname.search("/") >= 0) {
+      user = "/";
     } else {
       user = "user";
     }
 
+    console.log("ffhgfhygfh", pathname.search("/"));
+
     const Role = userData?.role === "superadmin" ? "admin" : "user";
+
+    console.log("Role", Role);
 
     let userCheck = Role ?? user;
 

@@ -6,7 +6,7 @@ import {
     AcountSidebar,
 //   Breadcrumb,
 Input as TextInput,
-  MetaTags, ModalComponent, PageHeader,
+   ModalComponent, PageHeader,
 //   PageHeader,
 //   ProfileForm,
 } from "../../../../components";
@@ -37,7 +37,7 @@ function AdminProfile() {
     }
     return (
         <>
-        <MetaTags title="" />
+        {/* <MetaTags title="" /> */}
         {/* <div className="nk-block-head nk-block-head-sm">
             <div className="nk-block-between">
             <PageHeader heading={t("text.profile.title")}>

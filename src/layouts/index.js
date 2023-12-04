@@ -18,3 +18,10 @@ export const CustomerPublicLayout = React.lazy(() =>
 export const CustomerPrivateLayout = React.lazy(() =>
   import("./Customer/private.layout")
 );
+export const UserPublicLayout = React.lazy(() =>
+  import("./User/public.layout")
+);
+export const UserPrivateLayout = React.lazy(() =>
+  import("./User/private.layout")
+);
+export const UserLayout = React.lazy(() => import("./User/index.layout"));

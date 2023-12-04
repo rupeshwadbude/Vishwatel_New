@@ -2,7 +2,8 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import AppLayout from "../App/index.layout";
 
-function AdminPublicLayout() {
+function UserPublicLayout() {
+  console.log("tesst");
   return (
     <AppLayout>
       <div className="nk-body bg-lighter npc-general pg-auth no-touch nk-nio-theme">
@@ -20,4 +21,4 @@ function AdminPublicLayout() {
   );
 }
 
-export default AdminPublicLayout;
+export default UserPublicLayout;
