@@ -658,6 +658,7 @@
     &_head{
         padding: 10px;
         background-color: #252b65;
+        span{display: flex; align-items: center;color: #fff;}
         h2{
             font-size: 22px;
             color: #fff;
@@ -673,6 +674,7 @@
             color: #252b65;
             font-size: 14px;
             border-radius: 50%;
+            margin-right: 10px;
         }
     }
     &_inner{
@@ -694,6 +696,102 @@
             em{
                 color: #fff;
                 font-size: 38px;
+            }
+        }
+        &-full{
+            max-width: 100%;
+        }
+    }
+    &_cnt{
+        .ant-select-selection-search-input, .ant-select-selection-item{
+            text-align: left;
+        }
+        .numberInfo{
+            padding: 20px;
+            background-color: rgba(#252b65,0.10);
+            color: #252b65;
+            font-size: 18px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    }
+}
+
+
+.getNumberModal{
+    .modal-body{
+        padding: 0;
+    }
+    &_head{
+        padding: 15px 20px;
+        border-bottom: 1px solid #ddd;
+        h2{
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+        .icon{
+            background-color: $danger;
+            color: $white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &_inner{
+        margin-top: 20px;
+        form{
+            padding: 15px 20px;
+            margin-bottom: 10px;
+        }
+
+        &.subsModal{
+            p{
+                font-size: 18px;
+                color: #252b65;
+            }
+            span{
+                font-size: 13px;
+                color: #101010;
+            }
+        }
+    }
+    ul{
+        margin-bottom: 20px;
+        li{
+            margin-bottom: 2px;
+            background-color: rgba(#252b65, 0.1);
+            padding: 8px 20px;
+            font-size: 18px;
+            color: #252b65;
+            img{
+                height: 35px;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+.dataTablePhone{
+    table{
+        thead{
+            background-color: #252b65;
+            tr,th{
+                padding: 15px 20px;
+                color: #fff;
+            }
+        }
+        tbody{
+            tr,td{
+                padding: 15px 20px;
+                background-color: rgba(#252b65, 0.10);
+                margin-bottom: 2px;
+                img{
+                    height: 40px;
+                    margin-right: 15px;
+                }
             }
         }
     }
