@@ -21,7 +21,7 @@ function Ekyc() {
                     name="upload"
                     type="file"
                   />
-                    Upload Picture <span className="splash-upload"/>
+                    Upload Picture <em className="icon ni ni-upload"/>
                 </label>
               </div>
           </Card.Body>

@@ -1,17 +1,13 @@
-import React from "react";
+import React  from "react";
+// { useState, useEffect }
+
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import { Card, Col, Row } from "react-bootstrap";
-import { Breadcrumb, PageHeader, Select } from "../../../components";
+import { Link } from "react-router-dom";
+import { PageHeader } from "../../../components";
 
 function Dashboard() {
-  const breadcrumb = [
-    {
-      path: "#",
-      name: "DASHBOARD",
-    },
-  ];
-
   const options1 ={
     chart: {
         type: 'spline',
@@ -76,13 +72,13 @@ function Dashboard() {
         textOutline: false
       },
       series: [{
-          name: 'Students',
+          name: 'Total Users',
           data: [5.4, 5.2, 5.7, 6.3, 5.2, 5.6, 6.1,
               5.6, 5.9, 7.1, 8.6, 7.8, 8.6,
               8.0, 9.7, 11.2, 12.5, 13.1, 10.6,
               10.9, 8.9, 9.5, 7.5, 3.5, 4.2],
       }, {
-          name: 'Teachers',
+          name: 'Users',
           data: [2, 3, 1, 3, 1,2, 1.1,
               2.2, 3.1, 3.5, 1.1, 1.1, 1.3,
               2.0, 1.5, 1.5, 1.5, 1.4, 1.7,
@@ -100,7 +96,7 @@ const barChartOptions1 = {
     title: {
         text: ''
     },
-    colors: [ '#134d9f', "#4986dd"],
+    colors: [ '#'],
     xAxis: {
       labels: {
           style: {
@@ -151,40 +147,35 @@ const barChartOptions1 = {
         {
             data: [100, 70, 60, 80, 50, 68, 78, 30, 52, 85, 30, 45]
         },
-        {
-            data: [56, 54, 45, 100, 54, 87, 78, 44, 75, 10, 56, 47]
-        }
     ]
   }
-const filterOptions = [
-    {id: 1, name: "Weekly"},
-    {id: 2, name: "Monthly"},
-    {id: 3, name: "Yearly"}
-]
+// const filterOptions = [
+//     {id: 1, name: "Weekly"},
+//     {id: 2, name: "Monthly"},
+//     {id: 3, name: "Yearly"}
+// ]
 
 
   // Data for the donut chart
     const chartData = [
-        { name: 'Category 1', y: 30, color: 'orange' },
-        { name: 'Category 2', y: 20, color: 'block'},
-        { name: 'Category 3', y: 50, color: 'grey'},
+        { y: 30, color: 'orange' },
+        { y: 20, color: 'block'},
+        { y: 50, color: 'grey'},
     ];
 
     const options3 = {
         chart: {
             type: 'pie',
         },
-        title: {
-            text: 'Donut Chart',
-        },
+        title: false,
         plotOptions: {
             pie: {
                 innerSize: '60%', // Adjust the inner size to create a donut chart
                 allowPointSelect: true,
                 cursor: 'pointer',
                 dataLabels: {
-                    enabled: true,
-                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    enabled: false,
+                    // format: '<b>{point.name}</b>: {point.percentage:.1f} %',
                 },
             },
         },
@@ -196,36 +187,80 @@ const filterOptions = [
         ],
     }
 
+   
   return (
     <>
       <div className="nk-block-head nk-block-head-sm">
-        <div className="nk-block-between">
+        {/* <div className="nk-block-between">
           <PageHeader heading="Dashboard">
             <Breadcrumb breadcrumb={breadcrumb} />
           </PageHeader>
+        </div> */}
+         <div className="nk-block-between">
+          <PageHeader heading="Dashboard" />
         </div>
       </div>
       <div className="nk-block">
         <div className="dashboardTiles nk-store-statistics">
-          <Row className="g-2 g-xxl-4">
-          <Col xxl={6}>
-                    <Card className="mb-0 border-0 h-100">
-                        <Card.Header>
-                            <div className="filterHead d-flex justify-content-between align-items-center">
-                                <div className="heading mb-sm-0 mb-2">
-                                    <Card.Title as="h5" className="mb-0">Overview</Card.Title>
-                                    <p className="mb-0 text-light fs-14">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                </div>
-                                <Select size="small" placeholder="Select" defaultValue="Weekly" arrayOfData={filterOptions} />
-                            </div>
-                        </Card.Header>
-                        <Card.Body>
-                            <HighchartsReact
-                                highcharts={Highcharts}
-                                options={options1}
-                            />
-                        </Card.Body>
-                    </Card>
+          <Row>
+            <Col md={10}>
+              <div className="mb-4">
+                  <Row>
+                      <Col md={3}>
+                          <div className="cardDash">
+                              <div className="cardDash_data cardDash_data-1">
+                                  $10000+
+                              </div>
+                              <p>Vishwatel Balance</p>
+                          </div>
+                      </Col>
+                      <Col md={3}>
+                          <div className="cardDash">
+                              <div className="cardDash_data cardDash_data-2">
+                                  170+
+                              </div>
+                              <p>Phone Number Sold</p>
+                          </div>
+                      </Col>
+                      <Col md={3}>
+                          <div className="cardDash">
+                              <div className="cardDash_data cardDash_data-3">
+                                  800
+                              </div>
+                              <p>Total Users</p>
+                          </div>
+                      </Col>
+                      <Col md={3}>
+                          <div className="cardDash">
+                              <div className="cardDash_data cardDash_data-4">
+                                  60+
+                              </div>
+                              <p>Total Partners</p>
+                          </div>
+                      </Col>
+                  </Row>
+              </div>
+              <Row className="g-2 g-xxl-4">
+                <Col xxl={6}>
+                  <Card className="mb-0 border-0 h-100">
+                      <Card.Header>
+                          <div className="filterHead d-flex justify-content-between align-items-center">
+                              <div className="heading mb-sm-0 mb-2">
+                                  <Card.Title as="h5" className="mb-0">Users</Card.Title>
+                              </div>
+                              {/* <Select size="small" placeholder="Select" defaultValue="Weekly" arrayOfData={filterOptions} /> */}
+                              <Link to="#" className="text-dark">
+                                <em className="icon ni ni-more-h"/>
+                              </Link>
+                          </div>
+                      </Card.Header>
+                      <Card.Body>
+                          <HighchartsReact
+                              highcharts={Highcharts}
+                              options={options1}
+                          />
+                      </Card.Body>
+                  </Card>
                 </Col>
 
                 <Col xxl={6}>
@@ -233,10 +268,12 @@ const filterOptions = [
                         <Card.Header>
                             <div className="filterHead d-flex justify-content-between align-items-center">
                                 <div className="heading mb-sm-0 mb-2">
-                                    <Card.Title as="h5" className="mb-0">Students Strength</Card.Title>
-                                    <p className="mb-0 text-light fs-14">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <Card.Title as="h5" className="mb-0">Sold Phone</Card.Title>
                                 </div>
-                                <Select size="small" placeholder="Select" defaultValue="Weekly" arrayOfData={filterOptions} />
+                                {/* <Select size="small" placeholder="Select" defaultValue="Weekly" arrayOfData={filterOptions} /> */}
+                                <Link to="#" className="text-dark">
+                                  <em className="icon ni ni-more-h"/>
+                                </Link>
                             </div>
                         </Card.Header>
                         <Card.Body>
@@ -248,24 +285,49 @@ const filterOptions = [
                     </Card>
                 </Col>
 
-                <Col xxl={6}>
+                <Col xxl={4}>
                     <Card className="mb-0 border-0 h-100">
                         <Card.Header>
                             <div className="filterHead d-flex justify-content-between align-items-center">
                                 <div className="heading mb-sm-0 mb-2">
-                                    <Card.Title as="h5" className="mb-0">Students Strength</Card.Title>
-                                    <p className="mb-0 text-light fs-14">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                    <Card.Title as="h5" className="mb-0">Vishwatel Balance</Card.Title>
                                 </div>
-                                <Select size="small" placeholder="Select" defaultValue="Weekly" arrayOfData={filterOptions} />
+                                <Link to="#" className="text-dark">
+                                  <em className="icon ni ni-more-h"/>
+                                </Link>
                             </div>
                         </Card.Header>
                         <Card.Body>
                             <div>
                                 <HighchartsReact highcharts={Highcharts} options={options3} />
+                                {/* <HighchartsReact highcharts={Highcharts} options={chartOptions} />; */}
                             </div>
                         </Card.Body>
                     </Card>
                 </Col>
+
+                <Col xxl={4}>
+                    <Card className="mb-0 border-0 h-100">
+                        <Card.Header>
+                            <div className="filterHead d-flex justify-content-between align-items-center">
+                                <div className="heading mb-sm-0 mb-2">
+                                    <Card.Title as="h5" className="mb-0">Referal Partner Payout</Card.Title>
+                                </div>
+                                <Link to="#" className="text-dark">
+                                  <em className="icon ni ni-more-h"/>
+                                </Link>
+                            </div>
+                        </Card.Header>
+                        <Card.Body>
+                            <div>
+                                <HighchartsReact highcharts={Highcharts} options={options3} />
+                                {/* <HighchartsReact highcharts={Highcharts} options={chartOptions} />; */}
+                            </div>
+                        </Card.Body>
+                    </Card>
+                </Col>
+              </Row>
+            </Col>
           </Row>
         </div>
       </div>

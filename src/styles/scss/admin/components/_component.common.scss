@@ -339,9 +339,6 @@
 
 .dashboardTiles{
     .card{
-        &-body{
-            border-left: 6px solid;
-        }
         @include media-breakpoint-up(xl){
             .icon{
                 &-lg{
@@ -625,6 +622,10 @@
             input{
                 display: none;
             }
+            .icon{
+                font-size: 18px;
+                margin-left: 10px;
+            }
         }
     }
 }
@@ -794,5 +795,38 @@
                 }
             }
         }
+    }
+}
+
+.cardDash{
+    padding: 15px;
+    background-color: #FFF; 
+    border-radius: 10px;
+    text-align: center;
+    &_data{
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px auto;
+        background-color: brown;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;align-items: center;
+        justify-content: center;
+        &-1{
+            background-color: #549338;
+        }
+        &-2{
+            background-color: #EF3179;
+        }
+        &-3{
+            background-color: #4443A9;
+        }
+        &-4{
+            background-color: #FFC71E;
+        }
+    }
+    p{
+        font-size: 18px;
+        margin-bottom: 0;
     }
 }
