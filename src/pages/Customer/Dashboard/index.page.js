@@ -5,9 +5,16 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import { Card, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { DatePicker } from 'antd';
 import { PageHeader } from "../../../components";
 
+const { RangePicker } = DatePicker;
+
 function Dashboard() {
+  const getPopupContainer = (trigger) => {
+    // Appends the DatePicker dropdown after the input field
+    return trigger.parentNode;
+  };
   const options1 ={
     chart: {
         type: 'spline',
@@ -88,89 +95,7 @@ function Dashboard() {
       credits: {
           enabled: false
       },
-}
-// const barChartOptions1 = {
-//     chart: {
-//       type: 'column'
-//     },
-//     title: {
-//       text: ""
-//     },
-//     colors: [ '#'],
-//     xAxis: {
-//       type: "datetime",
-//       labels: {
-//         overflow: "justify",
-//         style: {
-//           color: "#B5B5C3"
-//         }
-//       },
-//       lineColor: "#e6e6e6",
-//       tickColor: "#e6e6e6"
-//     },
-//     yAxis: {
-//       title: {
-//         text: ""
-//       },
-//       labels: {
-//         style: {
-//           color: "#B5B5C3"
-//         }
-//       },
-//       minorGridLineWidth: 1,
-//       gridLineWidth: 1,
-//       gridLineDashStyle: "longdash",
-//       alternateGridColor: null
-//     },
-//     tooltip: {
-//       valueSuffix: " m/s",
-//       // shared: true,
-//       useHTML: true,
-//       backgroundColor: "transparent",
-//       borderColor: "transparent",
-//       padding: 0,
-//       headerFormat:
-//         '<div class="chartTooltip"><div class="chartTooltip-header"><h5>{point.key}</h5></div>',
-//       pointFormat:
-//         '<div class="chartTooltip-data"><p style="color: {series.color}">{series.name} : <b>{point.y}</b></p></div>',
-//       footerFormat: "</div>",
-//       valueDecimals: 2
-//     },
-//     plotOptions: {
-//       spline: {
-//         lineWidth: 4,
-//         states: {
-//           hover: {
-//             lineWidth: 5
-//           }
-//         },
-//         marker: {
-//           enabled: false
-//         },
-//         pointInterval: 3600000, // one hour
-//         pointStart: Date.UTC(2020, 3, 15, 0, 0, 0)
-//       }
-//     },
-//     colors: ["orange", "black"],
-//     style: {
-//       textOutline: false
-//     },
-//     series: [
-//         {
-//             data: [100, 70, 60, 80, 50, 68, 78, 30, 52, 85, 30, 45]
-//         },
-//     ]
-//   }
-// const filterOptions = [
-//     {id: 1, name: "Weekly"},
-//     {id: 2, name: "Monthly"},
-//     {id: 3, name: "Yearly"}
-// ]
-
-  //   credits: {
-  //     enabled: false
-  //   }
-  // };
+  }
   const barChartOptions1 = {
     chart: {
       type: "column"
@@ -249,48 +174,38 @@ function Dashboard() {
       }
     ]
   };
-
-
   // Data for the donut chart
-    const chartData = [
-        { y: 30, color: 'orange' },
-        { y: 20, color: 'block'},
-        { y: 50, color: 'grey'},
-    ];
-
-    const options3 = {
-        chart: {
-            type: 'pie',
-        },
-        title: false,
-        plotOptions: {
-            pie: {
-                innerSize: '60%', // Adjust the inner size to create a donut chart
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: false,
-                    // format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                },
-            },
-        },
-        series: [
-            {
-                name: 'Categories',
-                data: chartData,
-            },
-        ],
-    }
-
-   
+  const chartData = [
+      { y: 30, color: 'orange' },
+      { y: 20, color: 'block'},
+      { y: 50, color: 'grey'},
+  ];
+  const options3 = {
+      chart: {
+          type: 'pie',
+      },
+      title: false,
+      plotOptions: {
+          pie: {
+              innerSize: '60%', // Adjust the inner size to create a donut chart
+              allowPointSelect: true,
+              cursor: 'pointer',
+              dataLabels: {
+                  enabled: false,
+                  // format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+              },
+          },
+      },
+      series: [
+          {
+              name: 'Categories',
+              data: chartData,
+          },
+      ],
+  }
   return (
     <>
       <div className="nk-block-head nk-block-head-sm">
-        {/* <div className="nk-block-between">
-          <PageHeader heading="Dashboard">
-            <Breadcrumb breadcrumb={breadcrumb} />
-          </PageHeader>
-        </div> */}
          <div className="nk-block-between">
           <PageHeader heading="Dashboard" />
         </div>
@@ -332,6 +247,19 @@ function Dashboard() {
                               </div>
                               <p>Total Partners</p>
                           </div>
+                      </Col>
+                      <Col>
+                        <div className="form-group">
+                          <label htmlFor="email" className="form-label d-flex">Date Picker</label>
+                          <RangePicker
+                              open="true" 
+                              getPopupContainer={getPopupContainer} 
+                              // onChange={onChange} 
+                              placement="bottomLeft"
+                              className="form-control w-100" 
+                              icon={<em className="icon icon-calendar" />} 
+                          />
+                        </div>
                       </Col>
                   </Row>
               </div>
