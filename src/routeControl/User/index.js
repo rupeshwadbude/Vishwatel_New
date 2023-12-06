@@ -6,6 +6,7 @@ import profileUpdate from "./ProfileUpdate";
 import conversation from "./Conversation";
 import telephony from "./Telephony";
 import recordings from "./Recordings";
+import billing from "./Billing";
 
 const AccessControl = {
   ...auth,
@@ -15,6 +16,7 @@ const AccessControl = {
   ...profileUpdate,
   ...conversation,
   ...telephony,
-  ...recordings
+  ...recordings,
+  ...billing
 };
 export default AccessControl;

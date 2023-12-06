@@ -22,3 +22,4 @@ export const UserChangePassword = React.lazy(() =>
   import("./Account/ChangePassword/index.page")
 );
 export const Recordings = React.lazy(() => import("./Recordings/index.page"));
+export * from "./Billing";
