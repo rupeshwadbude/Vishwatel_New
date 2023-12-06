@@ -21,3 +21,4 @@ export const Telephony = React.lazy(() => import("./Telephony/index.page"));
 export const UserChangePassword = React.lazy(() =>
   import("./Account/ChangePassword/index.page")
 );
+export const Recordings = React.lazy(() => import("./Recordings/index.page"));
