@@ -55,6 +55,28 @@ function CustomerHeader({ menuToggle }) {
                   as="a"
                   className="nk-quick-nav-icon btn-icon btn-icon-break p-0"
                 >
+                  <em className="icon ni ni-cart-fill"/>
+                </Dropdown.Toggle>
+                <Dropdown.Menu align="end" className="dropdown-menu-xl">
+                  <div className="dropdown-head">
+                    <div className="d-flex align-items-center">
+                      <h2>+91-8310-77100</h2>
+                      <Link to="#" className="notification-link d-inline-block">Continue shopping</Link>
+                    </div>
+                  </div>
+                  <div className="dropdown-body">
+                    Download 
+                  </div>
+                  <div className="dropdown-foot center">
+                    5
+                  </div>
+                </Dropdown.Menu>
+              </Dropdown>
+              <Dropdown as="li" className="notification-dropdown">
+                <Dropdown.Toggle
+                  as="a"
+                  className="nk-quick-nav-icon btn-icon btn-icon-break p-0"
+                >
                   <div className="badge badge-circle align-items-center bg-primary">
                     5
                   </div>

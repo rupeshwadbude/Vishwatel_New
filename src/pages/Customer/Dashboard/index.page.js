@@ -249,7 +249,7 @@ function Dashboard() {
                           </div>
                       </Col>
                       <Col>
-                        <div className="form-group">
+                        <div className="form-group datePickerUser">
                           <label htmlFor="email" className="form-label d-flex">Date Picker</label>
                           <RangePicker
                               open="true" 

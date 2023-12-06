@@ -187,6 +187,13 @@
             margin-left: - math.div($dropdown-width-xl,2);
         }
     }
+    &-xxl{
+        min-width: $dropdown-width-xl;
+        max-width: $dropdown-width-xl;
+        &.dropdown-menu-center{
+            margin-left: - math.div($dropdown-width-xl,2);
+        }
+    }
     &-auto{
         min-width: 100%;
         max-width: 100%;
