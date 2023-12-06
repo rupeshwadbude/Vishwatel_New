@@ -12,44 +12,19 @@ const accessRoute = {
     )
   },
   PREPARED_ACCOUNT: {
-    path: `${baseRoutes.userBaseRoutes}billing/prepared-account`,
-    icon: (
-      <span className="nk-menu-icon">
-        <em className="icon ni ni-view-x3" />
-      </span>
-    )
+    path: `${baseRoutes.userBaseRoutes}billing/prepared-account`
   },
   PLAN: {
-    path: `${baseRoutes.userBaseRoutes}billing/plan`,
-    icon: (
-      <span className="nk-menu-icon">
-        <em className="icon ni ni-view-x3" />
-      </span>
-    )
+    path: `${baseRoutes.userBaseRoutes}billing/plan`
   },
   PAYMENT_METHOD: {
-    path: `${baseRoutes.userBaseRoutes}billing/payment-method`,
-    icon: (
-      <span className="nk-menu-icon">
-        <em className="icon ni ni-view-x3" />
-      </span>
-    )
+    path: `${baseRoutes.userBaseRoutes}billing/payment-method`
   },
   RECIEPT: {
-    path: `${baseRoutes.userBaseRoutes}billing/reciept`,
-    icon: (
-      <span className="nk-menu-icon">
-        <em className="icon ni ni-view-x3" />
-      </span>
-    )
+    path: `${baseRoutes.userBaseRoutes}billing/reciept`
   },
   USAGE: {
-    path: `${baseRoutes.userBaseRoutes}billing/usage`,
-    icon: (
-      <span className="nk-menu-icon">
-        <em className="icon ni ni-view-x3" />
-      </span>
-    )
+    path: `${baseRoutes.userBaseRoutes}billing/usage`
   }
 };
 
