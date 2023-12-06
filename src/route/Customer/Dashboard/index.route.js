@@ -5,7 +5,7 @@ export default function route() {
   return [
     {
       path: customerRouteMap.DASHBOARD.path,
-      name: "Dashboard",
+      name: "Super Admin Dashboard",
       key: customerRouteMap.DASHBOARD.path,
       private: false,
       belongsToSidebar: true,

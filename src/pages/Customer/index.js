@@ -16,10 +16,12 @@ export const UserManagement = React.lazy(() =>
 export const UserDetails = React.lazy(() =>
   import("./UserManagement/UserDetails/index.page")
 );
+export const DashboardUser = React.lazy(() => import("./DashboardUser/index.page"));
 export const Profile = React.lazy(() => import("./Account/Profile/index.page"));
 export const EkycPage = React.lazy(() => import("./Ekyc/index.page"));
 export const ProfileUpdate = React.lazy(() => import("./ProfileUpdate/index.page"));
 export const Conversation = React.lazy(() => import("./Conversation/index.page"));
+export const Telephony = React.lazy(() => import("./Telephony/index.page"));
 export const ChangePassword = React.lazy(() =>
   import("./Account/ChangePassword/index.page")
 );

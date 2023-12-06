@@ -33,21 +33,20 @@ function AdminPrivateLayout() {
   };
   useEffect(() => {
     setTimeout(() => {
-      let navbar = document.querySelector(".nk-header").clientHeight;
-      let footer = document.querySelector(".nk-footer").clientHeight;
-      let inner = document.querySelector(".nk-block-head").clientHeight;
+      let navbar = document.querySelector(".nk-header");
+      let footer = document.querySelector(".nk-footer");
+      let inner = document.querySelector(".nk-block-head");
+      let contentInner = document.querySelector(".nk-content-inner");
+      let content = document.querySelector(".nk-content");
+      if (navbar && footer && inner && contentInner && content) {
+        let navbarHeight = navbar.clientHeight;
+        let footerHeight = footer.clientHeight;
+        let innerHeight = inner.clientHeight;
 
-      let query1 = document.querySelector(
-        ".nk-content-inner .ekycPage .card-body"
-      );
-      let query2 = document.querySelector(".nk-content");
-      if (query1 !== null) {
-        query1.style.minHeight = `${
-          window.innerHeight - (footer + inner + navbar + 70)
+        contentInner.style.minHeight = `${
+          window.innerHeight - (footerHeight + innerHeight + navbarHeight + 70)
         }px`;
-      }
-      if (query2 !== null) {
-        query2.style.paddingTop = `${navbar + 35}px`;
+        content.style.paddingTop = `${navbarHeight + 35}px`;
       }
     }, 300);
   }, []);
