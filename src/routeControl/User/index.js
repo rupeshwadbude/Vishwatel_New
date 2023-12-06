@@ -7,6 +7,10 @@ import conversation from "./Conversation";
 import telephony from "./Telephony";
 import recordings from "./Recordings";
 import billing from "./Billing";
+import callHistory from "./CallHistory";
+import postBox from "./PostBox";
+import buyNumber from "./BuyNumber";
+import survey from "./Survey";
 
 const AccessControl = {
   ...auth,
@@ -17,6 +21,10 @@ const AccessControl = {
   ...conversation,
   ...telephony,
   ...recordings,
-  ...billing
+  ...billing,
+  ...callHistory,
+  ...postBox,
+  ...buyNumber,
+  ...survey
 };
 export default AccessControl;

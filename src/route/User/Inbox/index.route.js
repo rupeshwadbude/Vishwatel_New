@@ -5,7 +5,7 @@ export default function route() {
   return [
     {
       path: userRouteMap.CONVERSATION.path,
-      name: "Conversation",
+      name: "Inbox",
       key: userRouteMap.CONVERSATION.path,
       private: false,
       belongsToSidebar: true,

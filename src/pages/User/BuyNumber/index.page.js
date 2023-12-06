@@ -7,10 +7,8 @@ import {
   PageHeader,
   Select
 } from "../../../components";
-// import DataTable from "../../../components/UiElement/DataTable";
-// import { Formik } from "formik";
 
-function Telephony() {
+function BuyNumber() {
   const [getnumberModal, setGetnumberModal] = useState(false);
   const [subscription, setSubscription] = useState(false);
   const phoneNumbers = false;
@@ -47,65 +45,12 @@ function Telephony() {
       name: "Bengluru"
     }
   ];
-  // const customerData = [
-  //   {
-  //     id: 1,
-  //     name: "Basic",
-  //     planType: "Basic",
-  //     price: "$0",
-  //     status: "active"
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "Silver",
-  //     planType: "Translation",
-  //     price: "$300",
-  //     status: "active"
-  //   },
-  //   {
-  //     id: 3,
-  //     name: "Gold",
-  //     planType: "Video Conferencing",
-  //     price: "$600",
-  //     status: "inactive"
-  //   },
-  //   {
-  //     id: 4,
-  //     name: "Platinum",
-  //     planType: "Bundled",
-  //     price: "$900",
-  //     status: "active"
-  //   },
 
-  // ]
-
-  // const columns = [
-  //   {
-  //     dataField: "id",
-  //     text: "S.No.",
-  //     headerClasses: "w_70"
-  //   },
-  //   {
-  //     dataField: "name",
-  //     text: "Plan Name",
-  //     headerClasses: "sorting"
-  //   },
-  //   {
-  //     dataField: "planType",
-  //     text: "Plan Type",
-  //     headerClasses: "sorting"
-  //   },
-  //   {
-  //     dataField: "price",
-  //     text: "Plan price",
-  //     headerClasses: "sorting",
-  //   },
-  // ]
   return (
     <>
       <div className="nk-block-head nk-block-head-sm">
         <div className="nk-block-between">
-          <PageHeader heading="Home | Telephony" />
+          <PageHeader heading="Home | Buy A Number" />
         </div>
       </div>
 
@@ -202,13 +147,15 @@ function Telephony() {
                         <th scope="col">Setup</th>
                         <th scope="col">Monthly</th>
                         <th scope="col">Price/min</th>
-                        <th scope="col">Buy Now</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>
-                          <div className="d-flex align-items-center">
+                          <div
+                            className="d-flex align-items-center"
+                            onClick={() => setSubscription(true)}
+                          >
                             <img
                               src="/assets/images/admin/bharat-flag.png"
                               className="img-fluid"
@@ -220,11 +167,6 @@ function Telephony() {
                         <td>-</td>
                         <td>$15.00</td>
                         <td>$10.00</td>
-                        <td>
-                          <button onClick={() => setSubscription(true)}>
-                            Buy Now
-                          </button>
-                        </td>
                       </tr>
                       <tr>
                         <td>
@@ -240,11 +182,6 @@ function Telephony() {
                         <td>-</td>
                         <td>$15.00</td>
                         <td>$10.00</td>
-                        <td>
-                          <button onClick={() => setSubscription(true)}>
-                            Buy Now
-                          </button>
-                        </td>
                       </tr>
                       <tr>
                         <td>
@@ -260,11 +197,6 @@ function Telephony() {
                         <td>-</td>
                         <td>$15.00</td>
                         <td>$10.00</td>
-                        <td>
-                          <button onClick={() => setSubscription(true)}>
-                            Buy Now
-                          </button>
-                        </td>
                       </tr>
                       <tr>
                         <td>
@@ -280,11 +212,6 @@ function Telephony() {
                         <td>-</td>
                         <td>$15.00</td>
                         <td>$10.00</td>
-                        <td>
-                          <button onClick={() => setSubscription(true)}>
-                            Buy Now
-                          </button>
-                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -479,4 +406,4 @@ function Telephony() {
   );
 }
 
-export default Telephony;
+export default BuyNumber;

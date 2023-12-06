@@ -1,8 +1,8 @@
 import { baseRoutes } from "../../../helpers/baseRoutes";
 
 const accessRoute = {
-  CONVERSATION: {
-    path: `${baseRoutes.userBaseRoutes}inbox`,
+  BUY_NUMBER: {
+    path: `${baseRoutes.userBaseRoutes}buy-number`,
     icon: (
       <span className="nk-menu-icon">
         {/* <em className="icon ni ni-user-alt" /> */}
