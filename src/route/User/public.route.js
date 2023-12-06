@@ -1,35 +1,35 @@
 import { DesktopOutlined } from "@ant-design/icons";
-import { CustomerSignup, ChannelSignup, Login } from "../../pages";
-import customerRouteMap from "../../routeControl/userRouteMap";
+import { UserLogin, UserSignUp } from "../../pages";
+import userRouteMap from "../../routeControl/userRouteMap";
 
 export default function route() {
   return [
     {
-      path: customerRouteMap.LOGIN.path,
+      path: userRouteMap.LOGIN.path,
       name: "Login",
-      key: customerRouteMap.LOGIN.path,
+      key: userRouteMap.LOGIN.path,
       private: false,
       belongsToSidebar: false,
       icon: <DesktopOutlined />,
-      element: <Login />
+      element: <UserLogin />
     },
     {
-      path: customerRouteMap.CUSTOMER_SIGNUP.path,
-      name: "Login",
-      key: customerRouteMap.CUSTOMER_SIGNUP.path,
+      path: userRouteMap.CUSTOMER_SIGNUP.path,
+      name: "User SignUp",
+      key: userRouteMap.CUSTOMER_SIGNUP.path,
       private: false,
       belongsToSidebar: false,
       icon: <DesktopOutlined />,
-      element: <CustomerSignup />
-    },
-    {
-      path: customerRouteMap.CHANNELSIGNUP.path,
-      name: "Channel Signup",
-      key: customerRouteMap.CHANNELSIGNUP.path,
-      private: false,
-      belongsToSidebar: false,
-      icon: <DesktopOutlined />,
-      element: <ChannelSignup />
+      element: <UserSignUp />
     }
+    // {
+    //   path: userRouteMap.CHANNELSIGNUP.path,
+    //   name: "Channel Signup",
+    //   key: userRouteMap.CHANNELSIGNUP.path,
+    //   private: false,
+    //   belongsToSidebar: false,
+    //   icon: <DesktopOutlined />,
+    //   element: <ChannelSignup />
+    // }
   ];
 }

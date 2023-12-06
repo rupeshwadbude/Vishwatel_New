@@ -9,18 +9,16 @@ function authDriver(route, userData, pathname) {
     let checkData = "";
     let user = "";
     if (pathname.search("/") >= 0) {
-      user = "/";
-    } else {
       user = "user";
+    } else if (pathname.search("channal-partner") >= 0) {
+      user = "channal-partner";
+    } else if (pathname.search("superAdmin") >= 0) {
+      user = "superAdmin";
     }
 
-    console.log("ffhgfhygfh", pathname.search("/"));
+    const Role = userData?.role === user;
 
-    const Role = userData?.role === "superadmin" ? "admin" : "user";
-
-    console.log("Role", Role);
-
-    let userCheck = Role ?? user;
+    let userCheck = user;
 
     if (userCheck === "user" && route?.common === true) {
       return true;

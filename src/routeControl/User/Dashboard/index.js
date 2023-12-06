@@ -4,7 +4,7 @@ import { baseRoutes } from "../../../helpers/baseRoutes";
 
 const accessRoute = {
   DASHBOARD: {
-    path: `${baseRoutes.userBaseRoutes}/dashboard`,
+    path: `${baseRoutes.userBaseRoutes}dashboard`,
     icon: (
       <span className="nk-menu-icon">
         <em className="icon ni ni-grid-alt" />

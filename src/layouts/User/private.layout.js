@@ -62,7 +62,7 @@ function AdminPrivateLayout() {
           <Sidebar
             sidebarOpen={sidebarOpen}
             menuToggle={menuToggle}
-            routes={routeList.admin}
+            routes={routeList.user}
           />
           {sidebarOpen ? (
             <div onClick={() => menuToggle()} className="nk-sidebar-overlay" />

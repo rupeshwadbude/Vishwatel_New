@@ -1,4 +1,4 @@
 export const baseRoutes = {
-  adminBaseRoutes: "/",
-  userBaseRoutes: "/user"
+  adminBaseRoutes: "/channel-partner/",
+  userBaseRoutes: "/"
 };

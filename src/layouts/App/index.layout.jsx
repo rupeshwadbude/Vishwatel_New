@@ -7,9 +7,7 @@ import { getCompletePathList } from "../../route";
 function AppLayout({ setRedirectPath, children }) {
   const location = useLocation();
   const params = useParams();
-  const userData = {};
-
-  console.log("jhdsgjfhsb");
+  const userData = localStorage.getItem("userData");
 
   function getGeneratedPath(data) {
     try {
@@ -35,7 +33,6 @@ function AppLayout({ setRedirectPath, children }) {
       let publicPath = "/";
       let privatePath = "";
       let path = "";
-      console.log("sdgdsgdfgdf", location.pathname.search("/"));
       if (location.pathname.search("/") >= 0) {
         path = "/";
       } else {

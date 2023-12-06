@@ -4,12 +4,13 @@ import { Dropdown } from "react-bootstrap";
 import { SweetAlert } from "../UiElement";
 import { modalNotification } from "../../utils";
 import customerRouteMap from "../../routeControl/customerRouteMap";
+import userRouteMap from "../../routeControl/userRouteMap";
 
 function CustomerHeader({ menuToggle }) {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [isAlertVisible, setIsAlertVisible] = useState(false);
-
+  const userData = localStorage.getItem("userData");
   const showSweetAlert = () => {
     setIsAlertVisible(true);
   };
@@ -23,7 +24,8 @@ function CustomerHeader({ menuToggle }) {
       message: "Logout Successfully"
     });
     setTimeout(() => {
-      navigate(customerRouteMap.LOGIN.path);
+      localStorage.setItem("userData", null);
+      navigate(userRouteMap.LOGIN.path);
     }, 1000);
     // return true;
   };
@@ -170,7 +172,11 @@ function CustomerHeader({ menuToggle }) {
                     <ul className="link-list">
                       <li>
                         <Link
-                          to={customerRouteMap.CUSTOMER_PROFILE.path}
+                          to={
+                            userData === "user"
+                              ? userRouteMap.CUSTOMER_PROFILE.path
+                              : customerRouteMap.CUSTOMER_PROFILE.path
+                          }
                           onClick={() => {
                             document.body.click();
                           }}
@@ -181,7 +187,11 @@ function CustomerHeader({ menuToggle }) {
                       </li>
                       <li>
                         <Link
-                          to={customerRouteMap.CUSTOMER_CHANGE_PASSWORD.path}
+                          to={
+                            userData === "user"
+                              ? userRouteMap.CUSTOMER_CHANGE_PASSWORD.path
+                              : customerRouteMap.CUSTOMER_CHANGE_PASSWORD.path
+                          }
                           onClick={() => {
                             document.body.click();
                           }}

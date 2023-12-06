@@ -7,7 +7,7 @@ export default function route() {
       path: customerRouteMap.CUSTOMER_PROFILE.path,
       name: "Profile",
       key: customerRouteMap.CUSTOMER_PROFILE.path,
-      private: true,
+      private: false,
       belongsToSidebar: false,
       element: <Profile />
     },
@@ -15,7 +15,7 @@ export default function route() {
       path: customerRouteMap.CUSTOMER_CHANGE_PASSWORD.path,
       name: "Change Password",
       key: customerRouteMap.CUSTOMER_CHANGE_PASSWORD.path,
-      private: true,
+      private: false,
       belongsToSidebar: false,
       element: <ChangePassword />
     }
