@@ -1,5 +1,5 @@
-import { CustomerLayout } from "../layouts";
-// import { userRoutes } from "./User";
+import { CustomerLayout, UserLayout } from "../layouts";
+import { userRoutes } from "./User";
 // import { NotFound } from "../pages";
 import { customerRoutes } from "./Customer";
 
@@ -8,11 +8,11 @@ export const routes = () => {
     {
       element: <CustomerLayout />,
       children: [...customerRoutes()]
+    },
+    {
+      element: <UserLayout />,
+      children: [...userRoutes()]
     }
-    // {
-    //   element: <MainLayout />,
-    //   children: [...userRoutes(t)],
-    // },
     // {
     //   path: "*",
     //   element: <NotFound />,
@@ -22,8 +22,8 @@ export const routes = () => {
 
 export const routesList = () => {
   let routeArr = [
-    // ...userRoutes(t)[0].children,
-    // ...userRoutes(t)[1].children,
+    ...userRoutes()[0].children,
+    ...userRoutes()[1].children,
     ...customerRoutes()[0].children,
     ...customerRoutes()[1].children
   ];
@@ -32,7 +32,7 @@ export const routesList = () => {
 
 export const moduleRoutesList = () => {
   let routeArr = {
-    // user: [...userRoutes(t)[0].children, ...userRoutes(t)[1].children],
+    user: [...userRoutes()[0].children, ...userRoutes()[1].children],
     admin: [...customerRoutes()[0].children, ...customerRoutes()[1].children]
   };
   return routeArr;

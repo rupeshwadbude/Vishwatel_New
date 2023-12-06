@@ -1,9 +1,13 @@
 import React from "react";
 import { Dropdown } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import customerRouteMapRouteMap from "../../../routeControl/customerRouteMap";
+import userRouteMap from "../../../routeControl/userRouteMap";
 
 function AcountSidebar({ asideView, asideToggle }) {
+  const location = useLocation();
+  const { pathname } = location;
+  const userData = localStorage.getItem("userData");
   return (
     <>
       <div
@@ -48,8 +52,12 @@ function AcountSidebar({ asideView, asideToggle }) {
             <ul className="link-list-menu">
               <li>
                 <Link
-                  className="active"
-                  to={customerRouteMapRouteMap.CUSTOMER_PROFILE.path}
+                  className={pathname === "/profile" && "active"}
+                  to={
+                    userData === "user"
+                      ? userRouteMap.CUSTOMER_PROFILE.path
+                      : customerRouteMapRouteMap.CUSTOMER_PROFILE.path
+                  }
                 >
                   <em className="icon ni ni-user-fill-c" />
                   <span>Personal Infomation</span>
@@ -57,7 +65,12 @@ function AcountSidebar({ asideView, asideToggle }) {
               </li>
               <li>
                 <Link
-                  to={customerRouteMapRouteMap.CUSTOMER_CHANGE_PASSWORD.path}
+                  className={pathname === "/change-password" && "active"}
+                  to={
+                    userData === "user"
+                      ? userRouteMap.CUSTOMER_CHANGE_PASSWORD.path
+                      : customerRouteMapRouteMap.CUSTOMER_CHANGE_PASSWORD.path
+                  }
                 >
                   <em className="icon ni ni-lock-alt-fill" />
                   <span>Change Password</span>

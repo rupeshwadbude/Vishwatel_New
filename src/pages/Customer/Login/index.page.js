@@ -14,6 +14,7 @@ function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const loginSuccessfully = () => {
+    localStorage.setItem("userData", "channelPartner");
     modalNotification({
       type: "success",
       message: "Signin Successfully"

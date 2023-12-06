@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import { useLocation, generatePath, useParams } from "react-router-dom";
 import React, { useEffect } from "react";
 import { AuthDriver as authDriver, modalNotification } from "../../utils";
@@ -7,7 +7,7 @@ import { getCompletePathList } from "../../route";
 function AppLayout({ setRedirectPath, children }) {
   const location = useLocation();
   const params = useParams();
-  const userData = useSelector({});
+  const userData = localStorage.getItem("userData");
 
   function getGeneratedPath(data) {
     try {
@@ -33,7 +33,6 @@ function AppLayout({ setRedirectPath, children }) {
       let publicPath = "/";
       let privatePath = "";
       let path = "";
-
       if (location.pathname.search("/") >= 0) {
         path = "/";
       } else {

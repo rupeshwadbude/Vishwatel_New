@@ -11,11 +11,13 @@ import {
 } from "../../redux/AuthSlice/index.slice";
 import { getSideBarData } from "../../utils";
 import customerRouteMap from "../../routeControl/customerRouteMap";
+import userRouteMap from "../../routeControl/userRouteMap";
 // import { Sider, Header } from "..";
 
 function Sidebar({ routes, sidebarOpen, menuToggle }) {
   const location = useLocation();
   const dispatch = useDispatch();
+  const userData = localStorage.getItem("userData");
   const sidebarKey = useSelector(getSidebarKey);
   // const userData = useSelector(selectUserData);
   const [state, setState] = useState({
@@ -66,7 +68,11 @@ function Sidebar({ routes, sidebarOpen, menuToggle }) {
       <div className="nk-sidebar-element nk-sidebar-head">
         <div className="nk-sidebar-brand">
           <Link
-            to={customerRouteMap.DASHBOARD.path}
+            to={
+              userData === "user"
+                ? userRouteMap.DASHBOARD.path
+                : customerRouteMap.DASHBOARD.path
+            }
             className="logo-link nk-sidebar-logo"
           >
             <img

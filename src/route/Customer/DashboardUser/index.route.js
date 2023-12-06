@@ -4,12 +4,12 @@ import customerRouteMap from "../../../routeControl/customerRouteMap";
 export default function route() {
   return [
     {
-      path: customerRouteMap.DASHBOARDUSER.path,
+      path: customerRouteMap.DASHBOARD.path,
       name: "Dashboard User",
-      key: customerRouteMap.DASHBOARDUSER.path,
+      key: customerRouteMap.DASHBOARD.path,
       private: false,
       belongsToSidebar: true,
-      icon: customerRouteMap.DASHBOARDUSER.icon,
+      icon: customerRouteMap.DASHBOARD.icon,
       element: <DashboardUser />
     }
   ];
