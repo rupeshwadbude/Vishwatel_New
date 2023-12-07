@@ -5,7 +5,7 @@ const accessRoute = {
     path: `${baseRoutes.userBaseRoutes}`
   },
   CUSTOMER_SIGNUP: {
-    path: `${baseRoutes.userBaseRoutes}/customer-signup`
+    path: `${baseRoutes.userBaseRoutes}customer-signup`
   },
   CHANNELSIGNUP: {
     path: `${baseRoutes.userBaseRoutes}/channel-signup`

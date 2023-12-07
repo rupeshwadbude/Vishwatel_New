@@ -5,7 +5,7 @@ export default function route() {
   return [
     {
       path: userRouteMap.TELEPHONY.path,
-      name: "telephony",
+      name: "Telephony",
       key: userRouteMap.TELEPHONY.path,
       private: false,
       belongsToSidebar: true,

@@ -8,7 +8,7 @@ const accessRoute = {
     path: `${baseRoutes.adminBaseRoutes}/customer-signup`
   },
   CHANNELSIGNUP: {
-    path: `${baseRoutes.adminBaseRoutes}/channel-signup`
+    path: `${baseRoutes.adminBaseRoutes}channel-signup`
   },
   FORGOT_PASSWORD: {
     path: `${baseRoutes.adminBaseRoutes}forgot-password`
