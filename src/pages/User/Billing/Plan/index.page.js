@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Row, Col, Card } from "react-bootstrap";
 import { PageHeader } from "../../../../components";
 
 function Plan() {
@@ -19,24 +19,30 @@ function Plan() {
             <h5 className="telePage_innerPage p-4">
               View and manage your sonetel plan and data usage
             </h5>
-            <div className="d-flex">
-              <div className="telePage_inner">
-                <div className="prepare">
-                  <div className="prepareCard">
-                    <h2 className="prepareCard_bal">$350</h2>
-                    <p>Total Balance</p>
+            <div className="telePage_inner telePage_inner-full">
+              <Row className=" mb-4">
+                <Col md={4}>
+                  <div className="prepare prepare-white">
+                    <div className="prepareCard">
+                      <h2 className="prepareCard_bal">$350</h2>
+                      <p className="text-center">Total Balance</p>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="telePage_inner text-center">
-                <div className="prepare">
-                  <div className="prepareCard">
-                    <h2 className="prepareCard_bal">$07</h2>
-                    <p>Users</p>
+                </Col>
+                <Col md={4}>
+                  <div className="prepare prepare-white">
+                    <div className="prepareCard">
+                      <div className="d-flex align-items-center">
+                        <div className="text-center">
+                          <em className="icon ni ni-users"/>
+                          <p>Users</p>
+                        </div>
+                        <h2 className="prepareCard_bal">$07</h2>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
+                </Col>
+              </Row>
             <div className="dataTablePhone">
               <table className="table">
                 <thead>
@@ -114,6 +120,15 @@ function Plan() {
               <div className="justify-content-start">Data Usage</div>
               <div className="justify-content-end">0.00 GB of 2 GB</div>
             </div>
+            </div>
+            {/* <div className="d-flex">
+              <div className="telePage_inner">
+                
+              </div>
+              <div className="telePage_inner text-center">
+                
+              </div>
+            </div> */}
           </div>
         </Card.Body>
       </Card>
