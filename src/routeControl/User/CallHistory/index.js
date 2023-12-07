@@ -6,7 +6,7 @@ const accessRoute = {
     icon: (
       <span className="nk-menu-icon">
         {/* <em className="icon ni ni-user-alt" /> */}
-        <em className="icon ni ni-chat" />
+        <em className="icon ni ni-history"/>
       </span>
     )
   }

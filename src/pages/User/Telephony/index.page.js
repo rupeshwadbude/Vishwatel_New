@@ -221,7 +221,7 @@ function Telephony() {
                         <td>$15.00</td>
                         <td>$10.00</td>
                         <td>
-                          <button onClick={() => setSubscription(true)}>
+                          <button className="btn btn-success" onClick={() => setSubscription(true)}>
                             Buy Now
                           </button>
                         </td>
@@ -241,7 +241,7 @@ function Telephony() {
                         <td>$15.00</td>
                         <td>$10.00</td>
                         <td>
-                          <button onClick={() => setSubscription(true)}>
+                          <button className="btn btn-success" onClick={() => setSubscription(true)}>
                             Buy Now
                           </button>
                         </td>
@@ -261,7 +261,7 @@ function Telephony() {
                         <td>$15.00</td>
                         <td>$10.00</td>
                         <td>
-                          <button onClick={() => setSubscription(true)}>
+                          <button className="btn btn-success" onClick={() => setSubscription(true)}>
                             Buy Now
                           </button>
                         </td>
@@ -281,7 +281,7 @@ function Telephony() {
                         <td>$15.00</td>
                         <td>$10.00</td>
                         <td>
-                          <button onClick={() => setSubscription(true)}>
+                          <button className="btn btn-success" onClick={() => setSubscription(true)}>
                             Buy Now
                           </button>
                         </td>

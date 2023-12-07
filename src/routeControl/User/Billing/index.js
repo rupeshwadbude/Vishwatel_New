@@ -7,7 +7,7 @@ const accessRoute = {
     path: "/billing",
     icon: (
       <span className="nk-menu-icon">
-        <em className="icon ni ni-view-x3" />
+        <em className="icon ni ni-report-profit"/>
       </span>
     )
   },

@@ -702,6 +702,33 @@
         &-full{
             max-width: 100%;
         }
+        .prepare{
+            max-width: 380px;
+            margin: 0 auto;
+            &Card{
+                background-color: #252b65;
+                border-radius: 8px;
+                padding: 20px;
+                
+                margin-bottom:25px;
+                &_bal{
+                    width: 100px;
+                    height: 100px;
+                    background-color: #FE9933;
+                    border-radius: 50%;
+                    margin: 0 auto 20px auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+                    font-size: 22px;
+                }
+                p{
+                    color: #fff;
+                    font-size: 18px;
+                }
+            }
+        }
     }
     &_innerPage{
         h3{
