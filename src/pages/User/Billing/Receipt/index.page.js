@@ -16,7 +16,7 @@ function Receipt() {
       id: 3,
       name: "Item2"
     }
-  ]
+  ];
   return (
     <>
       <div className="nk-block-head nk-block-head-sm">
@@ -35,23 +35,40 @@ function Receipt() {
             <h3>View your usage data</h3>
             <Row className="justify-content-between1">
               <Col md={3}>
-                  <Select
-                    name="data"
-                    arrayOfData={selectArray}
-                    extraClassName="text-start"
-                    placeholder="Select"
-                  />
+                <Select
+                  name="data"
+                  arrayOfData={selectArray}
+                  extraClassName="text-start"
+                  placeholder="Select"
+                />
               </Col>
               <Col md={3}>
-                <DatePicker 
+                <DatePicker
                   className="form-control form-control-lg"
                   placeholder="Select Date"
-                  icon={<><em className="icon ni ni-calendar-booking-fill"/></>}
+                  icon={
+                    <>
+                      <em className="icon ni ni-calendar-booking-fill" />
+                    </>
+                  }
+                />
+              </Col>
+              <Col md={3}>
+                <DatePicker
+                  className="form-control form-control-lg"
+                  placeholder="End Date"
+                  icon={
+                    <>
+                      <em className="icon ni ni-calendar-booking-fill" />
+                    </>
+                  }
                 />
               </Col>
             </Row>
             <div className="py-5 my-5 text-center">
-              <h3>Our recipts will show up here once a payment has been made.</h3>
+              <h3>
+                Our recipts will show up here once a payment has been made.
+              </h3>
             </div>
           </div>
         </Card.Body>

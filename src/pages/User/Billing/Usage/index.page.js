@@ -1,9 +1,13 @@
 import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
-import { DatePicker, PageHeader, Select, Input as TextInput } from "../../../../components";
+import {
+  DatePicker,
+  PageHeader,
+  Select,
+  Input as TextInput
+} from "../../../../components";
 
 function Usage() {
-
   const selectArray = [
     {
       id: 1,
@@ -17,7 +21,7 @@ function Usage() {
       id: 3,
       name: "Item2"
     }
-  ]
+  ];
   return (
     <>
       <div className="nk-block-head nk-block-head-sm">
@@ -36,24 +40,39 @@ function Usage() {
             <h3>View your usage data</h3>
             <Row>
               <Col md={3}>
-                  <Select
-                    name="data"
-                    arrayOfData={selectArray}
-                    extraClassName="text-start"
-                    placeholder="Select"
-                  />
+                <Select
+                  name="data"
+                  arrayOfData={selectArray}
+                  extraClassName="text-start"
+                  placeholder="Select"
+                />
               </Col>
               <Col md={2}>
-                <TextInput 
+                <TextInput
                   className="form-control form-control-lg"
                   placeholder="CSV"
-                  />
+                />
               </Col>
               <Col md={3}>
-                <DatePicker 
+                <DatePicker
                   className="form-control form-control-lg"
-                  placeholder="Select Date"
-                  icon={<><em className="icon ni ni-calendar-booking-fill"/></>}
+                  placeholder="Start Date"
+                  icon={
+                    <>
+                      <em className="icon ni ni-calendar-booking-fill" />
+                    </>
+                  }
+                />
+              </Col>
+              <Col md={3}>
+                <DatePicker
+                  className="form-control form-control-lg"
+                  placeholder="End Date"
+                  icon={
+                    <>
+                      <em className="icon ni ni-calendar-booking-fill" />
+                    </>
+                  }
                 />
               </Col>
             </Row>
