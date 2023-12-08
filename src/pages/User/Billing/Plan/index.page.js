@@ -112,10 +112,7 @@ function Plan() {
                   </tbody>
                 </table>
               </div>
-              <div className="numberInfo d-flex justify-content-sm-between">
-                <div className="justify-content-start">Al credits</div>
-                <div className="justify-content-end">0 of 100 credits</div>
-              </div>
+
               <div className="numberInfo d-flex justify-content-sm-between">
                 <div className="justify-content-start">Data Usage</div>
                 <div className="justify-content-end">0.00 GB of 2 GB</div>
