@@ -114,3 +114,79 @@
         }
     }
 }
+//
+// Balance header 
+.balanceTop{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #252b65;
+    span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-left: 10px;
+        background-color: #FF9934;
+        color: #fff;
+    }
+}
+
+//Cart item dropdown
+.cartItem{
+    .dropdown-head{
+        h2{
+            font-size: 20px;
+            color: #252b65;
+        }
+        a{font-size: 18px;color: #252b65;}
+    }
+    .dropdown-body{
+        padding: 25px;
+        .closeIcon{
+            color: #252b65;
+            .icon{
+                font-size: 16px;
+                color: #252b65;
+            }
+        }
+    }
+    &_number{
+        margin-left: 25px;
+        position: relative;
+        p{
+            font-size: 18px;
+            margin-bottom: 0;
+            color: #252b65;
+        }
+        span{
+            font-size: 16px;
+            display: block;
+            color: #252b65;
+        }
+        .icon{
+            position: absolute;
+            right: -30px;
+            top: 0;
+            font-size: 22px;
+            color: #252b65;
+        }
+    }
+    &_price{
+        padding: 15px;
+        border-top: 1px solid #252b65;
+        background-color: rgba(#252b65,0.10);
+        p{
+            color: #252b65;
+            font-size: 16px;
+        }
+        &-plan{
+            p{
+                color: #252b65;
+                font-size: 16px;
+            }
+        }
+    }
+}

@@ -188,10 +188,10 @@
         }
     }
     &-xxl{
-        min-width: $dropdown-width-xl;
-        max-width: $dropdown-width-xl;
+        min-width: $dropdown-width-xxl;
+        max-width: $dropdown-width-xxl;
         &.dropdown-menu-center{
-            margin-left: - math.div($dropdown-width-xl,2);
+            margin-left: - math.div($dropdown-width-xxl,2);
         }
     }
     &-auto{
