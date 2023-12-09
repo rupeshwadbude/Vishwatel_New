@@ -20,20 +20,23 @@ function PostBox() {
                 <table className="table">
                   <thead>
                     <tr>
-                      <th scope="col">Numbers</th>
-                      <th scope="col">Message</th>
+                      <th scope="col">Sender By</th>
+                      <th scope="col">Message / Attachment</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>
+                        <div className="d-flex align-items-center">Admin</div>
+                      </td>
+                      <td>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit                       
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
                         <div className="d-flex align-items-center">
-                          <img
-                            src="/assets/images/admin/bharat-flag.png"
-                            className="img-fluid"
-                            alt="bharat-flag"
-                          />
-                          +91-8310-771100
+                          Admin
                         </div>
                       </td>
                       <td>
@@ -43,12 +46,7 @@ function PostBox() {
                     <tr>
                       <td>
                         <div className="d-flex align-items-center">
-                          <img
-                            src="/assets/images/admin/bharat-flag.png"
-                            className="img-fluid"
-                            alt="bharat-flag"
-                          />
-                          +91-8310-771100
+                          Admin
                         </div>
                       </td>
                       <td>
@@ -58,27 +56,7 @@ function PostBox() {
                     <tr>
                       <td>
                         <div className="d-flex align-items-center">
-                          <img
-                            src="/assets/images/admin/bharat-flag.png"
-                            className="img-fluid"
-                            alt="bharat-flag"
-                          />
-                          +91-8310-771100
-                        </div>
-                      </td>
-                      <td>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div className="d-flex align-items-center">
-                          <img
-                            src="/assets/images/admin/bharat-flag.png"
-                            className="img-fluid"
-                            alt="bharat-flag"
-                          />
-                          +91-8310-771100
+                          Admin
                         </div>
                       </td>
                       <td>

@@ -13,7 +13,7 @@ import {
 function Telephony() {
   const [getnumberModal, setGetnumberModal] = useState(false);
   const [subscription, setSubscription] = useState(false);
-  const phoneNumbers = false;
+  const phoneNumbers = true;
   const handleCloseModal = () => {
     setGetnumberModal(false);
     setSubscription(false);
@@ -47,60 +47,22 @@ function Telephony() {
       name: "Bengluru"
     }
   ];
-  // const customerData = [
-  //   {
-  //     id: 1,
-  //     name: "Basic",
-  //     planType: "Basic",
-  //     price: "$0",
-  //     status: "active"
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "Silver",
-  //     planType: "Translation",
-  //     price: "$300",
-  //     status: "active"
-  //   },
-  //   {
-  //     id: 3,
-  //     name: "Gold",
-  //     planType: "Video Conferencing",
-  //     price: "$600",
-  //     status: "inactive"
-  //   },
-  //   {
-  //     id: 4,
-  //     name: "Platinum",
-  //     planType: "Bundled",
-  //     price: "$900",
-  //     status: "active"
-  //   },
 
-  // ]
+  const plan = [
+    {
+      id: "1",
+      name: "Plan 1"
+    },
+    {
+      id: "2",
+      name: "Plan 2"
+    },
+    {
+      id: "3",
+      name: "Plan 3"
+    }
+  ];
 
-  // const columns = [
-  //   {
-  //     dataField: "id",
-  //     text: "S.No.",
-  //     headerClasses: "w_70"
-  //   },
-  //   {
-  //     dataField: "name",
-  //     text: "Plan Name",
-  //     headerClasses: "sorting"
-  //   },
-  //   {
-  //     dataField: "planType",
-  //     text: "Plan Type",
-  //     headerClasses: "sorting"
-  //   },
-  //   {
-  //     dataField: "price",
-  //     text: "Plan price",
-  //     headerClasses: "sorting",
-  //   },
-  // ]
   return (
     <>
       <div className="nk-block-head nk-block-head-sm">
@@ -115,43 +77,122 @@ function Telephony() {
             <div className="telePage_cnt">
               <div className="telePage_head d-flex align-items-center justify-content-between">
                 <h2>Phone Number</h2>
-                <em className="ni ni-plus" />
-              </div>
-              <div className="telePage_inner text-center">
-                <div className="position-relative">
-                  <video width="100%" height="360" controls>
-                    <source src="your-video-source.mp4" type="video/mp4" />
-                    <track
-                      kind="captions"
-                      label="English"
-                      srcLang="en"
-                      src="captions.vtt"
-                    />
-                    Your browser does not support the video tag.
-                  </video>
-                  {/* <video width="100%" height="360" src="/assets/images/admin/video.mp4" /> */}
-                  <Link to="" className="playIcon">
-                    <em className="icon ni ni-play-fill" />
-                  </Link>
-                </div>
-                <p className="mb-0 mt-4">
-                  You can purchase local phone numbers in any country. incoming
-                  call can
-                  <br />
-                  be answered in the app or forwarded to any mobile phone number
-                  at the
-                  <br />
-                  cost of a local call.
-                </p>
-
-                <Link
-                  to=""
+                <em
+                  className="ni ni-plus"
                   onClick={() => setGetnumberModal(true)}
-                  className="btn btn-secondary mt-4"
-                >
-                  Get a Local Phone Number
-                </Link>
+                />
               </div>
+              <div className="telePage_inner telePage_inner-full">
+                <Row>
+                  <Col md={5}>
+                    <div>
+                      <Select
+                        name="coutry"
+                        arrayOfData={dataCountry}
+                        extraClassName="text-start"
+                        placeholder="Select Country"
+                      />
+                    </div>
+                  </Col>
+                  <Col md={5}>
+                    <div>
+                      <Select
+                        name="city"
+                        arrayOfData={dataCity}
+                        extraClassName="text-start"
+                        placeholder="Select City"
+                      />
+                    </div>
+                  </Col>
+                </Row>
+                <p className="numberInfo">
+                  Anyone can buy a phone number in india.
+                  <br /> Phone numbers in india are not available for free with
+                  paid plans cannot be used for free on your website.
+                </p>
+                <div className="dataTablePhone">
+                  <table className="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Numbers</th>
+                        <th scope="col">Setup</th>
+                        <th scope="col">Monthly</th>
+                        <th scope="col">Price/min</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <img
+                              src="/assets/images/admin/bharat-flag.png"
+                              className="img-fluid"
+                              alt="bharat-flag"
+                            />
+                            +91-8310-771100
+                          </div>
+                        </td>
+                        <td>-</td>
+                        <td>$15.00</td>
+                        <td>$10.00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <img
+                              src="/assets/images/admin/bharat-flag.png"
+                              className="img-fluid"
+                              alt="bharat-flag"
+                            />
+                            +91-8310-771100
+                          </div>
+                        </td>
+                        <td>-</td>
+                        <td>$15.00</td>
+                        <td>$10.00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <img
+                              src="/assets/images/admin/bharat-flag.png"
+                              className="img-fluid"
+                              alt="bharat-flag"
+                            />
+                            +91-8310-771100
+                          </div>
+                        </td>
+                        <td>-</td>
+                        <td>$15.00</td>
+                        <td>$10.00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <img
+                              src="/assets/images/admin/bharat-flag.png"
+                              className="img-fluid"
+                              alt="bharat-flag"
+                            />
+                            +91-8310-771100
+                          </div>
+                        </td>
+                        <td>-</td>
+                        <td>$15.00</td>
+                        <td>$10.00</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* <Link
+                to=""
+                onClick={() => setGetnumberModal(true)}
+                className="btn btn-secondary mt-4"
+              >
+                Get a Local Phone Number
+              </Link> */}
             </div>
           </Card.Body>
         </Card>
@@ -221,7 +262,10 @@ function Telephony() {
                         <td>$15.00</td>
                         <td>$10.00</td>
                         <td>
-                          <button className="btn btn-success" onClick={() => setSubscription(true)}>
+                          <button
+                            className="btn btn-success"
+                            onClick={() => setSubscription(true)}
+                          >
                             Buy Now
                           </button>
                         </td>
@@ -241,7 +285,10 @@ function Telephony() {
                         <td>$15.00</td>
                         <td>$10.00</td>
                         <td>
-                          <button className="btn btn-success" onClick={() => setSubscription(true)}>
+                          <button
+                            className="btn btn-success"
+                            onClick={() => setSubscription(true)}
+                          >
                             Buy Now
                           </button>
                         </td>
@@ -261,7 +308,10 @@ function Telephony() {
                         <td>$15.00</td>
                         <td>$10.00</td>
                         <td>
-                          <button className="btn btn-success" onClick={() => setSubscription(true)}>
+                          <button
+                            className="btn btn-success"
+                            onClick={() => setSubscription(true)}
+                          >
                             Buy Now
                           </button>
                         </td>
@@ -281,7 +331,10 @@ function Telephony() {
                         <td>$15.00</td>
                         <td>$10.00</td>
                         <td>
-                          <button className="btn btn-success" onClick={() => setSubscription(true)}>
+                          <button
+                            className="btn btn-success"
+                            onClick={() => setSubscription(true)}
+                          >
                             Buy Now
                           </button>
                         </td>
@@ -414,9 +467,9 @@ function Telephony() {
             <label className="form-label">Subscription</label>
             <Select
               name="city"
-              arrayOfData={dataCity}
+              arrayOfData={plan}
               extraClassName="text-start"
-              placeholder="Select City"
+              placeholder="Select Plan"
             />
           </div>
 
@@ -430,7 +483,7 @@ function Telephony() {
             </span>
           </div>
 
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <div className="d-flex align-items justify-content-between">
               <p className="mb-0">Capabilities</p>
               <p className="mb-0">$34.99</p>
@@ -462,7 +515,7 @@ function Telephony() {
               not available for free with paid plans and cannot be used for free
               on your website.
             </span>
-          </div>
+          </div> */}
 
           <div className="text-center mt-4">
             <button className="btn btn-primary mb-3">

@@ -123,7 +123,7 @@ function BuyNumber() {
                       />
                     </div>
                   </Col>
-                  <Col md={5}>
+                  {/* <Col md={5}>
                     <div>
                       <Select
                         name="city"
@@ -132,7 +132,7 @@ function BuyNumber() {
                         placeholder="Select City"
                       />
                     </div>
-                  </Col>
+                  </Col> */}
                 </Row>
                 <p className="numberInfo">
                   Anyone can buy a phone number in india.

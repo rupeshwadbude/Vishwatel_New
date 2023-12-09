@@ -22,7 +22,7 @@ export default function route() {
         {
           path: userRouteMap.PREPARED_ACCOUNT.path,
           private: false,
-          name: "Prepared Account",
+          name: "Prepaid Account",
           key: userRouteMap.PREPARED_ACCOUNT.path,
           belongsToSidebar: true,
           icon: userRouteMap.PREPARED_ACCOUNT.icon,

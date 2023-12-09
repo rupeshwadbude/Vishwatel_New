@@ -2,7 +2,7 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import { PageHeader, Select } from "../../../../components";
 
-function PreparedAccount() {
+function PrepaidAccount() {
   const moneyArray = [
     {
       id: 1,
@@ -17,14 +17,14 @@ function PreparedAccount() {
     <>
       <div className="nk-block-head nk-block-head-sm">
         <div className="nk-block-between">
-          <PageHeader heading="Home | Billing > Prepared Account" />
+          <PageHeader heading="Home | Billing > Prepaid Account" />
         </div>
       </div>
       <Card className="telePage cardHeight h-100">
         <Card.Body className="p-0">
           <div className="telePage_cnt">
             <div className="telePage_head d-flex align-items-center justify-content-between">
-              <h2>Phone Number</h2>
+              <h2>Prepaid Account</h2>
               <em className="ni ni-plus" />
             </div>
             <div className="telePage_inner text-center">
@@ -53,4 +53,4 @@ function PreparedAccount() {
   );
 }
 
-export default PreparedAccount;
+export default PrepaidAccount;

@@ -21,9 +21,9 @@ function Plan() {
             </h5>
             <div className="telePage_inner telePage_inner-full">
               <Row className=" mb-4">
-                <Col md={4}>
+                <Col md={6}>
                   <div className="prepare prepare-white">
-                    <div className="prepareCard">
+                    <div className="prepareCard w-80">
                       <h2 className="prepareCard_bal">$350</h2>
                       <p className="text-center">Total Balance</p>
                     </div>
@@ -31,10 +31,10 @@ function Plan() {
                 </Col>
                 <Col md={4}>
                   <div className="prepare prepare-white">
-                    <div className="prepareCard">
-                      <div className="d-flex align-items-center">
+                    <div className="prepareCard w-80">
+                      <div className="d-flex align-items-center pt-3">
                         <div className="text-center">
-                          <em className="icon ni ni-users"/>
+                          <em className="icon ni ni-users" />
                           <p>Users</p>
                         </div>
                         <h2 className="prepareCard_bal">$07</h2>
@@ -43,83 +43,80 @@ function Plan() {
                   </div>
                 </Col>
               </Row>
-            <div className="dataTablePhone">
-              <table className="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Numbers</th>
-                    <th scope="col">Call Type</th>
-                    <th scope="col">Date</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <img
-                          src="/assets/images/admin/bharat-flag.png"
-                          className="img-fluid"
-                          alt="bharat-flag"
-                        />
-                        +91-8310-771100
-                      </div>
-                    </td>
-                    <td>Missed Call</td>
-                    <td>02/12/2023</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <img
-                          src="/assets/images/admin/bharat-flag.png"
-                          className="img-fluid"
-                          alt="bharat-flag"
-                        />
-                        +91-8310-771100
-                      </div>
-                    </td>
-                    <td>Missed Call</td>
-                    <td>02/12/2023</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <img
-                          src="/assets/images/admin/bharat-flag.png"
-                          className="img-fluid"
-                          alt="bharat-flag"
-                        />
-                        +91-8310-771100
-                      </div>
-                    </td>
-                    <td>Missed Call</td>
-                    <td>02/12/2023</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <img
-                          src="/assets/images/admin/bharat-flag.png"
-                          className="img-fluid"
-                          alt="bharat-flag"
-                        />
-                        +91-8310-771100
-                      </div>
-                    </td>
-                    <td>Missed Call</td>
-                    <td>02/12/2023</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div className="numberInfo d-flex justify-content-sm-between">
-              <div className="justify-content-start">Al credits</div>
-              <div className="justify-content-end">0 of 100 credits</div>
-            </div>
-            <div className="numberInfo d-flex justify-content-sm-between">
-              <div className="justify-content-start">Data Usage</div>
-              <div className="justify-content-end">0.00 GB of 2 GB</div>
-            </div>
+              <div className="dataTablePhone">
+                <table className="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Numbers</th>
+                      <th scope="col">Call Type</th>
+                      <th scope="col">Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div className="d-flex align-items-center">
+                          <img
+                            src="/assets/images/admin/bharat-flag.png"
+                            className="img-fluid"
+                            alt="bharat-flag"
+                          />
+                          +91-8310-771100
+                        </div>
+                      </td>
+                      <td>Missed Call</td>
+                      <td>02/12/2023</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div className="d-flex align-items-center">
+                          <img
+                            src="/assets/images/admin/bharat-flag.png"
+                            className="img-fluid"
+                            alt="bharat-flag"
+                          />
+                          +91-8310-771100
+                        </div>
+                      </td>
+                      <td>Missed Call</td>
+                      <td>02/12/2023</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div className="d-flex align-items-center">
+                          <img
+                            src="/assets/images/admin/bharat-flag.png"
+                            className="img-fluid"
+                            alt="bharat-flag"
+                          />
+                          +91-8310-771100
+                        </div>
+                      </td>
+                      <td>Missed Call</td>
+                      <td>02/12/2023</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div className="d-flex align-items-center">
+                          <img
+                            src="/assets/images/admin/bharat-flag.png"
+                            className="img-fluid"
+                            alt="bharat-flag"
+                          />
+                          +91-8310-771100
+                        </div>
+                      </td>
+                      <td>Missed Call</td>
+                      <td>02/12/2023</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="numberInfo d-flex justify-content-sm-between">
+                <div className="justify-content-start">Data Usage</div>
+                <div className="justify-content-end">0.00 GB of 2 GB</div>
+              </div>
             </div>
             {/* <div className="d-flex">
               <div className="telePage_inner">
